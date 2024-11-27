@@ -1,17 +1,22 @@
-import { ExperienceOverview } from "@/components/ExperienceOverview";
-import { OverallInformation } from "@/components/OverallInformation";
-import { ProfileCard } from "@/components/ProfileCard";
-import { ProjectOverview } from "@/components/ProjectOverview";
+import { AboutSection } from "@/layouts/AboutSection";
+import { EducationSection } from "@/layouts/EducationSection";
+import { ExperienceSection } from "@/layouts/ExperienceSection";
+import { Footer } from "@/layouts/Footer";
+import { ProfileSection } from "@/layouts/ProfileSection";
+import { ProjectSection } from "@/layouts/ProjectSection";
+import { TechnologySection } from "@/layouts/TechnologySection";
 
 export const Index = () => {
   return (
-    <div className="grid grid-cols-2 py-40 relative">
-      <ProfileCard />
-      <div className="space-y-10">
-        <OverallInformation />
-        <ProjectOverview />
-        <ExperienceOverview />
-      </div>
+    <div className="mx-auto w-full max-w-[45rem] space-y-8">
+      <ProfileSection />
+      <AboutSection />
+      <ProjectSection />
+      <ExperienceSection />
+      <TechnologySection />
+      {/* <CertificateSection /> */}
+      <EducationSection />
+      <Footer />
     </div>
   );
 };

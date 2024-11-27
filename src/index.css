@@ -32,7 +32,7 @@
     --solid: 240 10% 3.9%;
   }
   .dark {
-    --background: 240 10% 3.9%;
+    --background: 0 0% 7%;
     --foreground: 0 0% 98%;
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
@@ -67,4 +67,8 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+* {
+  font-family: "ui-monospace", Consolas, Liberation Mono, monospace;
 }
