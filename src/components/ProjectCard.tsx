@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { Play } from "lucide-react";
 
 export const ProjectCard = ({
