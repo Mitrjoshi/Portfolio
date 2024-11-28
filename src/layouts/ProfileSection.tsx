@@ -32,11 +32,6 @@ export const ProfileSection = () => {
       url: "mailto:mitrjoshi26@gmail.com",
       text: "",
     },
-    {
-      icon: <File className="scale-110 text-primary/70" />,
-      url: "",
-      text: "Resume",
-    },
   ];
 
   return (
@@ -65,6 +60,18 @@ export const ProfileSection = () => {
               </Button>
             </Link>
           ))}
+
+          <Button
+            title={"Resume"}
+            className="bg-blue-400/20 hover:bg-blue-400/30 duration-150"
+            variant={"outline"}
+            size={"icon"}
+            onClick={() => {
+              window.open("/resume.pdf", "_blank");
+            }}
+          >
+            <File className="scale-110 text-primary/70" />
+          </Button>
         </div>
         <div className="flex items-center gap-2">
           <Button

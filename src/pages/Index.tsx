@@ -1,4 +1,5 @@
 import { AboutSection } from "@/layouts/AboutSection";
+import { CertificateSection } from "@/layouts/CertificateSection";
 import { EducationSection } from "@/layouts/EducationSection";
 import { ExperienceSection } from "@/layouts/ExperienceSection";
 import { Footer } from "@/layouts/Footer";
@@ -14,7 +15,7 @@ export const Index = () => {
       <ProjectSection />
       <ExperienceSection />
       <TechnologySection />
-      {/* <CertificateSection /> */}
+      <CertificateSection />
       <EducationSection />
       <Footer />
     </div>

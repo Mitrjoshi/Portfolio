@@ -54,6 +54,21 @@ export const PROJECTS = [
     tech: ["React", "Javascript", "Tailwind CSS"],
   },
   {
+    id: "blog",
+    title: "Blog",
+    thumbnail: "/thumbnails/youtube-clone.png",
+    description: `
+      A responsive blogging platform that allows users to create, edit, and share articles effortlessly. 
+      Features include user authentication, dynamic content management, and real-time updates, ensuring seamless usability. 
+      Designed with a clean interface for accessibility across devices, it offers a streamlined experience for both personal and professional use.`,
+    links: {
+      live: "https://mitrjoshi-blog.netlify.app",
+      github: "https://github.com/username/blog-project", // Replace with the actual GitHub repository link
+    },
+    year: 2023,
+    tech: ["React.js", "TypeScript", "Tailwind CSS", "Firebase"],
+  },
+  {
     id: "vr-techno",
     title: "VR Techno",
     thumbnail: "/thumbnails/vr-techno.png",
@@ -84,7 +99,7 @@ export const PROJECTS = [
     thumbnail: "/thumbnails/youtube-clone.png",
     description: `YouTube Clone is a simplified platform for browsing and watching videos, built using APIs. With a "Watch Later" feature, users can easily save videos for future viewing. Designed for simplicity, it offers an intuitive interface while showcasing efficient API integration.`,
     links: {
-      live: "https://themoneytrunk.vercel.app/",
+      live: "https://youtube-clone-mitr.netlify.app/",
       github: "",
     },
     year: 2023,
@@ -198,5 +213,38 @@ export const technologies = [
   {
     text: "Supabase",
     class: "devicon-supabase-plain colored",
+  },
+];
+
+export const certificates = [
+  {
+    id: "full-stack",
+    title: "Full Stack Development",
+    year: "2023",
+    description: [
+      "Completed a comprehensive program on Full Stack Development at IT Vedant, India.",
+      "Gained expertise in modern web development technologies such as HTML, CSS, JavaScript, React.js, Node.js, and Express.js.",
+      "Learned to build and deploy full-stack web applications with a focus on scalability and user experience.",
+    ],
+  },
+  {
+    id: "aws",
+    title: "Cloud Computing",
+    year: "2023",
+    description: [
+      "Completed a specialized Cloud Computing course at IT Vedant, India.",
+      "Acquired hands-on experience with Amazon Web Services (AWS) and cloud infrastructure management.",
+      "Developed skills in deploying, managing, and scaling applications on the cloud.",
+    ],
+  },
+  {
+    id: "db",
+    title: "Database Management",
+    year: "2023",
+    description: [
+      "Completed a focused course on Database Management at IT Vedant, India.",
+      "Gained knowledge of relational database systems like MySQL and PostgreSQL.",
+      "Learned database design, query optimization, and data normalization techniques.",
+    ],
   },
 ];

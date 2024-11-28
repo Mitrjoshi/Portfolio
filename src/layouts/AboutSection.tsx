@@ -4,7 +4,7 @@ import { SectionTitles } from "@/components/SectionTitles";
 export const AboutSection = () => {
   return (
     <section className="flex flex-col gap-3">
-      <SectionTitles title="About me" />
+      <SectionTitles title="About Me" />
 
       <ParagraphText
         text="Hello! I'm a passionate developer with a deep interest in technology and
