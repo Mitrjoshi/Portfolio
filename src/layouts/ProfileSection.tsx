@@ -67,7 +67,7 @@ export const ProfileSection = () => {
             variant={"outline"}
             size={"icon"}
             onClick={() => {
-              window.open("/resume.pdf", "_blank");
+              window.open("/cv.pdf", "_blank");
             }}
           >
             <File className="scale-110 text-primary/70" />
