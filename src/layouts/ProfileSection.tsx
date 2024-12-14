@@ -102,7 +102,11 @@ export const ProfileSection = () => {
             )}
           </Button>
 
-          <Link to={"https://www.youtube.com/watch?v=dQw4w9WgXcQ"}>
+          <Link
+            target="_blank"
+            rel="noreferrer"
+            to={"https://www.youtube.com/watch?v=dQw4w9WgXcQ"}
+          >
             <Button
               className="hover:bg-blue-400/20 duration-150"
               variant={"ghost"}
