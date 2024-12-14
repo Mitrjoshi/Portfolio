@@ -51,7 +51,7 @@ export const ProfileSection = () => {
             <Link target="_blank" rel="noreferrer" to={link.url}>
               <Button
                 title={link.text}
-                className="bg-blue-400/20 hover:bg-blue-400/30 duration-150"
+                className="bg-sky-400/20 hover:bg-sky-400/30 duration-150"
                 key={link.url}
                 variant={"outline"}
                 size={"icon"}
@@ -63,7 +63,7 @@ export const ProfileSection = () => {
 
           <Button
             title={"Resume"}
-            className="bg-blue-400/20 hover:bg-blue-400/30 duration-150"
+            className="bg-sky-400/20 hover:bg-sky-400/30 duration-150"
             variant={"outline"}
             size={"icon"}
             onClick={() => {
@@ -76,7 +76,7 @@ export const ProfileSection = () => {
         <div className="flex items-center gap-2">
           <Button
             disabled
-            className="hover:bg-blue-400/20 disabled:opacity-100 duration-150"
+            className="hover:bg-sky-400/20 disabled:opacity-100 duration-150"
             variant={"ghost"}
             size={"icon"}
           >
@@ -91,7 +91,7 @@ export const ProfileSection = () => {
             onClick={() => {
               setTheme(theme === "dark" ? "light" : "dark");
             }}
-            className="hover:bg-blue-400/20 duration-150"
+            className="hover:bg-sky-400/20 duration-150"
             variant={"ghost"}
             size={"icon"}
           >
@@ -108,7 +108,7 @@ export const ProfileSection = () => {
             to={"https://www.youtube.com/watch?v=dQw4w9WgXcQ"}
           >
             <Button
-              className="hover:bg-blue-400/20 duration-150"
+              className="hover:bg-sky-400/20 duration-150"
               variant={"ghost"}
               size={"icon"}
             >

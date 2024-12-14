@@ -21,7 +21,7 @@ export const ProjectCard = ({
   return (
     <div
       key={project.id}
-      className="rounded-lg divide-y divide-gray-200 dark:divide-gray-800 shadow bg-blue-400/10 border border-stone-200 dark:border-stone-600 relative overflow-hidden group hover:bg-blue-400/20 dark:hover:bg-primary-900 transition duration-300"
+      className="rounded-lg divide-y divide-gray-200 dark:divide-gray-800 shadow bg-sky-400/10 border border-stone-200 dark:border-stone-600 relative overflow-hidden group hover:bg-sky-400/20 dark:hover:bg-primary-900 transition duration-300"
     >
       <div className="px-3 py-4 sm:p-4">
         <div className="flex flex-col gap-2">
@@ -53,7 +53,7 @@ export const ProjectCard = ({
         <div className="mt-4 flex flex-row items-center justify-start gap-2 w-full">
           {/* <Link to={project.links.github}>
             <Button
-              className="bg-blue-400/40 hover:bg-blue-400/45 text-primary"
+              className="bg-sky-400/40 hover:bg-sky-400/45 text-primary"
               size={"sm"}
             >
               <GitHubLogoIcon />
@@ -62,7 +62,7 @@ export const ProjectCard = ({
           </Link> */}
           <Link target="_blank" rel="noreferrer" to={project.links.live}>
             <Button
-              className="bg-blue-400/40 hover:bg-blue-400/45 text-primary"
+              className="bg-sky-400/40 hover:bg-sky-400/45 text-primary"
               size={"sm"}
             >
               <Play />

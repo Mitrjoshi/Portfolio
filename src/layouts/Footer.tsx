@@ -33,7 +33,7 @@ export const Footer = () => {
       <div className="flex items-center gap-2">
         <Button
           disabled
-          className="hover:bg-blue-400/20 disabled:opacity-100 duration-150"
+          className="hover:bg-sky-400/20 disabled:opacity-100 duration-150"
           variant={"ghost"}
           size={"icon"}
         >
@@ -48,7 +48,7 @@ export const Footer = () => {
           onClick={() => {
             setTheme(theme === "dark" ? "light" : "dark");
           }}
-          className="hover:bg-blue-400/20 duration-150"
+          className="hover:bg-sky-400/20 duration-150"
           variant={"ghost"}
           size={"icon"}
         >
@@ -61,7 +61,7 @@ export const Footer = () => {
 
         <Link to={"https://www.youtube.com/watch?v=dQw4w9WgXcQ"}>
           <Button
-            className="hover:bg-blue-400/20 duration-150"
+            className="hover:bg-sky-400/20 duration-150"
             variant={"ghost"}
             size={"icon"}
           >
