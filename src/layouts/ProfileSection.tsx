@@ -40,7 +40,7 @@ export const ProfileSection = () => {
         <SectionTitles title="Mitr Joshi" />
         <div>
           <p className="max-w-md text-sm text-neutral-600 dark:text-neutral-400">
-            Web Developer
+            Full Stack Developer
           </p>
           <p className="flex items-center gap-1 max-w-md text-sm text-neutral-600 dark:text-neutral-400">
             <MapPin size={16} className="text-primary/70" /> Mumbai, India
