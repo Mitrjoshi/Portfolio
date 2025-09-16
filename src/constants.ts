@@ -1,15 +1,14 @@
 export const PROJECTS = [
   {
-    id: "milka-romania",
-    title: "Milka Romania",
-    thumbnail: "/thumbnails/milka-romania.png",
-    description: `Milka Romania lets users create personalized AI-generated song videos for their loved ones. With customizable messages and visuals, it transforms emotions into unique, heartfelt digital keepsakes. Perfect for special occasions, the platform is simple to use and offers easy sharing options.`,
+    id: "maaza",
+    title: "Maaza My Small Win",
+    thumbnail: "/thumbnails/maaza.png",
+    description: `A promotional website for Maaza, a popular mango drink brand, to engage users in a fun and interactive way. The website allows users to create personalized AI-generated videos showcasing their "small wins" using Maaza. Users can select from various templates, add their own text and images, and generate a unique video that celebrates their achievements.`,
     links: {
-      live: "https://milka-romania-stag-25.onmlab.in/",
+      live: "https://maaza-my-small-win.coke2home.com/",
       github: "",
     },
-    year: 2024,
-
+    year: 2025,
     tech: [
       "React",
       "Typescript",
@@ -21,16 +20,15 @@ export const PROJECTS = [
     ],
   },
   {
-    id: "itc-mixpod",
-    title: "ITC Mixpod",
-    thumbnail: "/thumbnails/itc-mixpod.png",
-    description: `ITC Mixpod allows users to create unique avatars by capturing their images, offering a personalized and fun experience. The platform uses advanced technology to transform user photos into customized avatars, perfect for digital profiles or creative expressions.`,
+    id: "fevikwik",
+    title: "Fevikwik AI Pack",
+    thumbnail: "/thumbnails/fevikwik.png",
+    description: `A promotional website for Fevikwik, a popular adhesive brand, to showcase the power of their product in a fun and interactive way. The website allows users to enter two objects they want to see stuck together, and then uses AI to generate an image of those objects being glued together using Fevikwik. Users can share their creations on social media and challenge their friends to come up with even more creative combinations.`,
     links: {
-      live: "https://mixpod-main.onmlab.in/",
+      live: "https://aipack.fevikwik.in/",
       github: "",
     },
-    year: 2024,
-
+    year: 2025,
     tech: [
       "React",
       "Typescript",
@@ -40,94 +38,6 @@ export const PROJECTS = [
       "Msql",
       "AWS",
     ],
-  },
-  {
-    id: "openwave",
-    title: "Openwave",
-    thumbnail: "/thumbnails/openwave.png",
-    description: `Openwave is a sleek e-commerce website dedicated to showcasing and selling premium watches. With an intuitive interface and a wide range of stylish timepieces, it provides a seamless shopping experience for watch enthusiasts.`,
-    links: {
-      live: "https://openwave-ecom.netlify.app/",
-      github: "",
-    },
-    year: 2023,
-    tech: ["React", "Javascript", "Tailwind CSS"],
-  },
-  {
-    id: "blog",
-    title: "Blog",
-    thumbnail: "/thumbnails/youtube-clone.png",
-    description: `
-      A responsive blogging platform that allows users to create, edit, and share articles effortlessly. 
-      Features include user authentication, dynamic content management, and real-time updates, ensuring seamless usability. 
-      Designed with a clean interface for accessibility across devices, it offers a streamlined experience for both personal and professional use.`,
-    links: {
-      live: "https://mitrjoshi-blog.netlify.app",
-      github: "https://github.com/username/blog-project", // Replace with the actual GitHub repository link
-    },
-    year: 2023,
-    tech: ["React.js", "TypeScript", "Tailwind CSS", "Firebase"],
-  },
-  {
-    id: "vr-techno",
-    title: "VR Techno",
-    thumbnail: "/thumbnails/vr-techno.png",
-    description: `VR Techno is a company showcase website highlighting the expertise and services of VR Techno. Designed to present the company’s vision, offerings, and achievements, the site provides an engaging platform for visitors to explore its innovative solutions.`,
-    links: {
-      live: "https://www.vrtechno.finance/",
-      github: "",
-    },
-    year: 2024,
-
-    tech: ["Next.js", "Typescript", "Tailwind CSS"],
-  },
-  {
-    id: "money-trunk",
-    title: "The Money Trunk",
-    thumbnail: "/thumbnails/money-trunk.png",
-    description: `The Money Trunk is a user-friendly platform where individuals can seamlessly apply for car loans and car insurance. Designed for convenience, it simplifies the process with an intuitive interface, making financial services accessible to all.`,
-    links: {
-      live: "https://themoneytrunk.vercel.app/",
-      github: "",
-    },
-    year: 2024,
-    tech: ["Next.js", "Typescript", "Tailwind CSS"],
-  },
-  {
-    id: "youtube-clone",
-    title: "YouTube Clone",
-    thumbnail: "/thumbnails/youtube-clone.png",
-    description: `YouTube Clone is a simplified platform for browsing and watching videos, built using APIs. With a "Watch Later" feature, users can easily save videos for future viewing. Designed for simplicity, it offers an intuitive interface while showcasing efficient API integration.`,
-    links: {
-      live: "https://youtube-clone-mitr.netlify.app/",
-      github: "",
-    },
-    year: 2023,
-    tech: ["Next.js", "Typescript", "Tailwind CSS", "Firebase"],
-  },
-  {
-    id: "cadbury-chocobake",
-    title: "Cadbury Chocobakes",
-    thumbnail: "/thumbnails/cadbury-chocobakes.png",
-    description: `Cadbury Chocobakes is an engaging platform where users can participate in a fun activity to win exciting coupons. By chanting a mantra 10 times, users unlock rewards, creating a delightful and interactive experience.`,
-    links: {
-      live: "https://chocobakes-chant-24.onmlab.in/",
-      github: "",
-    },
-    year: 2023,
-    tech: ["React", "Javascript", "Tailwind CSS"],
-  },
-  {
-    id: "choclairs",
-    title: "Choclairs",
-    thumbnail: "/thumbnails/choclairs.png",
-    description: `Choclairs is a fun and interactive platform where users can create personalized avatars and send birthday bumps to their friends' avatars. Each interaction earns points, increasing the chances of winning exciting prizes.`,
-    links: {
-      live: "https://choclairs-birthday-24.onmlab.in/",
-      github: "",
-    },
-    year: 2023,
-    tech: ["React", "Javascript", "Tailwind CSS"],
   },
 ];
 
@@ -171,16 +81,8 @@ export const experience = [
 
 export const technologies = [
   {
-    text: "AWS",
-    class: "devicon-amazonwebservices-plain-wordmark colored",
-  },
-  {
     text: "React",
     class: "devicon-react-original colored",
-  },
-  {
-    text: "Node.js",
-    class: "devicon-nodejs-plain-wordmark colored",
   },
   {
     text: "Next.js",
@@ -191,28 +93,28 @@ export const technologies = [
     class: "devicon-typescript-plain colored",
   },
   {
-    text: "JavaScript",
+    text: "Javascript",
     class: "devicon-javascript-plain colored",
-  },
-  {
-    text: "Python",
-    class: "devicon-python-plain colored",
-  },
-  {
-    text: "Java",
-    class: "devicon-java-plain colored",
   },
   {
     text: "Tailwind CSS",
     class: "devicon-tailwindcss-original colored",
   },
   {
+    text: "Node.js",
+    class: "devicon-nodejs-plain-wordmark colored",
+  },
+  {
+    text: "AWS",
+    class: "devicon-amazonwebservices-plain-wordmark colored",
+  },
+  {
     text: "MySQL",
     class: "devicon-mysql-plain-wordmark colored",
   },
   {
-    text: "Supabase",
-    class: "devicon-supabase-plain colored",
+    text: "PostgreSQL",
+    class: "devicon-postgresql-plain colored",
   },
 ];
 

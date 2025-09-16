@@ -18,7 +18,7 @@ export const ProjectSection = () => {
         <Link to="projects">
           <Button
             size={"sm"}
-            className="bg-sky-400/10 group hover:bg-sky-400/20 text-primary"
+            className="bg-cyan-400/10 group hover:bg-cyan-400/20 text-primary"
           >
             View all
             <ArrowRight className="text-primary/70 group-hover:ml-2 duration-200 group-hover:-rotate-45" />
