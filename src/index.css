@@ -32,7 +32,7 @@
     --solid: 240 10% 3.9%;
   }
   .dark {
-    --background: 320, 6%, 9%;
+    --background: 0 0% 7%;
     --foreground: 0 0% 98%;
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
@@ -75,18 +75,4 @@
     Consolas,
     Liberation Mono,
     monospace;
-}
-
-.masonry {
-  column-count: 4;
-  column-gap: 16px;
-  padding: 16px;
-}
-
-.item {
-  break-inside: avoid;
-  margin-bottom: 16px;
-  background: #dadcd2;
-  /* border-radius: 16px; */
-  padding: 16px;
 }

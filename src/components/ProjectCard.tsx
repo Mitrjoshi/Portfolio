@@ -32,7 +32,7 @@ export const ProjectCard = ({
               </p>
               <div className="space-x-2">
                 {project.tech.map((tech) => (
-                  <span className="text-xs underline text-background w-full sm:w-1/2">
+                  <span className="text-xs underline text-neutral-600 dark:text-neutral-400 w-full sm:w-1/2">
                     {tech}
                   </span>
                 ))}
@@ -45,7 +45,7 @@ export const ProjectCard = ({
         </div>
 
         <div className="mt-4 flex flex-row items-center justify-between w-full">
-          <p className="text-xs text-background w-full sm:w-1/2">
+          <p className="text-xs text-neutral-600 dark:text-neutral-400 w-full sm:w-1/2">
             {project.description}
           </p>
         </div>

@@ -39,10 +39,10 @@ export const ProfileSection = () => {
       <div className="space-y-2">
         <SectionTitles title="Mitr Joshi" />
         <div>
-          <p className="max-w-md text-sm text-background">
+          <p className="max-w-md text-sm text-neutral-600 dark:text-neutral-400">
             Full Stack Developer - L1
           </p>
-          <p className="flex items-center gap-1 max-w-md text-sm text-background">
+          <p className="flex items-center gap-1 max-w-md text-sm text-neutral-600 dark:text-neutral-400">
             <MapPin size={16} className="text-primary/70" /> Mumbai, India
           </p>
         </div>
