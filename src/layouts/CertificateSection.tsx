@@ -11,22 +11,23 @@ export const CertificateSection = () => {
           <div key={certificate.id} className="flex flex-col gap-2">
             <div className="flex justify-between items-center">
               <div className="flex flex-col">
-                <p className="text-lg font-bold hover:underline">
+                <p className="text-lg font-bold hover:underline text-background">
                   {certificate.title}
                 </p>
-                <p className="block sm:hidden text-sm">{certificate.year}</p>
+                <p className="block sm:hidden text-sm text-background">
+                  {certificate.year}
+                </p>
               </div>
               <div className="flex flex-col items-end gap-0.5">
-                <p className="hidden sm:block text-sm">{certificate.year}</p>
+                <p className="hidden sm:block text-sm text-background">
+                  {certificate.year}
+                </p>
               </div>
             </div>
 
             <ol>
               {certificate.description.map((desc) => (
-                <li
-                  key={desc}
-                  className="text-xs text-pretty text-neutral-600 dark:text-neutral-400"
-                >
+                <li key={desc} className="text-xs text-pretty text-background">
                   - {desc}
                 </li>
               ))}

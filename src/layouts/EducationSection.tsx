@@ -11,19 +11,23 @@ export const EducationSection = () => {
             <div className="flex flex-col items-start">
               <div className="flex flex-row items-center gap-2">
                 <a
-                  className="text-base sm:text-lg font-bold hover:underline"
+                  className="text-base sm:text-lg font-bold text-background hover:underline"
                   href="https://www.itvedant.com/"
                 >
                   IT Vedant
                 </a>
-                <p className="sm:hidden block text-sm">• 2022 - 2023</p>
+                <p className="sm:hidden block text-sm text-background">
+                  • 2022 - 2023
+                </p>
               </div>
-              <p className="text-xs sm:text-sm">
+              <p className="text-xs sm:text-sm text-background">
                 Full Stack Web Development Course
               </p>
             </div>
             <div className="flex flex-col items-end gap-0.5">
-              <p className="hidden sm:block text-sm">2022 - 2023</p>
+              <p className="hidden sm:block text-sm text-background">
+                2022 - 2023
+              </p>
             </div>
           </div>
         </div>
@@ -35,17 +39,23 @@ export const EducationSection = () => {
             <div className="flex flex-col items-start">
               <div className="flex flex-row items-center gap-2">
                 <a
-                  className="text-base sm:text-lg font-bold hover:underline"
+                  className="text-base sm:text-lg font-bold text-background hover:underline"
                   href="https://mithibai.ac.in/"
                 >
                   Mithibai
                 </a>
-                <p className="sm:hidden block text-sm">• 2019 - 2022</p>
+                <p className="sm:hidden block text-sm text-background">
+                  • 2019 - 2022
+                </p>
               </div>
-              <p className="text-xs sm:text-sm">Bachelors in Physics</p>
+              <p className="text-xs sm:text-sm text-background">
+                Bachelors in Physics
+              </p>
             </div>
             <div className="flex flex-col items-end gap-0.5">
-              <p className="hidden sm:block text-sm">2019 - 2022</p>
+              <p className="hidden sm:block text-sm text-background">
+                2019 - 2022
+              </p>
             </div>
           </div>
         </div>

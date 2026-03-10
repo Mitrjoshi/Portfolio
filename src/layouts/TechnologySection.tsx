@@ -8,10 +8,10 @@ export const TechnologySection = () => {
 
       <div className="grid md:grid-cols-5 sm:grid-cols-4 grid-cols-3 gap-2">
         {technologies.map((tech) => (
-          <div className="h-full group w-full aspect-square border rounded-lg bg-cyan-400/20 hover:bg-cyan-400/30 duration-150 cursor-pointer">
+          <div className="h-full group w-full aspect-square border rounded-lg bg-green-400/20 hover:bg-purple-400/30 duration-150 cursor-pointer">
             <div className="flex flex-col items-center justify-evenly text-xs text-center w-full h-full">
               <div className="flex flex-col items-center justify-evenly text-xs text-center w-full h-full">
-                <p className="md:text-base text-[0.65rem] font-bold text-stone-800 dark:text-neutral-400">
+                <p className="md:text-base text-[0.65rem] font-bold text-stone-800 dark:text-background">
                   {tech.text}
                 </p>
                 <div className="group/label group-hover:scale-125 duration-200 relative">

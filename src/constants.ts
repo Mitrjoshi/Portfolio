@@ -1,5 +1,25 @@
 export const PROJECTS = [
   {
+    id: "vertex",
+    title: "Ogilvy × Google Vertex AI Studio — AI Tooling Platform",
+    thumbnail: "/thumbnails/vertex.png",
+    description: `Built an internal AI platform for Ogilvy's global creative teams to generate images and videos at scale using Google Vertex AI (Gemini, Imagen, Veo). Supported 10K+ AI generations/month for 100+ internal users; maintained reliability during 3× traffic spikes in peak campaign periods. Designed credit-based governance for cost control and access management, cutting creative iteration from hours to minutes.`,
+    links: {
+      live: "https://dev.ogilvystudio.ai/",
+      github: "",
+    },
+    year: 2025,
+    tech: [
+      "React",
+      "Typescript",
+      "Tailwind CSS",
+      "Node js",
+      "Express js",
+      "MsSQL",
+      "AWS",
+    ],
+  },
+  {
     id: "maaza",
     title: "Maaza My Small Win",
     thumbnail: "/thumbnails/maaza.png",
@@ -25,7 +45,7 @@ export const PROJECTS = [
     thumbnail: "/thumbnails/fevikwik.png",
     description: `A promotional website for Fevikwik, a popular adhesive brand, to showcase the power of their product in a fun and interactive way. The website allows users to enter two objects they want to see stuck together, and then uses AI to generate an image of those objects being glued together using Fevikwik. Users can share their creations on social media and challenge their friends to come up with even more creative combinations.`,
     links: {
-      live: "https://aipack.fevikwik.in/",
+      live: "https://fevikwik-kwik-gpt-stag-25.onmlab.in/",
       github: "",
     },
     year: 2025,
@@ -46,35 +66,46 @@ export const experience = [
     id: "adsmn",
     title: "ADSMN",
     description: [
-      `Joined as an intern and transitioned into a full-time role as a Full Stack Developer. Contributed to various high-impact projects for renowned brands like Cadbury, Kellogg's, and Milka. Designed and implemented innovative platforms and campaigns, leveraging cutting-edge technologies to enhance user engagement, boost brand visibility, and deliver scalable solutions tailored to client needs.`,
+      `Architect and own end-to-end AI platforms powering image, video, and text generation for 1M+ users across consumer and enterprise products, with high availability and fault-tolerant execution.`,
 
-      `I am currently expanding my expertise in Database and cloud technologies, particularly AWS. As part of an international virtual team, I am enhancing my skills in communication, teamwork, and automation while actively contributing to the success of various cloud-based initiatives.`,
+      `Lead frontend architecture using React, Next.js, and TypeScript; improved First Contentful Paint by ~25% through code-splitting, asset optimisation, and efficient state management.`,
+
+      `Design and maintain serverless cloud infrastructure on AWS (Lambda, S3, SQS, CloudFront), enabling zero-downtime deployments that reliably handle 3× peak traffic bursts.`,
+
+      `Integrate Google Vertex AI (Gemini, Imagen, Veo) into production pipelines for 10K+ AI generations/month, with credit-based usage governance and per-user analytics.`,
     ],
-    duration: "2023 - Present",
-    role: "Full Stack Developer",
+    duration: "2025 - Present",
+    role: "Full Stack Developer - L1",
     type: "Full Time",
     tech: ["React", "Next.js", "Node.js", "AWS"],
   },
   {
-    id: "money-trunk",
-    title: "The Money Trunk",
+    id: "adsmn",
+    title: "ADSMN",
     description: [
-      `Worked as a Front-End Developer for a freelance project, building a user-friendly platform that simplifies the process of applying for car loans and insurance. Leveraged modern front-end technologies to create an intuitive interface, ensuring a seamless user experience. Delivered the project within a tight one-month timeline, meeting all client requirements and expectations.`,
+      `Built high-performance React and Next.js frontends for AI generation products used by 100+ internal and external users.`,
+
+      `Optimised backend APIs in Node.js and Express, achieving 20–35% latency reduction through query optimisation, caching, and async processing.`,
+
+      `Collaborated on database schema design and query optimisation using PostgreSQL and MS SQL.`,
     ],
-    duration: "1 Month",
-    role: "Front End Developer",
-    type: "Freelance",
+    duration: "2024 - 2025",
+    role: "Frontend Developer",
+    type: "Full Time",
     tech: ["React", "Next.js", "Node.js", "AWS"],
   },
+
   {
-    id: "vr-techno",
-    title: "VR Techno",
+    id: "adsmn",
+    title: "ADSMN",
     description: [
-      `Contributed as a Front-End Developer for a freelance project, creating a dynamic and responsive company showcase website. Designed and implemented an engaging interface to effectively highlight the company's services and achievements. Delivered the project within a one-month timeline, ensuring high-quality standards and client satisfaction.`,
+      `Contributed to UI development across live client projects using React.js, JavaScript, and Tailwind CSS.`,
+
+      `Promoted to full-time role after 6 months based on performance and impact.`,
     ],
-    duration: "1 Month",
-    role: "Front End Developer",
-    type: "Freelance",
+    duration: "2024 - 2025",
+    role: "Frontend Developer",
+    type: "Intern",
     tech: ["React", "Next.js", "Node.js", "AWS"],
   },
 ];

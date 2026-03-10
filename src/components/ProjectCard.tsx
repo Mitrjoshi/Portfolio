@@ -21,7 +21,7 @@ export const ProjectCard = ({
   return (
     <div
       key={project.id}
-      className="rounded-lg divide-y divide-gray-200 dark:divide-gray-800 shadow bg-cyan-400/10 border border-stone-200 dark:border-stone-600 relative overflow-hidden group hover:bg-cyan-400/20 dark:hover:bg-primary-900 transition duration-300"
+      className="rounded-lg divide-y divide-gray-200 dark:divide-gray-800 shadow bg-green-400/20 border border-stone-200 dark:border-stone-600 relative overflow-hidden group hover:bg-green-400/20 dark:hover:bg-primary-900 transition duration-300"
     >
       <div className="px-3 py-4 sm:p-4">
         <div className="flex flex-col gap-2">
@@ -32,7 +32,7 @@ export const ProjectCard = ({
               </p>
               <div className="space-x-2">
                 {project.tech.map((tech) => (
-                  <span className="text-xs underline text-neutral-600 dark:text-neutral-400 w-full sm:w-1/2">
+                  <span className="text-xs underline text-background w-full sm:w-1/2">
                     {tech}
                   </span>
                 ))}
@@ -45,7 +45,7 @@ export const ProjectCard = ({
         </div>
 
         <div className="mt-4 flex flex-row items-center justify-between w-full">
-          <p className="text-xs text-neutral-600 dark:text-neutral-400 w-full sm:w-1/2">
+          <p className="text-xs text-background w-full sm:w-1/2">
             {project.description}
           </p>
         </div>
@@ -53,7 +53,7 @@ export const ProjectCard = ({
         <div className="mt-4 flex flex-row items-center justify-start gap-2 w-full">
           {/* <Link to={project.links.github}>
             <Button
-              className="bg-cyan-400/40 hover:bg-cyan-400/45 text-primary"
+              className="bg-green-400/40 hover:bg-purple-400/45 text-primary"
               size={"sm"}
             >
               <GitHubLogoIcon />
@@ -62,7 +62,7 @@ export const ProjectCard = ({
           </Link> */}
           <Link target="_blank" rel="noreferrer" to={project.links.live}>
             <Button
-              className="bg-cyan-400/40 hover:bg-cyan-400/45 text-primary"
+              className="bg-green-400/40 hover:bg-purple-400/45 text-primary"
               size={"sm"}
             >
               <Play />

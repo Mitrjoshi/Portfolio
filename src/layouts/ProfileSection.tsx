@@ -39,10 +39,10 @@ export const ProfileSection = () => {
       <div className="space-y-2">
         <SectionTitles title="Mitr Joshi" />
         <div>
-          <p className="max-w-md text-sm text-neutral-600 dark:text-neutral-400">
-            Full Stack Developer
+          <p className="max-w-md text-sm text-background">
+            Full Stack Developer - L1
           </p>
-          <p className="flex items-center gap-1 max-w-md text-sm text-neutral-600 dark:text-neutral-400">
+          <p className="flex items-center gap-1 max-w-md text-sm text-background">
             <MapPin size={16} className="text-primary/70" /> Mumbai, India
           </p>
         </div>
@@ -51,7 +51,7 @@ export const ProfileSection = () => {
             <Link target="_blank" rel="noreferrer" to={link.url}>
               <Button
                 title={link.text}
-                className="bg-cyan-400/20 hover:bg-cyan-400/30 duration-150"
+                className="bg-green-400/20 hover:bg-purple-400/30 duration-150"
                 key={link.url}
                 variant={"outline"}
                 size={"icon"}
@@ -63,7 +63,7 @@ export const ProfileSection = () => {
 
           {/* <Button
             title={"Resume"}
-            className="bg-cyan-400/20 hover:bg-cyan-400/30 duration-150"
+            className="bg-green-400/20 hover:bg-purple-400/30 duration-150"
             variant={"outline"}
             size={"icon"}
             onClick={() => {
@@ -76,7 +76,7 @@ export const ProfileSection = () => {
         <div className="flex items-center gap-2">
           <Button
             disabled
-            className="hover:bg-cyan-400/20 disabled:opacity-100 duration-150"
+            className="hover:bg-green-400/20 disabled:opacity-100 duration-150"
             variant={"ghost"}
             size={"icon"}
           >
@@ -91,7 +91,7 @@ export const ProfileSection = () => {
             onClick={() => {
               setTheme(theme === "dark" ? "light" : "dark");
             }}
-            className="hover:bg-cyan-400/20 duration-150"
+            className="hover:bg-green-400/20 duration-150"
             variant={"ghost"}
             size={"icon"}
           >
@@ -108,7 +108,7 @@ export const ProfileSection = () => {
             to={"https://www.youtube.com/watch?v=dQw4w9WgXcQ"}
           >
             <Button
-              className="hover:bg-cyan-400/20 duration-150"
+              className="hover:bg-green-400/20 duration-150"
               variant={"ghost"}
               size={"icon"}
             >
@@ -119,7 +119,7 @@ export const ProfileSection = () => {
       </div>
 
       <img
-        src="/profile.jpg"
+        src="/avatar.png"
         className="sm:w-40 sm:h-40 w-24 h-24 rounded-full object-cover object-top hover:cursor-pointer"
         alt=""
       />
