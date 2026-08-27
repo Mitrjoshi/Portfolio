@@ -3,7 +3,6 @@ import "@/index.css";
 import { Root } from "@/Root";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Index } from "@/pages/Index";
-import { Projects } from "./pages/Projects";
 
 const router = createBrowserRouter([
   {
@@ -14,14 +13,10 @@ const router = createBrowserRouter([
         index: true,
         element: <Index />,
       },
-      {
-        path: "projects",
-        element: <Projects />,
-      },
     ],
   },
 ]);
 
 createRoot(document.getElementById("root")!).render(
-  <RouterProvider router={router} />
+  <RouterProvider router={router} />,
 );

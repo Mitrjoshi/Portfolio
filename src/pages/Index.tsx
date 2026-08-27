@@ -1,23 +1,5 @@
-import { AboutSection } from "@/layouts/AboutSection";
-import { CertificateSection } from "@/layouts/CertificateSection";
-import { EducationSection } from "@/layouts/EducationSection";
-import { ExperienceSection } from "@/layouts/ExperienceSection";
-import { Footer } from "@/layouts/Footer";
-import { ProfileSection } from "@/layouts/ProfileSection";
-import { ProjectSection } from "@/layouts/ProjectSection";
-import { TechnologySection } from "@/layouts/TechnologySection";
+import { ShipLogPage } from "@/components/sections";
 
 export const Index = () => {
-  return (
-    <div className="mx-auto w-full max-w-[45rem] space-y-8">
-      <ProfileSection />
-      <AboutSection />
-      <ProjectSection />
-      <ExperienceSection />
-      <TechnologySection />
-      <CertificateSection />
-      <EducationSection />
-      <Footer />
-    </div>
-  );
+  return <ShipLogPage />;
 };
