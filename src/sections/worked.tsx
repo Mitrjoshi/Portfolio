@@ -2,7 +2,6 @@ import { BorderContainer } from '../components/border-container'
 import { Container } from '../components/container'
 import { InView } from '../components/in-view'
 import { RevealText } from '../components/reveal-text'
-import { motion } from 'motion/react'
 
 const teams = [
   {
