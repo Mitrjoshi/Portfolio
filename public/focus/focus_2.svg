@@ -1,0 +1,384 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+  <defs>
+    <linearGradient id="shellSurface" x1="355" y1="335" x2="830" y2="605" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#37342D" stop-opacity="0.68"/>
+      <stop offset="1" stop-color="#252521" stop-opacity="0.56"/>
+    </linearGradient>
+
+```
+<linearGradient id="stateSurface" x1="400" y1="585" x2="760" y2="730" gradientUnits="userSpaceOnUse">
+  <stop offset="0" stop-color="#615949" stop-opacity="0.31"/>
+  <stop offset="1" stop-color="#484437" stop-opacity="0.25"/>
+</linearGradient>
+
+<linearGradient id="featureTop" x1="490" y1="388" x2="670" y2="475" gradientUnits="userSpaceOnUse">
+  <stop offset="0" stop-color="#E0AA50"/>
+  <stop offset="1" stop-color="#D7A34A"/>
+</linearGradient>
+
+<radialGradient id="amberGlow">
+  <stop offset="0" stop-color="#E3AD45" stop-opacity="0.28"/>
+  <stop offset="0.45" stop-color="#E3AD45" stop-opacity="0.08"/>
+  <stop offset="1" stop-color="#E3AD45" stop-opacity="0"/>
+</radialGradient>
+
+<filter id="microGlow" x="-300%" y="-300%" width="700%" height="700%">
+  <feGaussianBlur stdDeviation="3.2"/>
+</filter>
+
+<filter id="contactShadow" x="-20%" y="-20%" width="140%" height="150%">
+  <feDropShadow dx="0" dy="2.5" stdDeviation="2.5" flood-color="#161613" flood-opacity="0.17"/>
+</filter>
+```
+
+  </defs>
+
+  <g id="technical-guides" fill="none" stroke="#777064" stroke-width="1" stroke-opacity="0.18">
+    <path d="M250 518 L193 486 L155 486"/>
+    <path d="M896 429 L955 395 L1002 395"/>
+    <path d="M385 704 L343 728 L287 728"/>
+    <path d="M781 655 L829 682 L881 682"/>
+    <path d="M309 315 L309 291 L348 269"/>
+    <path d="M918 289 L963 263"/>
+    <path d="M180 480 L188 475 M180 492 L188 487"/>
+    <path d="M994 389 L1002 394 M994 401 L1002 396"/>
+  </g>
+
+  <g id="state-layer">
+    <polygon
+      points="444,566 751,395 847,451 539,623"
+      fill="url(#stateSurface)"
+      stroke="#777064"
+      stroke-width="1"
+      stroke-opacity="0.30"
+    />
+    <polygon
+      points="539,623 847,451 847,465 539,637"
+      fill="#37342D"
+      fill-opacity="0.22"
+      stroke="#777064"
+      stroke-width="1"
+      stroke-opacity="0.22"
+    />
+    <polygon
+      points="444,566 539,623 539,637 444,580"
+      fill="#292822"
+      fill-opacity="0.28"
+      stroke="#777064"
+      stroke-width="1"
+      stroke-opacity="0.22"
+    />
+
+```
+<g id="state-nodes">
+  <polygon points="507,557 544,536 564,548 527,569" fill="#615949" fill-opacity="0.45" stroke="#777064" stroke-width="0.8" stroke-opacity="0.32"/>
+  <polygon points="585,516 622,495 642,507 605,528" fill="#615949" fill-opacity="0.42" stroke="#777064" stroke-width="0.8" stroke-opacity="0.30"/>
+  <polygon points="665,472 702,451 722,463 685,484" fill="#615949" fill-opacity="0.40" stroke="#777064" stroke-width="0.8" stroke-opacity="0.28"/>
+  <polygon points="743,429 780,408 800,420 763,441" fill="#615949" fill-opacity="0.36" stroke="#777064" stroke-width="0.8" stroke-opacity="0.26"/>
+</g>
+
+<g stroke="#777064" stroke-width="1" stroke-opacity="0.26" fill="none">
+  <path d="M548 559 L548 529"/>
+  <path d="M682 485 L682 452"/>
+  <path d="M778 437 L778 406"/>
+</g>
+```
+
+  </g>
+
+  <g id="frontend-shell" filter="url(#contactShadow)">
+    <polygon
+      points="357,406 688,221 877,330 545,516"
+      fill="url(#shellSurface)"
+      stroke="#777064"
+      stroke-width="1.3"
+      stroke-opacity="0.48"
+    />
+    <polygon
+      points="545,516 877,330 877,348 545,534"
+      fill="#181816"
+      fill-opacity="0.72"
+      stroke="#777064"
+      stroke-width="1"
+      stroke-opacity="0.44"
+    />
+    <polygon
+      points="357,406 545,516 545,534 357,424"
+      fill="#292822"
+      fill-opacity="0.70"
+      stroke="#777064"
+      stroke-width="1"
+      stroke-opacity="0.42"
+    />
+
+```
+<polygon
+  points="380,407 689,235 853,331 544,504"
+  fill="#252521"
+  fill-opacity="0.17"
+  stroke="#777064"
+  stroke-width="1"
+  stroke-opacity="0.28"
+/>
+
+<g id="shell-corner-details" fill="none" stroke="#777064" stroke-width="1" stroke-opacity="0.34">
+  <path d="M380 407 L397 397"/>
+  <path d="M689 235 L707 245"/>
+  <path d="M835 341 L853 331"/>
+  <path d="M526 494 L544 504"/>
+  <path d="M404 394 L418 386"/>
+  <path d="M813 342 L829 333"/>
+</g>
+```
+
+  </g>
+
+  <g id="component-hierarchy" fill="none" stroke="#777064" stroke-width="1" stroke-opacity="0.30">
+    <path d="M519 363 L553 344 L584 362"/>
+    <path d="M584 362 L584 382 L623 404"/>
+    <path d="M584 362 L623 340 L660 361"/>
+    <path d="M584 362 L548 383 L513 363"/>
+    <path d="M707 315 L738 332 L738 354"/>
+    <path d="M453 426 L453 448 L482 465"/>
+  </g>
+
+  <g id="component-system" filter="url(#contactShadow)">
+    <g id="large-content-module">
+      <polygon points="645,349 751,290 815,327 709,387" fill="#484437" fill-opacity="0.72" stroke="#777064" stroke-width="1"/>
+      <polygon points="709,387 815,327 815,350 709,410" fill="#37342D" fill-opacity="0.73" stroke="#777064" stroke-width="1"/>
+      <polygon points="645,349 709,387 709,410 645,372" fill="#292822" fill-opacity="0.80" stroke="#777064" stroke-width="1"/>
+      <path d="M671 352 L714 328" stroke="#777064" stroke-width="1" stroke-opacity="0.27"/>
+      <path d="M691 363 L748 331" stroke="#777064" stroke-width="1" stroke-opacity="0.22"/>
+    </g>
+
+```
+<g id="medium-component-a">
+  <polygon points="407,414 483,371 530,398 454,441" fill="#484437" fill-opacity="0.62" stroke="#777064" stroke-width="1"/>
+  <polygon points="454,441 530,398 530,420 454,463" fill="#37342D" fill-opacity="0.65" stroke="#777064" stroke-width="1"/>
+  <polygon points="407,414 454,441 454,463 407,436" fill="#292822" fill-opacity="0.76" stroke="#777064" stroke-width="1"/>
+</g>
+
+<g id="medium-component-b">
+  <polygon points="704,412 776,372 820,397 748,438" fill="#484437" fill-opacity="0.58" stroke="#777064" stroke-width="1"/>
+  <polygon points="748,438 820,397 820,417 748,458" fill="#37342D" fill-opacity="0.64" stroke="#777064" stroke-width="1"/>
+  <polygon points="704,412 748,438 748,458 704,432" fill="#292822" fill-opacity="0.77" stroke="#777064" stroke-width="1"/>
+</g>
+
+<g id="reusable-component-1">
+  <polygon points="509,334 555,308 583,324 537,350" fill="#526979" fill-opacity="0.82" stroke="#777064" stroke-width="1"/>
+  <polygon points="537,350 583,324 583,344 537,370" fill="#44596A" fill-opacity="0.84" stroke="#777064" stroke-width="1"/>
+  <polygon points="509,334 537,350 537,370 509,354" fill="#303E48" fill-opacity="0.88" stroke="#777064" stroke-width="1"/>
+</g>
+
+<g id="reusable-component-2">
+  <polygon points="566,368 612,342 640,358 594,384" fill="#526979" fill-opacity="0.79" stroke="#777064" stroke-width="1"/>
+  <polygon points="594,384 640,358 640,378 594,404" fill="#44596A" fill-opacity="0.82" stroke="#777064" stroke-width="1"/>
+  <polygon points="566,368 594,384 594,404 566,388" fill="#303E48" fill-opacity="0.86" stroke="#777064" stroke-width="1"/>
+</g>
+
+<g id="reusable-component-3">
+  <polygon points="622,401 668,375 696,391 650,417" fill="#526979" fill-opacity="0.76" stroke="#777064" stroke-width="1"/>
+  <polygon points="650,417 696,391 696,411 650,437" fill="#44596A" fill-opacity="0.80" stroke="#777064" stroke-width="1"/>
+  <polygon points="622,401 650,417 650,437 622,421" fill="#303E48" fill-opacity="0.84" stroke="#777064" stroke-width="1"/>
+</g>
+
+<g id="shared-source-node" fill="none" stroke="#777064" stroke-width="1" stroke-opacity="0.32">
+  <circle cx="574" cy="315" r="3" fill="#777064" fill-opacity="0.38" stroke="none"/>
+  <path d="M574 318 L574 329 L547 344"/>
+  <path d="M574 329 L603 346"/>
+  <path d="M603 346 L603 359"/>
+  <path d="M603 346 L642 368"/>
+</g>
+```
+
+  </g>
+
+  <g id="feature-component" filter="url(#contactShadow)">
+    <ellipse cx="587" cy="380" rx="17" ry="10" fill="url(#amberGlow)" filter="url(#microGlow)"/>
+
+```
+<polygon
+  points="466,355 611,274 698,325 553,406"
+  fill="url(#featureTop)"
+  fill-opacity="0.94"
+  stroke="#9B7750"
+  stroke-width="1"
+/>
+<polygon
+  points="553,406 698,325 698,356 553,437"
+  fill="#C9892B"
+  fill-opacity="0.92"
+  stroke="#8E6C43"
+  stroke-width="1"
+/>
+<polygon
+  points="466,355 553,406 553,437 466,386"
+  fill="#8E6125"
+  fill-opacity="0.93"
+  stroke="#7F6547"
+  stroke-width="1"
+/>
+
+<path d="M490 358 L566 316" stroke="#F0C16E" stroke-width="0.9" stroke-opacity="0.22"/>
+<path d="M520 376 L607 327" stroke="#F0C16E" stroke-width="0.9" stroke-opacity="0.18"/>
+
+<circle cx="588" cy="320" r="4" fill="#E3AD45"/>
+<circle cx="588" cy="320" r="8" fill="none" stroke="#E3AD45" stroke-width="0.8" stroke-opacity="0.24"/>
+```
+
+  </g>
+
+  <g id="upper-component-layer">
+    <g id="upper-slab-a">
+      <polygon points="423,332 493,293 534,317 464,356" fill="#37342D" fill-opacity="0.62" stroke="#777064" stroke-width="1"/>
+      <polygon points="464,356 534,317 534,328 464,367" fill="#292822" fill-opacity="0.74" stroke="#777064" stroke-width="1"/>
+      <polygon points="423,332 464,356 464,367 423,343" fill="#181816" fill-opacity="0.76" stroke="#777064" stroke-width="1"/>
+    </g>
+
+```
+<g id="upper-slab-b">
+  <polygon points="693,271 754,237 791,258 730,292" fill="#37342D" fill-opacity="0.55" stroke="#777064" stroke-width="1"/>
+  <polygon points="730,292 791,258 791,269 730,303" fill="#292822" fill-opacity="0.67" stroke="#777064" stroke-width="1"/>
+  <polygon points="693,271 730,292 730,303 693,282" fill="#181816" fill-opacity="0.72" stroke="#777064" stroke-width="1"/>
+</g>
+
+<g stroke="#777064" stroke-width="1" stroke-opacity="0.25">
+  <line x1="446" y1="351" x2="446" y2="380"/>
+  <line x1="746" y1="291" x2="746" y2="319"/>
+</g>
+```
+
+  </g>
+
+  <g id="logic-modules" filter="url(#contactShadow)">
+    <g id="logic-slate">
+      <polygon points="261,371 322,337 361,359 300,394" fill="#526979" fill-opacity="0.78" stroke="#777064" stroke-width="1"/>
+      <polygon points="300,394 361,359 361,372 300,407" fill="#44596A" fill-opacity="0.82" stroke="#777064" stroke-width="1"/>
+      <polygon points="261,371 300,394 300,407 261,384" fill="#303E48" fill-opacity="0.86" stroke="#777064" stroke-width="1"/>
+      <path d="M282 373 L321 351" stroke="#8898A3" stroke-width="0.8" stroke-opacity="0.28"/>
+    </g>
+
+```
+<g id="logic-bronze">
+  <polygon points="230,443 291,409 330,431 269,466" fill="#8B7952" fill-opacity="0.76" stroke="#777064" stroke-width="1"/>
+  <polygon points="269,466 330,431 330,444 269,479" fill="#766643" fill-opacity="0.82" stroke="#777064" stroke-width="1"/>
+  <polygon points="230,443 269,466 269,479 230,456" fill="#594C35" fill-opacity="0.88" stroke="#777064" stroke-width="1"/>
+  <path d="M251 445 L290 423" stroke="#A0916E" stroke-width="0.8" stroke-opacity="0.25"/>
+</g>
+
+<g id="logic-terracotta">
+  <polygon points="199,516 260,482 299,504 238,539" fill="#9D6252" fill-opacity="0.74" stroke="#777064" stroke-width="1"/>
+  <polygon points="238,539 299,504 299,517 238,552" fill="#8A4F40" fill-opacity="0.82" stroke="#777064" stroke-width="1"/>
+  <polygon points="199,516 238,539 238,552 199,529" fill="#60372F" fill-opacity="0.88" stroke="#777064" stroke-width="1"/>
+  <path d="M220 518 L259 496" stroke="#AD7B6D" stroke-width="0.8" stroke-opacity="0.25"/>
+</g>
+
+<g fill="none" stroke="#777064" stroke-width="1" stroke-opacity="0.27">
+  <path d="M361 367 L390 384 L390 402"/>
+  <path d="M330 439 L362 457 L390 441"/>
+  <path d="M299 512 L338 534 L366 518"/>
+</g>
+```
+
+  </g>
+
+  <g id="api-module" filter="url(#contactShadow)">
+    <polygon
+      points="939,245 979,268 943,289 903,266"
+      fill="#9D6252"
+      fill-opacity="0.82"
+      stroke="#777064"
+      stroke-width="1"
+    />
+    <polygon
+      points="903,266 943,289 943,347 903,324"
+      fill="#60372F"
+      fill-opacity="0.85"
+      stroke="#777064"
+      stroke-width="1"
+    />
+    <polygon
+      points="943,289 979,268 979,326 943,347"
+      fill="#8A4F40"
+      fill-opacity="0.82"
+      stroke="#777064"
+      stroke-width="1"
+    />
+
+```
+<circle cx="942" cy="278" r="2.7" fill="#D8A043" fill-opacity="0.72"/>
+<path d="M916 293 L932 302" stroke="#B78B7C" stroke-width="0.8" stroke-opacity="0.26"/>
+<path d="M916 301 L932 310" stroke="#B78B7C" stroke-width="0.8" stroke-opacity="0.22"/>
+```
+
+  </g>
+
+  <g id="data-connections" fill="none">
+    <path
+      d="M903 294 L866 315 L866 344 L831 364 L831 386 L799 404"
+      stroke="#B18A50"
+      stroke-width="1.5"
+      stroke-opacity="0.55"
+      stroke-linejoin="miter"
+    />
+
+```
+<path
+  d="M866 315 L846 303"
+  stroke="#777064"
+  stroke-width="1"
+  stroke-opacity="0.22"
+/>
+
+<g fill="#D8A043" stroke="none">
+  <circle cx="887" cy="303" r="2.5" opacity="0.72"/>
+  <circle cx="865" cy="332" r="2.3" opacity="0.68"/>
+  <circle cx="844" cy="357" r="2.4" opacity="0.66"/>
+  <circle cx="821" cy="392" r="2.2" opacity="0.62"/>
+  <circle cx="803" cy="402" r="2.1" opacity="0.58"/>
+</g>
+```
+
+  </g>
+
+  <g id="shell-to-state-connectors" stroke="#777064" stroke-width="1" stroke-opacity="0.30" fill="none">
+    <path d="M461 484 L461 528 L482 540"/>
+    <path d="M607 489 L607 539 L627 550"/>
+    <path d="M773 397 L773 448 L793 459"/>
+  </g>
+
+  <g id="technical-details">
+    <g fill="#D8A043">
+      <circle cx="357" cy="406" r="2.4" opacity="0.68"/>
+      <circle cx="545" cy="516" r="2.5" opacity="0.66"/>
+      <circle cx="877" cy="330" r="2.4" opacity="0.70"/>
+      <circle cx="444" cy="566" r="2.2" opacity="0.52"/>
+      <circle cx="847" cy="451" r="2.2" opacity="0.55"/>
+      <circle cx="321" cy="501" r="2" opacity="0.55"/>
+      <circle cx="829" cy="477" r="2" opacity="0.55"/>
+    </g>
+
+```
+<g fill="none" stroke="#777064" stroke-width="0.9" stroke-opacity="0.28">
+  <path d="M375 394 L387 387"/>
+  <path d="M525 510 L537 503"/>
+  <path d="M855 335 L866 329"/>
+  <path d="M446 548 L457 554"/>
+  <path d="M825 451 L837 444"/>
+
+  <rect x="395" y="444" width="8" height="4" transform="rotate(-29 395 444)"/>
+  <rect x="775" y="355" width="8" height="4" transform="rotate(-29 775 355)"/>
+  <rect x="621" y="604" width="8" height="4" transform="rotate(-29 621 604)"/>
+</g>
+```
+
+  </g>
+
+  <g id="annotations" font-family="monospace" font-size="8" letter-spacing="2" fill="#777064" fill-opacity="0.45">
+    <text x="160" y="566">ROUTE</text>
+    <text x="298" y="327">UI</text>
+    <text x="410" y="651">STATE</text>
+    <text x="890" y="225">API</text>
+    <text x="725" y="480">COMPONENTS</text>
+  </g>
+</svg>

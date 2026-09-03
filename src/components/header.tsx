@@ -152,7 +152,7 @@ const MobileMenu = ({
         menuPanelClosing ? 'mobile-menu-exit' : ''
       }`}
     >
-      <div className="mx-auto flex h-full w-full max-w-[95vw] flex-col overflow-y-auto overscroll-contain px-4 pt-35 pb-8">
+      <div className="mx-auto flex h-full w-full max-w-[95vw] flex-col overflow-y-auto overscroll-contain px-4 pt-20 pb-8">
         <ul className="space-y-6">
           {routes.map((route, index) => (
             <li

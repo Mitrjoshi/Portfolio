@@ -1,0 +1,532 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+  <defs>
+    <linearGradient id="platformTopGradient" x1="360" y1="310" x2="820" y2="620" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#484437" stop-opacity="0.62"/>
+      <stop offset="0.55" stop-color="#292822" stop-opacity="0.76"/>
+      <stop offset="1" stop-color="#161613" stop-opacity="0.82"/>
+    </linearGradient>
+
+```
+<linearGradient id="amberFaceGradient" x1="620" y1="420" x2="690" y2="550" gradientUnits="userSpaceOnUse">
+  <stop offset="0" stop-color="#E1A43B"/>
+  <stop offset="1" stop-color="#C98726"/>
+</linearGradient>
+
+<radialGradient id="nodeGlowGradient">
+  <stop offset="0" stop-color="#D8A043" stop-opacity="0.30"/>
+  <stop offset="0.45" stop-color="#D8A043" stop-opacity="0.10"/>
+  <stop offset="1" stop-color="#D8A043" stop-opacity="0"/>
+</radialGradient>
+
+<filter id="tinyAmberGlow" x="-200%" y="-200%" width="500%" height="500%">
+  <feGaussianBlur stdDeviation="3.5"/>
+</filter>
+
+<filter id="microShadow" x="-20%" y="-20%" width="140%" height="150%">
+  <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#161613" flood-opacity="0.22"/>
+</filter>
+
+<clipPath id="platformTopClip">
+  <polygon points="600,270 930,455 600,640 270,455"/>
+</clipPath>
+```
+
+  </defs>
+
+  <g id="technical-guides" stroke="#777064" stroke-width="1" stroke-opacity="0.24" fill="none">
+    <path d="M270 455 L213 422 L176 422"/>
+    <path d="M930 455 L984 424 L1031 424"/>
+    <path d="M600 640 L600 698 L646 724"/>
+    <path d="M422 355 L393 338 L359 338"/>
+    <path d="M790 535 L835 560 L879 560"/>
+  </g>
+
+  <g id="platform">
+    <polygon
+      points="600,305 930,490 600,675 270,490"
+      fill="#161613"
+      fill-opacity="0.52"
+      stroke="#777064"
+      stroke-width="1"
+      stroke-opacity="0.62"
+    />
+
+```
+<polygon
+  points="270,474 600,659 600,675 270,490"
+  fill="#292822"
+  fill-opacity="0.68"
+  stroke="#777064"
+  stroke-width="1"
+  stroke-opacity="0.48"
+/>
+
+<polygon
+  points="600,659 930,474 930,490 600,675"
+  fill="#484437"
+  fill-opacity="0.55"
+  stroke="#777064"
+  stroke-width="1"
+  stroke-opacity="0.48"
+/>
+
+<polygon
+  points="600,286 930,471 600,656 270,471"
+  fill="#292822"
+  fill-opacity="0.42"
+  stroke="#777064"
+  stroke-width="1"
+  stroke-opacity="0.58"
+/>
+
+<polygon
+  points="270,455 600,640 600,656 270,471"
+  fill="#161613"
+  fill-opacity="0.72"
+  stroke="#777064"
+  stroke-width="1"
+  stroke-opacity="0.55"
+/>
+
+<polygon
+  points="600,640 930,455 930,471 600,656"
+  fill="#615949"
+  fill-opacity="0.38"
+  stroke="#777064"
+  stroke-width="1"
+  stroke-opacity="0.55"
+/>
+
+<polygon
+  points="600,270 930,455 600,640 270,455"
+  fill="url(#platformTopGradient)"
+  stroke="#777064"
+  stroke-width="1.2"
+  stroke-opacity="0.74"
+/>
+
+<polyline
+  points="600,281 910,455 600,629 290,455 600,281"
+  stroke="#777064"
+  stroke-width="1"
+  stroke-opacity="0.17"
+  fill="none"
+/>
+```
+
+  </g>
+
+  <g id="circuit-pattern" clip-path="url(#platformTopClip)" stroke="#777064" stroke-width="1.3" stroke-opacity="0.35" fill="none">
+    <path d="M330 447 L403 406 L451 433 L502 404 L547 429"/>
+    <path d="M354 487 L420 450 L463 474 L514 445 L563 473"/>
+    <path d="M649 333 L700 362 L700 391 L758 424 L811 394"/>
+    <path d="M722 496 L768 470 L817 498 L870 468"/>
+    <path d="M514 578 L557 554 L557 522 L606 494"/>
+    <path d="M441 342 L478 363 L519 340 L559 362"/>
+    <path d="M625 579 L669 554 L713 579"/>
+    <path d="M324 414 L355 431 L355 456"/>
+    <path d="M845 440 L874 457 L874 481"/>
+    <path d="M422 527 L456 547 L496 524"/>
+    <path d="M590 313 L590 341 L620 359"/>
+    <path d="M735 392 L766 375 L800 394"/>
+    <path d="M386 465 L386 492 L417 510"/>
+    <path d="M664 519 L696 538 L696 566"/>
+
+```
+<g stroke-opacity="0.22">
+  <path d="M301 454 L600 287"/>
+  <path d="M601 624 L898 457"/>
+  <path d="M352 502 L594 638"/>
+  <path d="M607 276 L847 411"/>
+</g>
+```
+
+  </g>
+
+  <g id="platform-micro-details" stroke="#777064" fill="none">
+    <path d="M303 457 L324 469" stroke-width="1" stroke-opacity="0.45"/>
+    <path d="M883 449 L904 461" stroke-width="1" stroke-opacity="0.45"/>
+    <path d="M595 616 L595 631" stroke-width="1" stroke-opacity="0.45"/>
+    <rect x="335" y="469" width="9" height="4" transform="rotate(29 335 469)" stroke-width="0.8" stroke-opacity="0.38"/>
+    <rect x="834" y="430" width="9" height="4" transform="rotate(-29 834 430)" stroke-width="0.8" stroke-opacity="0.38"/>
+  </g>
+
+  <g id="modules" filter="url(#microShadow)">
+    <g id="module-left-rear">
+      <polygon
+        points="471,350 539,388 487,418 419,380"
+        fill="#484437"
+        fill-opacity="0.72"
+        stroke="#777064"
+        stroke-width="1"
+      />
+      <polygon
+        points="419,380 487,418 487,449 419,411"
+        fill="#292822"
+        fill-opacity="0.78"
+        stroke="#777064"
+        stroke-width="1"
+      />
+      <polygon
+        points="487,418 539,388 539,419 487,449"
+        fill="#615949"
+        fill-opacity="0.58"
+        stroke="#777064"
+        stroke-width="1"
+      />
+    </g>
+
+```
+<g id="module-left-front">
+  <polygon
+    points="405,439 476,479 426,508 355,468"
+    fill="#37342D"
+    fill-opacity="0.78"
+    stroke="#777064"
+    stroke-width="1"
+  />
+  <polygon
+    points="355,468 426,508 426,541 355,501"
+    fill="#292822"
+    fill-opacity="0.82"
+    stroke="#777064"
+    stroke-width="1"
+  />
+  <polygon
+    points="426,508 476,479 476,512 426,541"
+    fill="#615949"
+    fill-opacity="0.52"
+    stroke="#777064"
+    stroke-width="1"
+  />
+  <line x1="371" y1="487" x2="410" y2="509" stroke="#777064" stroke-width="1" stroke-opacity="0.35"/>
+</g>
+
+<g id="module-center-rear">
+  <polygon
+    points="599,334 661,369 614,396 552,361"
+    fill="#484437"
+    fill-opacity="0.82"
+    stroke="#777064"
+    stroke-width="1"
+  />
+  <polygon
+    points="552,361 614,396 614,432 552,397"
+    fill="#292822"
+    fill-opacity="0.78"
+    stroke="#777064"
+    stroke-width="1"
+  />
+  <polygon
+    points="614,396 661,369 661,405 614,432"
+    fill="#615949"
+    fill-opacity="0.60"
+    stroke="#777064"
+    stroke-width="1"
+  />
+</g>
+
+<g id="module-right-rear">
+  <polygon
+    points="727,390 796,429 746,458 677,419"
+    fill="#484437"
+    fill-opacity="0.68"
+    stroke="#777064"
+    stroke-width="1"
+  />
+  <polygon
+    points="677,419 746,458 746,489 677,450"
+    fill="#292822"
+    fill-opacity="0.80"
+    stroke="#777064"
+    stroke-width="1"
+  />
+  <polygon
+    points="746,458 796,429 796,460 746,489"
+    fill="#615949"
+    fill-opacity="0.60"
+    stroke="#777064"
+    stroke-width="1"
+  />
+</g>
+
+<g id="module-right-front">
+  <polygon
+    points="763,493 826,528 779,555 716,520"
+    fill="#37342D"
+    fill-opacity="0.76"
+    stroke="#777064"
+    stroke-width="1"
+  />
+  <polygon
+    points="716,520 779,555 779,588 716,553"
+    fill="#292822"
+    fill-opacity="0.82"
+    stroke="#777064"
+    stroke-width="1"
+  />
+  <polygon
+    points="779,555 826,528 826,561 779,588"
+    fill="#484437"
+    fill-opacity="0.64"
+    stroke="#777064"
+    stroke-width="1"
+  />
+</g>
+
+<g id="module-front-low">
+  <polygon
+    points="545,533 615,572 566,600 496,561"
+    fill="#484437"
+    fill-opacity="0.62"
+    stroke="#777064"
+    stroke-width="1"
+  />
+  <polygon
+    points="496,561 566,600 566,626 496,587"
+    fill="#292822"
+    fill-opacity="0.82"
+    stroke="#777064"
+    stroke-width="1"
+  />
+  <polygon
+    points="566,600 615,572 615,598 566,626"
+    fill="#615949"
+    fill-opacity="0.53"
+    stroke="#777064"
+    stroke-width="1"
+  />
+</g>
+```
+
+  </g>
+
+  <g id="main-cube" filter="url(#microShadow)">
+    <ellipse
+      cx="637"
+      cy="421"
+      rx="19"
+      ry="11"
+      fill="url(#nodeGlowGradient)"
+      filter="url(#tinyAmberGlow)"
+    />
+
+```
+<polygon
+  points="637,387 711,429 646,466 572,424"
+  fill="#171713"
+  stroke="#777064"
+  stroke-width="1.2"
+  stroke-opacity="0.82"
+/>
+
+<polygon
+  points="572,424 646,466 646,558 572,516"
+  fill="#37342D"
+  stroke="#777064"
+  stroke-width="1.2"
+  stroke-opacity="0.84"
+/>
+
+<polygon
+  points="646,466 711,429 711,521 646,558"
+  fill="url(#amberFaceGradient)"
+  fill-opacity="0.96"
+  stroke="#8B7858"
+  stroke-width="1.2"
+/>
+
+<path
+  d="M663 475 L694 457 L694 511 L663 529 Z"
+  fill="#D99B32"
+  fill-opacity="0.34"
+  stroke="#F0BE62"
+  stroke-opacity="0.18"
+  stroke-width="0.9"
+/>
+
+<circle cx="637" cy="421" r="3.5" fill="#D8A043"/>
+<circle cx="637" cy="421" r="7.5" fill="none" stroke="#D8A043" stroke-width="0.8" stroke-opacity="0.22"/>
+
+<path d="M590 436 L627 457" stroke="#777064" stroke-width="1" stroke-opacity="0.30"/>
+<path d="M590 444 L627 465" stroke="#777064" stroke-width="1" stroke-opacity="0.18"/>
+```
+
+  </g>
+
+  <g id="secondary-details">
+    <g id="thin-plate-one">
+      <polygon
+        points="677,553 716,575 682,595 643,573"
+        fill="#484437"
+        fill-opacity="0.48"
+        stroke="#777064"
+        stroke-width="1"
+        stroke-opacity="0.65"
+      />
+      <polygon
+        points="643,573 682,595 682,603 643,581"
+        fill="#292822"
+        fill-opacity="0.62"
+        stroke="#777064"
+        stroke-width="1"
+        stroke-opacity="0.50"
+      />
+      <polygon
+        points="682,595 716,575 716,583 682,603"
+        fill="#615949"
+        fill-opacity="0.42"
+        stroke="#777064"
+        stroke-width="1"
+        stroke-opacity="0.50"
+      />
+    </g>
+
+```
+<g id="thin-plate-two">
+  <polygon
+    points="473,399 504,417 477,433 446,415"
+    fill="#615949"
+    fill-opacity="0.45"
+    stroke="#777064"
+    stroke-width="1"
+    stroke-opacity="0.58"
+  />
+  <polygon
+    points="446,415 477,433 477,441 446,423"
+    fill="#292822"
+    fill-opacity="0.68"
+    stroke="#777064"
+    stroke-width="1"
+    stroke-opacity="0.45"
+  />
+  <polygon
+    points="477,433 504,417 504,425 477,441"
+    fill="#484437"
+    fill-opacity="0.48"
+    stroke="#777064"
+    stroke-width="1"
+    stroke-opacity="0.45"
+  />
+</g>
+```
+
+  </g>
+
+  <g id="floating-cubes" stroke="#777064" stroke-width="1" stroke-opacity="0.72">
+    <g id="floating-cube-blue">
+      <polygon
+        points="414,253 445,271 417,287 386,269"
+        fill="#536B7C"
+        fill-opacity="0.88"
+      />
+      <polygon
+        points="386,269 417,287 417,321 386,303"
+        fill="#354857"
+        fill-opacity="0.92"
+      />
+      <polygon
+        points="417,287 445,271 445,305 417,321"
+        fill="#44596A"
+        fill-opacity="0.94"
+      />
+      <path d="M401 278 L417 287 L417 306" fill="none" stroke-opacity="0.25"/>
+    </g>
+
+```
+<g id="floating-cube-bronze">
+  <polygon
+    points="355,198 386,216 358,232 327,214"
+    fill="#8B7952"
+    fill-opacity="0.88"
+  />
+  <polygon
+    points="327,214 358,232 358,266 327,248"
+    fill="#5E5138"
+    fill-opacity="0.92"
+  />
+  <polygon
+    points="358,232 386,216 386,250 358,266"
+    fill="#766643"
+    fill-opacity="0.95"
+  />
+</g>
+
+<g id="floating-cube-terracotta">
+  <polygon
+    points="298,143 329,161 301,177 270,159"
+    fill="#9B5E4C"
+    fill-opacity="0.90"
+  />
+  <polygon
+    points="270,159 301,177 301,211 270,193"
+    fill="#693D34"
+    fill-opacity="0.94"
+  />
+  <polygon
+    points="301,177 329,161 329,195 301,211"
+    fill="#8A4F40"
+    fill-opacity="0.96"
+  />
+</g>
+
+<g fill="none" stroke="#777064" stroke-width="1" stroke-opacity="0.18">
+  <path d="M401 322 L448 349"/>
+  <path d="M345 266 L386 290"/>
+  <path d="M288 211 L327 234"/>
+</g>
+```
+
+  </g>
+
+  <g id="nodes" fill="#D8A043">
+    <circle cx="305" cy="454" r="2.7" opacity="0.72"/>
+    <circle cx="337" cy="505" r="2.2" opacity="0.64"/>
+    <circle cx="391" cy="557" r="3" opacity="0.76"/>
+    <circle cx="480" cy="606" r="2.4" opacity="0.64"/>
+    <circle cx="596" cy="630" r="3" opacity="0.78"/>
+    <circle cx="704" cy="584" r="2.3" opacity="0.62"/>
+    <circle cx="798" cy="530" r="2.8" opacity="0.74"/>
+    <circle cx="884" cy="478" r="2.3" opacity="0.68"/>
+    <circle cx="898" cy="442" r="3" opacity="0.75"/>
+    <circle cx="831" cy="390" r="2.1" opacity="0.56"/>
+    <circle cx="713" cy="325" r="2.6" opacity="0.70"/>
+    <circle cx="506" cy="319" r="2.3" opacity="0.61"/>
+    <circle cx="350" cy="408" r="2.5" opacity="0.66"/>
+  </g>
+
+  <g id="node-rings" fill="none" stroke="#D8A043" stroke-width="0.8" stroke-opacity="0.25">
+    <circle cx="305" cy="454" r="7"/>
+    <circle cx="596" cy="630" r="7"/>
+    <circle cx="898" cy="442" r="7"/>
+  </g>
+
+  <g id="annotations" font-family="monospace" fill="#777064">
+    <text
+      x="175"
+      y="416"
+      font-size="9"
+      letter-spacing="2"
+      fill-opacity="0.46"
+    >TOKENS</text>
+
+```
+<text
+  x="992"
+  y="419"
+  font-size="9"
+  letter-spacing="2"
+  fill-opacity="0.43"
+>12 PARTS</text>
+
+<text
+  x="647"
+  y="734"
+  font-size="8"
+  letter-spacing="2"
+  fill-opacity="0.36"
+>SYS / 04</text>
+```
+
+  </g>
+</svg>

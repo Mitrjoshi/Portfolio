@@ -232,7 +232,8 @@
 
 .line-background-inner {
   height: 100%;
-  background-color: var(--background);
+
+  background-color: var(--background-secondary);
 
   background-image: repeating-linear-gradient(
     to bottom,

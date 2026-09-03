@@ -16,7 +16,7 @@ const RootLayout = () => (
 
       <Outlet />
 
-      <div className="bg-background-secondary">
+      <div className="bg-background border-t">
         <Footer />
       </div>
       {/* <TanStackRouterDevtools /> */}

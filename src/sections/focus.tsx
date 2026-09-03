@@ -3,6 +3,8 @@ import { BorderContainer } from '../components/border-container'
 import { Container } from '../components/container'
 import { useState } from 'react'
 import { RevealText } from '../components/reveal-text'
+import { InView } from '../components/in-view'
+import { AnimatePresence, motion } from 'motion/react'
 
 export const Focus = () => {
   return (
@@ -21,10 +23,12 @@ export const Focus = () => {
                 </p>,
               ]}
             />
-            <p className="text-secondary slide-up-fade-in mx-auto mt-4 text-center text-lg md:max-w-[40%]">
-              Ten years of shipping, settled into three tracks that sharpen each
-              other every day.
-            </p>
+            <InView>
+              <p className="text-secondary slide-up-fade-in mx-auto mt-4 text-center text-lg lg:max-w-[40%]">
+                Ten years of shipping, settled into three tracks that sharpen
+                each other every day.
+              </p>
+            </InView>
           </div>
 
           <div className="mt-10 md:mt-20">
@@ -38,22 +42,22 @@ export const Focus = () => {
 
 const carouselItems = [
   {
-    title: 'Product Design',
+    title: 'React Development',
     description:
-      'Most aspects of design and business, end-to-end, while shipping a product.',
-    duration: '10+ YEARS',
+      'Building scalable, responsive, and high-performance web applications with React and TypeScript.',
+    duration: '3+ YEARS',
   },
   {
-    title: 'Frontend Development',
+    title: 'Frontend Engineering',
     description:
-      'Building responsive, accessible, and high-performance interfaces for modern products.',
-    duration: '8+ YEARS',
+      'Creating maintainable frontend architectures, reusable components, and seamless API integrations.',
+    duration: '4+ YEARS',
   },
   {
     title: 'Creative Development',
     description:
-      'Blending interaction, motion, and technology to create polished digital experiences.',
-    duration: '6+ YEARS',
+      'Crafting interactive interfaces with smooth animations, modern UI patterns, and engaging digital experiences.',
+    duration: '4+ YEARS',
   },
 ]
 
@@ -71,8 +75,24 @@ const Carousel = () => {
   }
 
   return (
-    <div className="mx-auto grid max-w-[50%] md:grid-cols-2">
-      <div />
+    <div className="mx-auto grid items-center gap-10 md:grid-cols-2 lg:max-w-[75%]">
+      <div className="relative">
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={activeIndex}
+            src={`/focus/focus_${activeIndex + 1}.svg`}
+            className="w-full object-contain"
+            alt={activeItem.title}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{
+              duration: 0.35,
+              ease: 'easeInOut',
+            }}
+          />
+        </AnimatePresence>
+      </div>
 
       <div className="space-y-6 text-center md:text-left">
         <div key={activeIndex} className="space-y-6">

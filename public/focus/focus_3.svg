@@ -1,0 +1,515 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" fill="none">
+  <defs>
+    <linearGradient id="hubTopGradient" x1="500" y1="350" x2="690" y2="455" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#37342D" stop-opacity="0.78"/>
+      <stop offset="1" stop-color="#292822" stop-opacity="0.62"/>
+    </linearGradient>
+
+```
+<linearGradient id="amberPlateGradient" x1="535" y1="348" x2="665" y2="430" gradientUnits="userSpaceOnUse">
+  <stop offset="0" stop-color="#E0AA4C"/>
+  <stop offset="1" stop-color="#D99B32"/>
+</linearGradient>
+
+<linearGradient id="experimentGradient" x1="800" y1="210" x2="930" y2="320" gradientUnits="userSpaceOnUse">
+  <stop offset="0" stop-color="#526979" stop-opacity="0.5"/>
+  <stop offset="1" stop-color="#44596A" stop-opacity="0.24"/>
+</linearGradient>
+
+<radialGradient id="interactionGlow">
+  <stop offset="0" stop-color="#E3AD45" stop-opacity="0.3"/>
+  <stop offset="0.42" stop-color="#E3AD45" stop-opacity="0.09"/>
+  <stop offset="1" stop-color="#E3AD45" stop-opacity="0"/>
+</radialGradient>
+
+<filter id="tinyGlow" x="-250%" y="-250%" width="600%" height="600%">
+  <feGaussianBlur stdDeviation="3.5"/>
+</filter>
+
+<filter id="microShadow" x="-25%" y="-25%" width="150%" height="160%">
+  <feDropShadow dx="0" dy="2.5" stdDeviation="2.3" flood-color="#161613" flood-opacity="0.16"/>
+</filter>
+```
+
+  </defs>
+
+  <g id="motion-paths" fill="none" stroke-linecap="round">
+    <path
+      d="M275 574 C354 518 405 524 462 474 C511 431 529 374 594 349"
+      stroke="#777064"
+      stroke-width="1.25"
+      stroke-opacity="0.28"
+    />
+    <path
+      d="M360 307 C433 258 503 267 557 309 C610 351 654 332 718 290 C773 254 827 248 895 278"
+      stroke="#777064"
+      stroke-width="1.25"
+      stroke-opacity="0.25"
+    />
+    <path
+      d="M514 526 C584 569 669 564 729 519 C778 482 803 428 837 375"
+      stroke="#B18A50"
+      stroke-width="1.3"
+      stroke-opacity="0.40"
+    />
+    <path
+      d="M408 647 C505 678 594 661 646 610 C696 561 708 492 690 442"
+      stroke="#777064"
+      stroke-width="1.2"
+      stroke-opacity="0.22"
+    />
+    <path
+      d="M737 468 C800 442 864 454 916 498"
+      stroke="#777064"
+      stroke-width="1.1"
+      stroke-opacity="0.19"
+    />
+
+```
+<g stroke="#777064" stroke-width="0.8" stroke-opacity="0.22">
+  <line x1="448" y1="478" x2="433" y2="457"/>
+  <line x1="714" y1="294" x2="726" y2="274"/>
+  <line x1="727" y1="520" x2="744" y2="527"/>
+  <line x1="646" y1="610" x2="661" y2="620"/>
+</g>
+```
+
+  </g>
+
+  <g id="motion-trail-nodes">
+    <g fill="#D8A043">
+      <circle cx="306" cy="554" r="2.5" opacity="0.42"/>
+      <circle cx="350" cy="529" r="2.8" opacity="0.50"/>
+      <circle cx="405" cy="511" r="3" opacity="0.60"/>
+      <circle cx="459" cy="476" r="3.2" opacity="0.72"/>
+      <circle cx="511" cy="425" r="3.4" opacity="0.82"/>
+    </g>
+
+```
+<g fill="#777064">
+  <circle cx="401" cy="286" r="2.2" opacity="0.38"/>
+  <circle cx="469" cy="278" r="2.5" opacity="0.42"/>
+  <circle cx="536" cy="298" r="2.8" opacity="0.50"/>
+  <circle cx="603" cy="336" r="3" opacity="0.56"/>
+</g>
+
+<g fill="#44596A">
+  <circle cx="760" cy="492" r="2.6" opacity="0.52"/>
+  <circle cx="792" cy="454" r="2.8" opacity="0.60"/>
+  <circle cx="819" cy="409" r="3" opacity="0.68"/>
+  <circle cx="837" cy="375" r="3.2" opacity="0.74"/>
+</g>
+```
+
+  </g>
+
+  <g id="rear-interface-states" filter="url(#microShadow)">
+    <g id="rear-plane-upper-left">
+      <polygon points="350,280 448,225 507,259 409,314" fill="#37342D" fill-opacity="0.48" stroke="#777064" stroke-width="1"/>
+      <polygon points="409,314 507,259 507,272 409,327" fill="#292822" fill-opacity="0.58" stroke="#777064" stroke-width="1"/>
+      <polygon points="350,280 409,314 409,327 350,293" fill="#181816" fill-opacity="0.64" stroke="#777064" stroke-width="1"/>
+
+```
+  <line x1="378" y1="279" x2="421" y2="255" stroke="#777064" stroke-width="1" stroke-opacity="0.26"/>
+  <line x1="392" y1="288" x2="448" y2="256" stroke="#777064" stroke-width="1" stroke-opacity="0.18"/>
+  <circle cx="470" cy="266" r="3" fill="#44596A" fill-opacity="0.58"/>
+</g>
+
+<g id="rear-plane-upper-right">
+  <polygon points="704,245 800,191 856,223 760,278" fill="#484437" fill-opacity="0.44" stroke="#777064" stroke-width="1"/>
+  <polygon points="760,278 856,223 856,237 760,292" fill="#37342D" fill-opacity="0.52" stroke="#777064" stroke-width="1"/>
+  <polygon points="704,245 760,278 760,292 704,259" fill="#292822" fill-opacity="0.58" stroke="#777064" stroke-width="1"/>
+
+  <rect x="745" y="234" width="31" height="7" transform="rotate(-29 745 234)" fill="#766643" fill-opacity="0.35"/>
+  <rect x="778" y="222" width="18" height="18" transform="rotate(-29 778 222)" fill="#777064" fill-opacity="0.16"/>
+</g>
+```
+
+  </g>
+
+  <g id="interaction-core" filter="url(#microShadow)">
+    <g id="hub-lower-layer">
+      <polygon
+        points="493,454 574,408 654,454 573,501"
+        fill="#484437"
+        fill-opacity="0.48"
+        stroke="#777064"
+        stroke-width="1"
+        stroke-opacity="0.55"
+      />
+      <polygon
+        points="493,454 573,501 573,520 493,473"
+        fill="#292822"
+        fill-opacity="0.64"
+        stroke="#777064"
+        stroke-width="1"
+        stroke-opacity="0.46"
+      />
+      <polygon
+        points="573,501 654,454 654,473 573,520"
+        fill="#37342D"
+        fill-opacity="0.60"
+        stroke="#777064"
+        stroke-width="1"
+        stroke-opacity="0.46"
+      />
+    </g>
+
+```
+<g id="hub-middle-layer">
+  <polygon
+    points="502,419 579,376 655,420 578,464"
+    fill="#37342D"
+    fill-opacity="0.62"
+    stroke="#777064"
+    stroke-width="1"
+    stroke-opacity="0.60"
+  />
+  <polygon
+    points="502,419 578,464 578,482 502,437"
+    fill="#292822"
+    fill-opacity="0.72"
+    stroke="#777064"
+    stroke-width="1"
+    stroke-opacity="0.48"
+  />
+  <polygon
+    points="578,464 655,420 655,438 578,482"
+    fill="#484437"
+    fill-opacity="0.58"
+    stroke="#777064"
+    stroke-width="1"
+    stroke-opacity="0.48"
+  />
+</g>
+
+<g id="hub-top-layer">
+  <polygon
+    points="521,384 585,347 648,384 584,421"
+    fill="url(#hubTopGradient)"
+    stroke="#777064"
+    stroke-width="1.1"
+    stroke-opacity="0.66"
+  />
+  <polygon
+    points="521,384 584,421 584,436 521,399"
+    fill="#292822"
+    fill-opacity="0.78"
+    stroke="#777064"
+    stroke-width="1"
+    stroke-opacity="0.52"
+  />
+  <polygon
+    points="584,421 648,384 648,399 584,436"
+    fill="#37342D"
+    fill-opacity="0.70"
+    stroke="#777064"
+    stroke-width="1"
+    stroke-opacity="0.52"
+  />
+
+  <polygon
+    points="548,382 585,361 621,382 584,403"
+    fill="#161613"
+    fill-opacity="0.42"
+    stroke="#777064"
+    stroke-width="0.8"
+    stroke-opacity="0.34"
+  />
+</g>
+```
+
+  </g>
+
+  <g id="interaction-ripples" fill="none" stroke="#D8A043">
+    <ellipse cx="585" cy="398" rx="47" ry="25" stroke-width="1" stroke-opacity="0.32" transform="rotate(1 585 398)"/>
+    <ellipse cx="585" cy="398" rx="72" ry="38" stroke-width="1" stroke-opacity="0.20" transform="rotate(1 585 398)"/>
+    <ellipse cx="585" cy="398" rx="99" ry="52" stroke-width="1" stroke-opacity="0.12" transform="rotate(1 585 398)"/>
+  </g>
+
+  <g id="active-interaction" filter="url(#microShadow)">
+    <ellipse cx="620" cy="373" rx="24" ry="15" fill="url(#interactionGlow)" filter="url(#tinyGlow)"/>
+
+```
+<polygon
+  points="545,352 618,310 692,353 619,395"
+  fill="url(#amberPlateGradient)"
+  fill-opacity="0.94"
+  stroke="#9A7447"
+  stroke-width="1"
+/>
+<polygon
+  points="545,352 619,395 619,411 545,368"
+  fill="#895A23"
+  fill-opacity="0.93"
+  stroke="#7A5D3A"
+  stroke-width="1"
+/>
+<polygon
+  points="619,395 692,353 692,369 619,411"
+  fill="#B87826"
+  fill-opacity="0.94"
+  stroke="#8A653C"
+  stroke-width="1"
+/>
+
+<path d="M570 354 L620 326" stroke="#F1C06A" stroke-width="0.9" stroke-opacity="0.23"/>
+<path d="M592 366 L644 336" stroke="#F1C06A" stroke-width="0.9" stroke-opacity="0.16"/>
+
+<circle cx="650" cy="350" r="4" fill="#E3AD45"/>
+<circle cx="650" cy="350" r="8" fill="none" stroke="#E3AD45" stroke-width="0.8" stroke-opacity="0.22"/>
+```
+
+  </g>
+
+  <g id="floating-ui-planes" filter="url(#microShadow)">
+    <g id="ui-plane-left">
+      <polygon points="267,446 373,386 432,420 326,481" fill="#292822" fill-opacity="0.58" stroke="#777064" stroke-width="1"/>
+      <polygon points="326,481 432,420 432,438 326,499" fill="#37342D" fill-opacity="0.54" stroke="#777064" stroke-width="1"/>
+      <polygon points="267,446 326,481 326,499 267,464" fill="#181816" fill-opacity="0.70" stroke="#777064" stroke-width="1"/>
+
+```
+  <line x1="295" y1="445" x2="339" y2="420" stroke="#777064" stroke-width="1" stroke-opacity="0.27"/>
+  <rect x="315" y="447" width="25" height="13" transform="rotate(-29 315 447)" fill="#44596A" fill-opacity="0.31"/>
+  <rect x="346" y="428" width="25" height="13" transform="rotate(-29 346 428)" fill="#777064" fill-opacity="0.16"/>
+</g>
+
+<g id="ui-plane-right-center">
+  <polygon points="714,349 821,289 881,324 774,384" fill="#37342D" fill-opacity="0.55" stroke="#777064" stroke-width="1"/>
+  <polygon points="774,384 881,324 881,343 774,403" fill="#484437" fill-opacity="0.48" stroke="#777064" stroke-width="1"/>
+  <polygon points="714,349 774,384 774,403 714,368" fill="#292822" fill-opacity="0.68" stroke="#777064" stroke-width="1"/>
+
+  <line x1="741" y1="350" x2="793" y2="321" stroke="#777064" stroke-width="1" stroke-opacity="0.28"/>
+  <line x1="752" y1="357" x2="812" y2="323" stroke="#777064" stroke-width="1" stroke-opacity="0.20"/>
+  <circle cx="838" cy="328" r="3" fill="#766643" fill-opacity="0.58"/>
+</g>
+
+<g id="ui-plane-lower-right">
+  <polygon points="703,529 804,472 860,504 759,562" fill="#292822" fill-opacity="0.62" stroke="#777064" stroke-width="1"/>
+  <polygon points="759,562 860,504 860,522 759,580" fill="#37342D" fill-opacity="0.52" stroke="#777064" stroke-width="1"/>
+  <polygon points="703,529 759,562 759,580 703,547" fill="#181816" fill-opacity="0.70" stroke="#777064" stroke-width="1"/>
+
+  <rect x="734" y="524" width="44" height="18" transform="rotate(-29 734 524)" fill="#615949" fill-opacity="0.25"/>
+  <circle cx="817" cy="513" r="2.5" fill="#D8A043" fill-opacity="0.56"/>
+  <circle cx="826" cy="508" r="2.2" fill="#777064" fill-opacity="0.36"/>
+  <circle cx="835" cy="503" r="2" fill="#777064" fill-opacity="0.28"/>
+</g>
+
+<g id="ui-plane-lower-left">
+  <polygon points="367,566 456,515 506,544 417,595" fill="#484437" fill-opacity="0.46" stroke="#777064" stroke-width="1"/>
+  <polygon points="417,595 506,544 506,560 417,611" fill="#37342D" fill-opacity="0.48" stroke="#777064" stroke-width="1"/>
+  <polygon points="367,566 417,595 417,611 367,582" fill="#292822" fill-opacity="0.63" stroke="#777064" stroke-width="1"/>
+
+  <line x1="389" y1="565" x2="428" y2="543" stroke="#777064" stroke-width="1" stroke-opacity="0.24"/>
+  <line x1="396" y1="575" x2="450" y2="544" stroke="#777064" stroke-width="1" stroke-opacity="0.18"/>
+</g>
+
+<g id="ui-plane-foreground">
+  <polygon points="519,591 635,526 700,564 584,630" fill="#37342D" fill-opacity="0.66" stroke="#777064" stroke-width="1"/>
+  <polygon points="584,630 700,564 700,585 584,651" fill="#484437" fill-opacity="0.52" stroke="#777064" stroke-width="1"/>
+  <polygon points="519,591 584,630 584,651 519,612" fill="#292822" fill-opacity="0.74" stroke="#777064" stroke-width="1"/>
+
+  <rect x="555" y="583" width="43" height="8" transform="rotate(-29 555 583)" fill="#44596A" fill-opacity="0.31"/>
+  <rect x="583" y="587" width="29" height="18" transform="rotate(-29 583 587)" fill="#777064" fill-opacity="0.15"/>
+  <rect x="616" y="568" width="29" height="18" transform="rotate(-29 616 568)" fill="#777064" fill-opacity="0.14"/>
+</g>
+```
+
+  </g>
+
+  <g id="transition-sequence" filter="url(#microShadow)">
+    <g id="transition-state-01">
+      <polygon points="258,619 303,594 329,609 284,635" fill="#354752" fill-opacity="0.56" stroke="#777064" stroke-width="1"/>
+      <polygon points="284,635 329,609 329,620 284,646" fill="#303E48" fill-opacity="0.62" stroke="#777064" stroke-width="1"/>
+      <polygon points="258,619 284,635 284,646 258,630" fill="#26343D" fill-opacity="0.68" stroke="#777064" stroke-width="1"/>
+    </g>
+
+```
+<g id="transition-state-02">
+  <polygon points="316,601 367,572 397,589 346,618" fill="#44596A" fill-opacity="0.68" stroke="#777064" stroke-width="1"/>
+  <polygon points="346,618 397,589 397,602 346,631" fill="#394B59" fill-opacity="0.72" stroke="#777064" stroke-width="1"/>
+  <polygon points="316,601 346,618 346,631 316,614" fill="#303E48" fill-opacity="0.76" stroke="#777064" stroke-width="1"/>
+</g>
+
+<g id="transition-state-03">
+  <polygon points="385,574 447,539 483,560 421,595" fill="#526979" fill-opacity="0.80" stroke="#777064" stroke-width="1"/>
+  <polygon points="421,595 483,560 483,575 421,610" fill="#44596A" fill-opacity="0.82" stroke="#777064" stroke-width="1"/>
+  <polygon points="385,574 421,595 421,610 385,589" fill="#354752" fill-opacity="0.86" stroke="#777064" stroke-width="1"/>
+</g>
+
+<path
+  d="M276 606 C310 584 341 576 371 568 C400 560 424 546 451 533"
+  fill="none"
+  stroke="#777064"
+  stroke-width="1"
+  stroke-opacity="0.22"
+/>
+```
+
+  </g>
+
+  <g id="modern-ui-cluster">
+    <g transform="translate(687 444)">
+      <ellipse cx="0" cy="0" rx="13" ry="7" fill="#44596A" fill-opacity="0.72" stroke="#777064" stroke-width="0.9"/>
+      <ellipse cx="0" cy="0" rx="20" ry="11" fill="none" stroke="#44596A" stroke-width="0.8" stroke-opacity="0.22"/>
+    </g>
+
+```
+<g>
+  <polygon points="721,446 767,420 781,428 735,454" fill="#766643" fill-opacity="0.68" stroke="#777064" stroke-width="0.9"/>
+  <polygon points="735,454 781,428 781,436 735,462" fill="#625536" fill-opacity="0.72" stroke="#777064" stroke-width="0.9"/>
+  <polygon points="721,446 735,454 735,462 721,454" fill="#4D422F" fill-opacity="0.78" stroke="#777064" stroke-width="0.9"/>
+</g>
+
+<g>
+  <polygon points="748,475 787,453 812,467 773,490" fill="#9D6252" fill-opacity="0.68" stroke="#777064" stroke-width="0.9"/>
+  <polygon points="773,490 812,467 812,480 773,503" fill="#8A4F40" fill-opacity="0.74" stroke="#777064" stroke-width="0.9"/>
+  <polygon points="748,475 773,490 773,503 748,488" fill="#60372F" fill-opacity="0.80" stroke="#777064" stroke-width="0.9"/>
+</g>
+
+<path d="M700 440 C714 431 724 432 735 441" fill="none" stroke="#777064" stroke-width="0.9" stroke-opacity="0.21"/>
+<path d="M781 450 C792 455 798 458 804 466" fill="none" stroke="#777064" stroke-width="0.9" stroke-opacity="0.21"/>
+```
+
+  </g>
+
+  <g id="experimental-module">
+    <g transform="translate(856 253)">
+      <polygon
+        points="-64,0 0,-37 64,0 0,37"
+        fill="url(#experimentGradient)"
+        stroke="#44596A"
+        stroke-width="1.2"
+        stroke-opacity="0.58"
+      />
+
+```
+  <polygon
+    points="-50,3 5,-29 59,3 4,34"
+    fill="none"
+    stroke="#766643"
+    stroke-width="1.2"
+    stroke-opacity="0.52"
+  />
+
+  <polygon
+    points="-35,6 9,-20 51,4 7,29"
+    fill="#8A4F40"
+    fill-opacity="0.18"
+    stroke="#8A4F40"
+    stroke-width="1.1"
+    stroke-opacity="0.55"
+  />
+
+  <polygon
+    points="-21,8 10,-10 39,7 8,25"
+    fill="#292822"
+    fill-opacity="0.36"
+    stroke="#777064"
+    stroke-width="0.9"
+    stroke-opacity="0.34"
+  />
+
+  <circle cx="10" cy="7" r="3" fill="#D8A043" fill-opacity="0.58"/>
+</g>
+
+<g fill="none" stroke="#777064" stroke-width="0.8" stroke-opacity="0.18">
+  <path d="M792 253 L763 236"/>
+  <path d="M920 253 L950 236"/>
+  <path d="M856 216 L856 191"/>
+</g>
+```
+
+  </g>
+
+  <g id="timing-system">
+    <path d="M722 628 L859 551" stroke="#777064" stroke-width="1" stroke-opacity="0.25"/>
+    <g fill="#D8A043">
+      <circle cx="722" cy="628" r="2.4" opacity="0.50"/>
+      <circle cx="747" cy="614" r="2.5" opacity="0.58"/>
+      <circle cx="785" cy="592" r="2.7" opacity="0.66"/>
+      <circle cx="836" cy="563" r="3" opacity="0.76"/>
+      <circle cx="859" cy="551" r="2.4" opacity="0.50"/>
+    </g>
+
+```
+<g fill="none" stroke="#777064" stroke-width="0.9" stroke-opacity="0.18">
+  <line x1="722" y1="620" x2="722" y2="636"/>
+  <line x1="785" y1="584" x2="785" y2="600"/>
+  <line x1="859" y1="543" x2="859" y2="559"/>
+</g>
+```
+
+  </g>
+
+  <g id="easing-curve">
+    <path
+      d="M895 570 C915 570 912 532 944 532 C966 532 967 515 986 505"
+      fill="none"
+      stroke="#777064"
+      stroke-width="1"
+      stroke-opacity="0.34"
+    />
+
+```
+<g fill="#777064" fill-opacity="0.45">
+  <circle cx="895" cy="570" r="2"/>
+  <circle cx="944" cy="532" r="2"/>
+  <circle cx="986" cy="505" r="2"/>
+</g>
+
+<g stroke="#777064" stroke-width="0.8" stroke-opacity="0.18">
+  <line x1="895" y1="570" x2="916" y2="570"/>
+  <line x1="944" y1="532" x2="944" y2="513"/>
+  <line x1="986" y1="505" x2="970" y2="516"/>
+</g>
+```
+
+  </g>
+
+  <g id="technical-details">
+    <g fill="#777064" fill-opacity="0.45">
+      <circle cx="433" cy="457" r="2"/>
+      <circle cx="726" cy="274" r="2"/>
+      <circle cx="744" cy="527" r="2"/>
+      <circle cx="661" cy="620" r="2"/>
+      <circle cx="916" cy="498" r="2"/>
+    </g>
+
+```
+<g fill="none" stroke="#777064" stroke-width="1" stroke-opacity="0.15">
+  <path d="M211 519 L211 494 L238 479"/>
+  <path d="M973 340 L1002 323"/>
+  <path d="M286 682 L334 655"/>
+  <path d="M865 670 L909 645"/>
+
+  <path d="M238 479 L246 474 M238 479 L246 484"/>
+  <path d="M1002 323 L994 322 M1002 323 L998 330"/>
+  <path d="M334 655 L326 654 M334 655 L330 662"/>
+</g>
+
+<g stroke="#777064" stroke-width="0.8" stroke-opacity="0.22">
+  <line x1="484" y1="341" x2="496" y2="334"/>
+  <line x1="670" y1="426" x2="682" y2="419"/>
+  <line x1="318" y1="507" x2="330" y2="500"/>
+  <line x1="853" y1="442" x2="866" y2="434"/>
+</g>
+
+<g fill="#D8A043">
+  <circle cx="274" cy="574" r="2.3" opacity="0.55"/>
+  <circle cx="408" cy="647" r="2.2" opacity="0.50"/>
+  <circle cx="514" cy="526" r="2.4" opacity="0.58"/>
+  <circle cx="895" cy="278" r="2.4" opacity="0.52"/>
+</g>
+```
+
+  </g>
+
+  <g id="annotations" font-family="monospace" font-size="8" letter-spacing="2" fill="#777064" fill-opacity="0.42">
+    <text x="169" y="532">INPUT</text>
+    <text x="291" y="683">FRAME</text>
+    <text x="460" y="326">STATE</text>
+    <text x="741" y="652">MOTION</text>
+    <text x="934" y="589">EASE</text>
+  </g>
+</svg>

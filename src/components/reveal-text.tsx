@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { InView } from './in-view'
 
 type RevealTextProps = {
   lines: ReactNode[]
@@ -7,7 +8,7 @@ type RevealTextProps = {
 
 export const RevealText = ({ lines, delay = 0 }: RevealTextProps) => {
   return (
-    <div className="reveal-text">
+    <InView className="reveal-text">
       {lines.map((line, index) => (
         <div key={index} className="reveal-text-line">
           <div
@@ -20,6 +21,6 @@ export const RevealText = ({ lines, delay = 0 }: RevealTextProps) => {
           </div>
         </div>
       ))}
-    </div>
+    </InView>
   )
 }

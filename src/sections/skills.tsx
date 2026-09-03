@@ -1,6 +1,8 @@
 import { BorderContainer } from '../components/border-container'
 import { Container } from '../components/container'
 import { motion } from 'motion/react'
+import { RevealText } from '../components/reveal-text'
+import { InView } from '../components/in-view'
 
 const skills = [
   {
@@ -55,15 +57,24 @@ export const Skills = () => {
           </div>
 
           <div className="space-y-6">
-            <p className="text-4xl font-medium md:max-w-[40%]">
-              Built with a stack that values{' '}
-              <span className="text-secondary">speed, scale & craft</span>.
-            </p>
+            <InView>
+              <RevealText
+                lines={[
+                  <p className="text-4xl font-medium md:max-w-[40%]">
+                    Built with a stack that values{' '}
+                    <span className="text-secondary">speed, scale & craft</span>
+                    .
+                  </p>,
+                ]}
+              />
+            </InView>
 
-            <p className="text-secondary text-lg md:max-w-[40%]">
-              Not just a stack — a daily practice. These are the tools I rely on
-              to turn ideas into fast, polished, production-ready products.
-            </p>
+            <InView>
+              <p className="slide-up-fade-in text-secondary text-lg md:max-w-[40%]">
+                Not just a stack — a daily practice. These are the tools I rely
+                on to turn ideas into fast, polished, production-ready products.
+              </p>
+            </InView>
 
             <div className="grid grid-cols-5 gap-2 md:grid-cols-10">
               {skills.map((skill, i) => (
