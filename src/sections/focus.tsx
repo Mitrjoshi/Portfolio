@@ -5,20 +5,19 @@ import { useState } from 'react'
 import { RevealText } from '../components/reveal-text'
 import { InView } from '../components/in-view'
 import { AnimatePresence, motion } from 'motion/react'
+import { SectionAttribute } from '../components/section-attribute'
 
 export const Focus = () => {
   return (
     <BorderContainer>
       <Container className="corner-border-top-right relative border-x-0 border-t">
         <div className="p-5 py-20! md:p-10">
-          <div className="bg-primary text-background absolute top-0 left-0 w-fit px-3 py-1 text-xs font-medium tracking-widest">
-            Tracks
-          </div>
+          <SectionAttribute text="Tracks" />
 
           <div>
             <RevealText
               lines={[
-                <p className="text-center text-5xl font-medium">
+                <p className="text-center text-3xl font-medium md:text-6xl">
                   Primarily <span className="text-secondary">focused on</span>
                 </p>,
               ]}
@@ -76,13 +75,13 @@ const Carousel = () => {
 
   return (
     <div className="mx-auto grid items-center gap-10 md:grid-cols-2 lg:max-w-[75%]">
-      <div className="relative">
+      <div className="relative aspect-square w-full">
         <AnimatePresence mode="wait">
           <motion.img
             key={activeIndex}
             src={`/focus/focus_${activeIndex + 1}.svg`}
-            className="w-full object-contain"
             alt={activeItem.title}
+            className="absolute inset-0 h-full w-full object-contain"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

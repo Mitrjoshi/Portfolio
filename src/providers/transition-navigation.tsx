@@ -3,18 +3,36 @@
 import {
   createContext,
   useContext,
+  useRef,
   useState,
   type PropsWithChildren,
 } from 'react'
-import { useNavigate } from '@tanstack/react-router'
+import { useNavigate, useRouter } from '@tanstack/react-router'
 
 import ScreenTransition from '../components/screen-transition'
 
 export type RoutePath =
-  '/' | '/work' | '/projects' | '/profile' | '/contact' | '/privacy'
+  | '/'
+  | '/work'
+  | '/projects'
+  | '/projects/$title'
+  | '/profile'
+  | '/contact'
+  | '/privacy'
+
+type RouteParams = Record<string, string>
+
+type TransitionTarget = {
+  // path is null for back navigation — we don't know/need the
+  // destination path, we just replay browser history.
+  path: RoutePath | null
+  text: string
+  params?: RouteParams
+}
 
 type TransitionNavigationContextType = {
-  transitionTo: (path: RoutePath, text: string) => void
+  transitionTo: (path: RoutePath, text: string, params?: RouteParams) => void
+  transitionBack: (text: string) => void
   transitioning: boolean
 }
 
@@ -25,29 +43,39 @@ export const TransitionNavigationProvider = ({
   children,
 }: PropsWithChildren) => {
   const navigate = useNavigate()
+  const router = useRouter()
 
   const [transitioning, setTransitioning] = useState(false)
+  const [target, setTarget] = useState<TransitionTarget | null>(null)
 
-  const [target, setTarget] = useState<{
-    path: RoutePath
-    text: string
-  } | null>(null)
+  const transitioningRef = useRef(false)
 
-  const transitionTo = (path: RoutePath, text: string) => {
-    if (transitioning) return
+  const startTransition = (target: TransitionTarget) => {
+    if (transitioningRef.current) return
 
-    setTarget({
-      path,
-      text,
-    })
+    transitioningRef.current = true
 
+    setTarget(target)
     setTransitioning(true)
+  }
+
+  const transitionTo = (
+    path: RoutePath,
+    text: string,
+    params?: RouteParams
+  ) => {
+    startTransition({ path, text, params })
+  }
+
+  const transitionBack = (text: string) => {
+    startTransition({ path: null, text })
   }
 
   return (
     <TransitionNavigationContext.Provider
       value={{
         transitionTo,
+        transitionBack,
         transitioning,
       }}
     >
@@ -55,13 +83,21 @@ export const TransitionNavigationProvider = ({
 
       {transitioning && target && (
         <ScreenTransition
+          key={`${target.path ?? 'back'}-${target.text}`}
           text={target.text}
           onMidpoint={() => {
+            if (target.path === null) {
+              router.history.back()
+              return
+            }
+
             navigate({
               to: target.path,
+              params: target.params,
             })
           }}
           onComplete={() => {
+            transitioningRef.current = false
             setTransitioning(false)
             setTarget(null)
           }}

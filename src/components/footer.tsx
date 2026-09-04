@@ -22,12 +22,10 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div className="space-y-20 px-10 pt-20 pb-10">
+      <div className="space-y-20 p-5 pt-20 md:p-10">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p className="text-secondary text-sm font-extralight uppercase">
-              Contact
-            </p>
+            <p className="text-secondary text-xs uppercase">Contact</p>
 
             <ul className="text-secondary mt-5 space-y-2">
               <li>
@@ -44,9 +42,7 @@ export const Footer = () => {
             </ul>
           </div>
           <div>
-            <p className="text-secondary text-sm font-extralight uppercase">
-              Sitemap
-            </p>
+            <p className="text-secondary text-xs uppercase">Sitemap</p>
 
             <ul className="text-secondary mt-5 space-y-2">
               <li
@@ -76,9 +72,7 @@ export const Footer = () => {
             </ul>
           </div>
           <div>
-            <p className="text-secondary text-sm font-extralight uppercase">
-              Elsewhere
-            </p>
+            <p className="text-secondary text-xs uppercase">Elsewhere</p>
 
             <ul className="text-secondary mt-5 space-y-2">
               <li
@@ -121,9 +115,7 @@ export const Footer = () => {
             </ul>
           </div>
           <div>
-            <p className="text-secondary text-sm font-extralight uppercase">
-              Studio
-            </p>
+            <p className="text-secondary text-xs uppercase">Studio</p>
 
             <ul className="text-secondary mt-5 space-y-2">
               <li>

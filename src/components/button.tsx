@@ -10,7 +10,7 @@ export const Button = ({ text, showIcon = false, onClick }: I_Props) => {
   return (
     <button
       onClick={onClick}
-      className="bg-primary group flex cursor-pointer items-center gap-2 px-4 py-3 font-medium text-nowrap text-black duration-200 hover:brightness-110"
+      className="bg-primary group md:text-md flex cursor-pointer items-center gap-2 px-2 py-1.5 text-sm font-medium text-nowrap text-black duration-200 hover:brightness-110 md:px-4 md:py-3"
     >
       {text}
 

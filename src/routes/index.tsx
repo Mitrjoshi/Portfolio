@@ -5,6 +5,7 @@ import { Hero } from '../sections/hero'
 import { Skills } from '../sections/skills'
 import { Focus } from '../sections/focus'
 import { Worked } from '../sections/worked'
+import { Separator } from '../components/separator'
 
 export const Route = createFileRoute('/')({
   component: RouteComponent,
@@ -22,7 +23,7 @@ function RouteComponent() {
           <Focus />
         </Container>
 
-        <div className="bg-border h-px w-full" />
+        <Separator />
 
         <Container>
           <Skills />

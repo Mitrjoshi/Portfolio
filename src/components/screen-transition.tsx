@@ -41,7 +41,7 @@ const ScreenTransition = ({
         {Array.from({ length: SECTIONS }).map((_, index) => (
           <div
             key={index}
-            className="screen-transition-section line-background"
+            className="screen-transition-section line-background-uni bg-[#faf7e6] dark:bg-[#18170f]"
             style={
               {
                 '--index': index,

@@ -7,17 +7,17 @@ export const Hero = () => {
   const { transitionTo } = useTransitionNavigate()
 
   return (
-    <div className="p-4">
+    <div className="p-5 md:p-10">
       <div className="flex flex-col items-start justify-start gap-8 py-20 xl:flex-row xl:items-center xl:justify-between xl:gap-0">
         <div className="w-full">
           <RevealText
             lines={[
-              <span className="text-6xl font-medium">
+              <span className="text-3xl font-medium md:text-6xl">
                 I design apps, websites,
               </span>,
               <>
-                <span className="text-6xl font-medium">and </span>
-                <span className="text-foreground/40 text-6xl font-medium">
+                <span className="text-3xl font-medium md:text-6xl">and </span>
+                <span className="text-foreground/40 text-3xl font-medium md:text-6xl">
                   AI-powered systems
                 </span>
               </>,

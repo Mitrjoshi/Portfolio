@@ -1,8 +1,10 @@
+import { useRef } from 'react'
 import { BorderContainer } from '../components/border-container'
 import { Container } from '../components/container'
-import { motion } from 'motion/react'
+import { motion, useScroll, useTransform } from 'motion/react'
 import { RevealText } from '../components/reveal-text'
 import { InView } from '../components/in-view'
+import { SectionAttribute } from '../components/section-attribute'
 
 const skills = [
   {
@@ -48,19 +50,24 @@ const skills = [
 ]
 
 export const Skills = () => {
+  const sectionRef = useRef<HTMLDivElement>(null)
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start 80%', 'end 20%'],
+  })
+
   return (
     <BorderContainer>
       <Container className="corner-border-top-right relative border-x-0 border-t">
-        <div className="p-5 py-20! md:p-10">
-          <div className="bg-primary text-background absolute top-0 left-0 w-fit px-3 py-1 text-xs font-medium tracking-widest">
-            Skills
-          </div>
+        <div ref={sectionRef} className="p-5 py-20! md:p-10">
+          <SectionAttribute text="Skills" />
 
           <div className="space-y-6">
             <InView>
               <RevealText
                 lines={[
-                  <p className="text-4xl font-medium md:max-w-[40%]">
+                  <p className="text-3xl font-medium md:max-w-[40%] md:text-6xl">
                     Built with a stack that values{' '}
                     <span className="text-secondary">speed, scale & craft</span>
                     .
@@ -78,7 +85,12 @@ export const Skills = () => {
 
             <div className="grid grid-cols-5 gap-2 md:grid-cols-10">
               {skills.map((skill, i) => (
-                <SkillCard index={i} skill={skill} key={i} />
+                <SkillCard
+                  index={i}
+                  skill={skill}
+                  scrollProgress={scrollYProgress}
+                  key={skill.title}
+                />
               ))}
             </div>
           </div>
@@ -91,22 +103,35 @@ export const Skills = () => {
 const SkillCard = ({
   skill,
   index,
+  scrollProgress,
 }: {
   skill: (typeof skills)[number]
   index: number
+  scrollProgress: ReturnType<typeof useScroll>['scrollYProgress']
 }) => {
+  const start = 0.3 + index * 0.035
+  const end = start + 0.12
+
+  const opacity = useTransform(
+    scrollProgress,
+    [start, end, 0.85, 1],
+    [0, 1, 1, 0]
+  )
+
+  const y = useTransform(scrollProgress, [start, end, 0.85, 1], [40, 0, 0, -20])
+
+  const scale = useTransform(
+    scrollProgress,
+    [start, end, 0.85, 1],
+    [0.9, 1, 1, 0.95]
+  )
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{
-        once: false,
-        amount: 0.3,
-      }}
-      transition={{
-        duration: 0.5,
-        delay: index * 0.05,
-        ease: 'easeOut',
+      style={{
+        opacity,
+        y,
+        scale,
       }}
       className="w-full space-y-4"
     >

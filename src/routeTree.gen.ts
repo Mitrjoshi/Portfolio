@@ -13,8 +13,10 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ProfileRouteImport } from './routes/profile'
-import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as WorkRouteImport } from './routes/work'
+import { Route as ProjectsIndexRouteImport } from './routes/projects/index'
+import { Route as ProjectsTitleRouteRouteImport } from './routes/projects/$title/route'
+import { Route as ProjectsTitleIndexRouteImport } from './routes/projects/$title/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -36,15 +38,25 @@ const ProfileRoute = ProfileRouteImport.update({
   path: '/profile',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProjectsRoute = ProjectsRouteImport.update({
-  id: '/projects',
-  path: '/projects',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const WorkRoute = WorkRouteImport.update({
   id: '/work',
   path: '/work',
   getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsIndexRoute = ProjectsIndexRouteImport.update({
+  id: '/projects/',
+  path: '/projects/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsTitleRouteRoute = ProjectsTitleRouteRouteImport.update({
+  id: '/projects/$title',
+  path: '/projects/$title',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsTitleIndexRoute = ProjectsTitleIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ProjectsTitleRouteRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -52,16 +64,19 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
-  '/projects': typeof ProjectsRoute
   '/work': typeof WorkRoute
+  '/projects/$title': typeof ProjectsTitleRouteRouteWithChildren
+  '/projects/': typeof ProjectsIndexRoute
+  '/projects/$title/': typeof ProjectsTitleIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
   '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
-  '/projects': typeof ProjectsRoute
   '/work': typeof WorkRoute
+  '/projects': typeof ProjectsIndexRoute
+  '/projects/$title': typeof ProjectsTitleIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -69,22 +84,41 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
-  '/projects': typeof ProjectsRoute
   '/work': typeof WorkRoute
+  '/projects/$title': typeof ProjectsTitleRouteRouteWithChildren
+  '/projects/': typeof ProjectsIndexRoute
+  '/projects/$title/': typeof ProjectsTitleIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/contact' | '/privacy' | '/profile' | '/projects' | '/work'
+  fullPaths:
+    | '/'
+    | '/contact'
+    | '/privacy'
+    | '/profile'
+    | '/work'
+    | '/projects/$title'
+    | '/projects/'
+    | '/projects/$title/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contact' | '/privacy' | '/profile' | '/projects' | '/work'
+  to:
+    | '/'
+    | '/contact'
+    | '/privacy'
+    | '/profile'
+    | '/work'
+    | '/projects'
+    | '/projects/$title'
   id:
     | '__root__'
     | '/'
     | '/contact'
     | '/privacy'
     | '/profile'
-    | '/projects'
     | '/work'
+    | '/projects/$title'
+    | '/projects/'
+    | '/projects/$title/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -92,8 +126,9 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   PrivacyRoute: typeof PrivacyRoute
   ProfileRoute: typeof ProfileRoute
-  ProjectsRoute: typeof ProjectsRoute
   WorkRoute: typeof WorkRoute
+  ProjectsTitleRouteRoute: typeof ProjectsTitleRouteRouteWithChildren
+  ProjectsIndexRoute: typeof ProjectsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -126,13 +161,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProfileRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/projects': {
-      id: '/projects'
-      path: '/projects'
-      fullPath: '/projects'
-      preLoaderRoute: typeof ProjectsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/work': {
       id: '/work'
       path: '/work'
@@ -140,16 +168,49 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects/': {
+      id: '/projects/'
+      path: '/projects'
+      fullPath: '/projects/'
+      preLoaderRoute: typeof ProjectsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/$title': {
+      id: '/projects/$title'
+      path: '/projects/$title'
+      fullPath: '/projects/$title'
+      preLoaderRoute: typeof ProjectsTitleRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/$title/': {
+      id: '/projects/$title/'
+      path: '/'
+      fullPath: '/projects/$title/'
+      preLoaderRoute: typeof ProjectsTitleIndexRouteImport
+      parentRoute: typeof ProjectsTitleRouteRoute
+    }
   }
 }
+
+interface ProjectsTitleRouteRouteChildren {
+  ProjectsTitleIndexRoute: typeof ProjectsTitleIndexRoute
+}
+
+const ProjectsTitleRouteRouteChildren: ProjectsTitleRouteRouteChildren = {
+  ProjectsTitleIndexRoute: ProjectsTitleIndexRoute,
+}
+
+const ProjectsTitleRouteRouteWithChildren =
+  ProjectsTitleRouteRoute._addFileChildren(ProjectsTitleRouteRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactRoute: ContactRoute,
   PrivacyRoute: PrivacyRoute,
   ProfileRoute: ProfileRoute,
-  ProjectsRoute: ProjectsRoute,
   WorkRoute: WorkRoute,
+  ProjectsTitleRouteRoute: ProjectsTitleRouteRouteWithChildren,
+  ProjectsIndexRoute: ProjectsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

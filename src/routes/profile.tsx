@@ -2,6 +2,8 @@ import { createFileRoute } from '@tanstack/react-router'
 import { BorderContainer } from '../components/border-container'
 import { Container } from '../components/container'
 import { Worked } from '../sections/worked'
+import { ShortStory } from '../sections/short-story'
+import { Separator } from '../components/separator'
 
 export const Route = createFileRoute('/profile')({
   component: RouteComponent,
@@ -13,7 +15,7 @@ function RouteComponent() {
       <BorderContainer>
         <Container>
           <div className="py-20">
-            <p className="mx-auto px-8 text-center text-4xl font-medium md:max-w-[60%] md:px-0">
+            <p className="mx-auto px-8 text-xl font-medium md:max-w-[60%] md:px-0 md:text-center md:text-3xl">
               <span>
                 Over the last decade, I’ve worked across startups and global
                 companies, building everything from responsive websites to
@@ -27,6 +29,13 @@ function RouteComponent() {
               </span>
             </p>
           </div>
+        </Container>
+      </BorderContainer>
+
+      <BorderContainer>
+        <Container>
+          <Separator />
+          <ShortStory />
         </Container>
       </BorderContainer>
 

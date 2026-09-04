@@ -2,6 +2,7 @@ import { BorderContainer } from '../components/border-container'
 import { Container } from '../components/container'
 import { InView } from '../components/in-view'
 import { RevealText } from '../components/reveal-text'
+import { SectionAttribute } from '../components/section-attribute'
 
 const teams = [
   {
@@ -31,14 +32,12 @@ export const Worked = () => {
     <BorderContainer>
       <Container className="corner-border-top-right relative border-x-0 border-t">
         <div className="p-5 py-20! md:p-10">
-          <div className="bg-primary text-background absolute top-0 left-0 w-fit px-3 py-1 text-xs font-medium tracking-widest">
-            Teams
-          </div>
+          <SectionAttribute text="Teams" />
 
           <div className="space-y-6">
             <RevealText
               lines={[
-                <p className="text-4xl font-medium md:max-w-[40%]">
+                <p className="text-3xl font-medium md:max-w-[40%] md:text-6xl">
                   Where I've <span className="text-secondary">worked</span>.
                 </p>,
               ]}

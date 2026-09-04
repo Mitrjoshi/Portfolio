@@ -1,27 +1,42 @@
-import { createRootRoute, Outlet } from '@tanstack/react-router'
+import { createRootRoute, Outlet, useMatchRoute } from '@tanstack/react-router'
+
 import { Header } from '../components/header'
 import { BorderContainer } from '../components/border-container'
 import { TransitionNavigationProvider } from '../providers/transition-navigation'
 import { Footer } from '../components/footer'
 import { SmoothScroll } from '../providers/smooth-scroll'
 
-const RootLayout = () => (
-  <TransitionNavigationProvider>
-    <SmoothScroll>
-      <div className="sticky top-0 z-50">
-        <BorderContainer>
-          <Header />
-        </BorderContainer>
-      </div>
+const RootLayout = () => {
+  const matchRoute = useMatchRoute()
 
-      <Outlet />
+  const isProjectPage = matchRoute({
+    to: '/projects/$title',
+    fuzzy: false,
+  })
 
-      <div className="bg-background border-t">
-        <Footer />
-      </div>
-      {/* <TanStackRouterDevtools /> */}
-    </SmoothScroll>
-  </TransitionNavigationProvider>
-)
+  return (
+    <TransitionNavigationProvider>
+      <SmoothScroll>
+        {!isProjectPage && (
+          <div className="sticky top-0 z-50">
+            <BorderContainer>
+              <Header />
+            </BorderContainer>
+          </div>
+        )}
 
-export const Route = createRootRoute({ component: RootLayout })
+        <Outlet />
+
+        {!isProjectPage && (
+          <div className="bg-background border-t">
+            <Footer />
+          </div>
+        )}
+      </SmoothScroll>
+    </TransitionNavigationProvider>
+  )
+}
+
+export const Route = createRootRoute({
+  component: RootLayout,
+})
