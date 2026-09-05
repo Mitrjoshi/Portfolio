@@ -109,7 +109,7 @@ export const Projects = () => {
         <div className="w-full pt-12">
           <RevealText
             lines={[
-              <p className="text-3xl font-medium md:text-6xl">
+              <p className="text-3xl font-medium md:text-5xl">
                 Explore my work,{' '}
                 <span className="block">
                   process <span className="text-secondary">and more.</span>

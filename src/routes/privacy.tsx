@@ -15,7 +15,7 @@ function RouteComponent() {
           <p className="text-primary text-xs font-extralight uppercase">
             Last updated 3 September 2026
           </p>
-          <p className="text-6xl font-semibold">Privacy</p>
+          <p className="text-5xl font-semibold">Privacy</p>
           <p className="text-secondary md:max-w-[40ch]">
             What this site records while you read it, who receives it, and how
             to have it stopped. It is a portfolio, so the answer is short.

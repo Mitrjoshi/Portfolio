@@ -67,7 +67,7 @@ export const Skills = () => {
             <InView>
               <RevealText
                 lines={[
-                  <p className="text-3xl font-medium md:max-w-[40%] md:text-6xl">
+                  <p className="text-3xl font-medium md:max-w-[40%] md:text-5xl">
                     Built with a stack that values{' '}
                     <span className="text-secondary">speed, scale & craft</span>
                     .

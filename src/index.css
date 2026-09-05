@@ -528,6 +528,8 @@ html {
 .reveal-text-line {
   overflow: hidden;
   line-height: 2.5;
+  padding-bottom: 0.2em; /* room for descenders */
+  margin-bottom: -0.2em; /* pull adjacent lines back together */
 }
 
 .reveal-text-content {
@@ -535,6 +537,7 @@ html {
   transform: translateY(110%);
 
   animation: reveal-text-up 0.7s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  display: inline-block;
 
   will-change: transform, opacity;
 }
@@ -771,10 +774,10 @@ html {
 }
 
 .dotted-background {
-  background-color: #0d0d0b;
+  background-color: var(--color-background-secondary);
   background-image: radial-gradient(
     circle,
-    rgba(255, 255, 255, 0.22) 1px,
+    color-mix(in srgb, var(--color-foreground) 30%, transparent) 1px,
     transparent 1px
   );
   background-size: 22px 22px;

@@ -23,7 +23,7 @@ function RouteComponent() {
 
           <RevealText
             lines={[
-              <p className="text-6xl font-medium">
+              <p className="text-5xl font-medium">
                 Let's <span className="text-secondary">talk</span>
               </p>,
             ]}

@@ -134,7 +134,9 @@ export const Footer = () => {
           </p>
 
           <p
-            onClick={() => transitionTo('/privacy', 'Privacy')}
+            onClick={() =>
+              pathname !== '/privacy' && transitionTo('/privacy', 'Privacy')
+            }
             className="text-secondary cursor-pointer text-xs uppercase"
           >
             Privacy

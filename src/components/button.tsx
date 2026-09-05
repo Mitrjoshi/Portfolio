@@ -3,14 +3,20 @@ import { ArrowRight } from 'lucide-react'
 interface I_Props {
   text: string
   showIcon?: boolean
+  highlight?: boolean
   onClick?: () => void
 }
 
-export const Button = ({ text, showIcon = false, onClick }: I_Props) => {
+export const Button = ({
+  text,
+  showIcon = false,
+  onClick,
+  highlight = true,
+}: I_Props) => {
   return (
     <button
       onClick={onClick}
-      className="bg-primary group md:text-md flex cursor-pointer items-center gap-2 px-2 py-1.5 text-sm font-medium text-nowrap text-black duration-200 hover:brightness-110 md:px-4 md:py-3"
+      className={`${highlight ? 'bg-primary text-black' : 'text-foreground hover:border-foreground/50 border'} group md:text-md flex cursor-pointer items-center gap-2 px-2 py-1.5 text-sm font-medium text-nowrap duration-200 hover:brightness-110 md:px-4 md:py-3`}
     >
       {text}
 

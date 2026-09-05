@@ -12,19 +12,19 @@ export const Hero = () => {
         <div className="w-full">
           <RevealText
             lines={[
-              <span className="text-3xl font-medium md:text-6xl">
+              <span className="text-3xl font-medium md:text-5xl">
                 I design apps, websites,
               </span>,
               <>
-                <span className="text-3xl font-medium md:text-6xl">and </span>
-                <span className="text-foreground/40 text-3xl font-medium md:text-6xl">
+                <span className="text-3xl font-medium md:text-5xl">and </span>
+                <span className="text-foreground/40 text-3xl font-medium md:text-5xl">
                   AI-powered systems
                 </span>
               </>,
             ]}
           />
         </div>
-        <div className="space-y-10 xl:px-20">
+        <div className="space-y-10">
           <InView>
             <p className="text-secondary slide-up-fade-in text-lg">
               10+ years designing the systems, brands and AI workflows behind
@@ -42,6 +42,7 @@ export const Hero = () => {
                 showIcon={true}
               />
               <Button
+                highlight={false}
                 onClick={() => {
                   transitionTo('/profile', 'Profile')
                 }}

@@ -17,7 +17,7 @@ export const Focus = () => {
           <div>
             <RevealText
               lines={[
-                <p className="text-center text-3xl font-medium md:text-6xl">
+                <p className="text-center text-3xl font-medium md:text-5xl">
                   Primarily <span className="text-secondary">focused on</span>
                 </p>,
               ]}
