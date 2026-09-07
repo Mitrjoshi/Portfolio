@@ -2,8 +2,13 @@ import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { useTransitionNavigate } from '../../providers/transition-navigation'
 import { RevealText } from '../../components/reveal-text'
 import { InView } from '../../components/in-view'
+import type { Project } from '../../constants/projects'
 
-export const ProjectHero = () => {
+export const ProjectHero = ({
+  project_details,
+}: {
+  project_details: Project
+}) => {
   const { transitionBack } = useTransitionNavigate()
 
   return (
@@ -20,7 +25,11 @@ export const ProjectHero = () => {
 
       <InView className="space-y-4 md:space-y-8">
         <RevealText
-          lines={[<p className="text-3xl font-medium md:text-5xl">MindPath</p>]}
+          lines={[
+            <p className="text-3xl font-medium md:text-5xl">
+              {project_details.title}
+            </p>,
+          ]}
         />
         <p className="slide-up-fade-in text-secondary text-lg md:max-w-[70ch] md:text-xl">
           An online mental-health service for adult ADHD & autism assessment —

@@ -1,4 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
+import { useRef } from 'react'
 import { BorderContainer } from '../../components/border-container'
 import { Container } from '../../components/container'
 import { Projects } from '../../sections/projects'
@@ -10,21 +11,35 @@ export const Route = createFileRoute('/projects/')({
 })
 
 function RouteComponent() {
+  const screenshotsRef = useRef<HTMLDivElement>(null)
+  const allWorkRef = useRef<HTMLDivElement>(null)
+
+  const handleScrollToSection = (section: 'screenshots' | 'all-work') => {
+    const target =
+      section === 'screenshots' ? screenshotsRef.current : allWorkRef.current
+
+    if (!target) return
+
+    const top = target.getBoundingClientRect().top + window.scrollY
+
+    window.scrollTo({ top, behavior: 'smooth' })
+  }
+
   return (
     <>
       <BorderContainer>
         <Container>
-          <Projects />
+          <Projects handleScrollToSection={handleScrollToSection} />
         </Container>
       </BorderContainer>
 
-      <BorderContainer>
+      <BorderContainer ref={allWorkRef}>
         <Container className="line-background-inner-highlight corner-border-top-right border-t">
           <CompaniesWorkedWith />
         </Container>
       </BorderContainer>
 
-      <BorderContainer>
+      <BorderContainer ref={screenshotsRef}>
         <Container>
           <Screenshots />
         </Container>

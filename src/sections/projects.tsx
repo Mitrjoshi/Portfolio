@@ -17,53 +17,51 @@ const projects = [
     platform: 'SaaS App',
     image: '/projects/pathlens.png',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, accusantium!',
+      'A website analytics and user behavior intelligence platform built to understand how users interact with digital experiences.',
   },
   {
-    title: 'Retail',
+    title: 'De-beers',
     platform: 'Interactive Web',
-    image:
-      'https://cdn.sanity.io/images/uh01905c/production/e842ff688dba7aeab1c3d07e5eae4d26894df4d9-2500x1406.avif?w=1600&q=75&auto=format',
+    image: '/projects/indra.png',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, accusantium!',
+      'An interactive digital experience created for De Beers Indra Online.',
   },
   {
-    title: 'Brand',
+    title: 'AI Studio',
+    platform: 'AI Platform',
+    image: '/projects/vertex.png',
+    description:
+      'An AI-powered digital experience developed for Ogilvy AI Studio.',
+  },
+  {
+    title: 'Basecamp',
     platform: 'Web Platform',
-    image:
-      'https://cdn.sanity.io/images/uh01905c/production/e842ff688dba7aeab1c3d07e5eae4d26894df4d9-2500x1406.avif?w=1600&q=75&auto=format',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, accusantium!',
+    image: '/projects/basecamp.png',
+    description: 'A digital platform created for Ogilvy Basecamp.',
   },
   {
-    title: 'Consumer',
-    platform: 'Mobile Web',
-    image:
-      'https://cdn.sanity.io/images/uh01905c/production/e842ff688dba7aeab1c3d07e5eae4d26894df4d9-2500x1406.avif?w=1600&q=75&auto=format',
+    title: 'Fevikwik',
+    platform: 'Digital Campaign',
+    image: '/projects/fevikwik.png',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, accusantium!',
+      'An AI-powered digital campaign experience created for Fevikwik.',
   },
   {
-    title: 'Product',
-    platform: 'Microsite',
-    image:
-      'https://cdn.sanity.io/images/uh01905c/production/e842ff688dba7aeab1c3d07e5eae4d26894df4d9-2500x1406.avif?w=1600&q=75&auto=format',
+    title: 'Milka',
+    platform: 'Digital Campaign',
+    image: '/projects/milka-pokora.png',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, accusantium!',
-  },
-  {
-    title: 'Interactive',
-    platform: 'Digital Experience',
-    image:
-      'https://cdn.sanity.io/images/uh01905c/production/e842ff688dba7aeab1c3d07e5eae4d26894df4d9-2500x1406.avif?w=1600&q=75&auto=format',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, accusantium!',
+      'An engaging digital campaign experience created for Milka Pokora.',
   },
 ]
 
 type Project = (typeof projects)[number]
 
-export const Projects = () => {
+export const Projects = ({
+  handleScrollToSection,
+}: {
+  handleScrollToSection: (val: 'screenshots' | 'all-work') => void
+}) => {
   const projectsRef = useRef<HTMLDivElement>(null)
 
   const [hoveredProject, setHoveredProject] = useState<Project | null>(null)
@@ -126,8 +124,16 @@ export const Projects = () => {
           </p>
 
           <div className="slide-up-fade-in flex flex-wrap items-center gap-4">
-            <Button text="Screenshots Instead" showIcon />
-            <Button text="Explore AI Work" showIcon />
+            <Button
+              onClick={() => handleScrollToSection('screenshots')}
+              text="Screenshots Instead"
+              showIcon
+            />
+            <Button
+              onClick={() => handleScrollToSection('all-work')}
+              text="Explore AI Work"
+              showIcon
+            />
           </div>
         </div>
       </div>
