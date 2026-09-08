@@ -1,5 +1,3 @@
-import { BorderContainer } from '../components/border-container'
-import { Container } from '../components/container'
 import { InView } from '../components/in-view'
 import { RevealText } from '../components/reveal-text'
 import { SectionAttribute } from '../components/section-attribute'
@@ -29,41 +27,39 @@ const teams = [
 
 export const Worked = () => {
   return (
-    <BorderContainer>
-      <Container className="corner-border-top-right relative border-x-0 border-t">
-        <div className="p-5 py-20! md:p-10">
-          <SectionAttribute text="Teams" />
+    <div>
+      <div className="p-5 py-20! md:p-10">
+        <SectionAttribute text="Teams" />
 
-          <div className="space-y-6">
-            <RevealText
-              lines={[
-                <p className="text-3xl font-medium md:max-w-[40%] md:text-5xl">
-                  Where I've <span className="text-secondary">worked</span>.
-                </p>,
-              ]}
-            />
+        <div className="space-y-6">
+          <RevealText
+            lines={[
+              <p className="text-3xl font-medium md:max-w-[40%] md:text-5xl">
+                Where I've <span className="text-secondary">worked</span>.
+              </p>,
+            ]}
+          />
 
-            <InView>
-              <p className="slide-up-fade-in text-secondary text-lg md:max-w-[40%]">
-                From global banks to independent apps — product, brand and
-                systems for teams of every size.
-              </p>
-            </InView>
-          </div>
+          <InView>
+            <p className="slide-up-fade-in text-secondary text-lg md:max-w-[40%]">
+              From global banks to independent apps — product, brand and systems
+              for teams of every size.
+            </p>
+          </InView>
         </div>
+      </div>
 
-        <div
-          style={{
-            gridTemplateColumns: `repeat(${Math.min(teams.length, 5)}, minmax(0, 1fr))`,
-          }}
-          className={`divide-border divide-x md:grid ${teams.length < 5 ? 'divide-y md:divide-y-0' : 'divide-y'} border-t`}
-        >
-          {teams.map((team, i) => (
-            <TeamsCard key={i} index={i} team={team} />
-          ))}
-        </div>
-      </Container>
-    </BorderContainer>
+      <div
+        style={{
+          gridTemplateColumns: `repeat(${Math.min(teams.length, 5)}, minmax(0, 1fr))`,
+        }}
+        className={`divide-border divide-x md:grid ${teams.length < 5 ? 'divide-y md:divide-y-0' : 'divide-y'} border-t`}
+      >
+        {teams.map((team, i) => (
+          <TeamsCard key={i} index={i} team={team} />
+        ))}
+      </div>
+    </div>
   )
 }
 

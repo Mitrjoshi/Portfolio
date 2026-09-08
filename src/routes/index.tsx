@@ -29,7 +29,7 @@ function RouteComponent() {
           <Skills />
         </Container>
 
-        <Container>
+        <Container className="corner-border-top-right relative border-t">
           <Worked />
         </Container>
       </BorderContainer>

@@ -40,7 +40,7 @@ function RouteComponent() {
       </BorderContainer>
 
       <BorderContainer>
-        <Container>
+        <Container className="corner-border-top-right relative border-t">
           <Worked />
         </Container>
       </BorderContainer>

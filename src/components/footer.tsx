@@ -57,12 +57,12 @@ export const Footer = () => {
               >
                 <p className="">Work</p>
               </li>
-              <li
+              {/* <li
                 className="hover:text-foreground cursor-pointer duration-200"
                 onClick={() => transitionTo('/projects', 'Selected Projects')}
               >
                 <p className="">Projects</p>
-              </li>
+              </li> */}
               <li
                 className="hover:text-foreground cursor-pointer duration-200"
                 onClick={() => transitionTo('/profile', 'Profile')}

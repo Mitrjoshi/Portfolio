@@ -6,7 +6,7 @@ import { Projects } from '../../sections/projects'
 import { CompaniesWorkedWith } from '../../sections/companies-worked-with'
 import { Screenshots } from '../../sections/screenshots'
 
-export const Route = createFileRoute('/projects/')({
+export const Route = createFileRoute('/work/')({
   component: RouteComponent,
 })
 

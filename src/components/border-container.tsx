@@ -1,9 +1,13 @@
 import { forwardRef, type PropsWithChildren } from 'react'
 
-export const BorderContainer = forwardRef<HTMLDivElement, PropsWithChildren>(
-  ({ children }, ref) => {
+type BorderContainerProps = PropsWithChildren<{
+  className?: string
+}>
+
+export const BorderContainer = forwardRef<HTMLDivElement, BorderContainerProps>(
+  ({ children, className }, ref) => {
     return (
-      <div ref={ref} className="line-background">
+      <div ref={ref} className={`${className} line-background`}>
         {children}
       </div>
     )

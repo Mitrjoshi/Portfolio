@@ -10,52 +10,9 @@ import { ArrowRight, PlusIcon } from 'lucide-react'
 import { Button } from '../components/button'
 import { RevealText } from '../components/reveal-text'
 import { useTransitionNavigate } from '../providers/transition-navigation'
+import { PROJECTS } from '../constants/projects'
 
-const projects = [
-  {
-    title: 'Pathlens',
-    platform: 'SaaS App',
-    image: '/projects/pathlens.png',
-    description:
-      'A website analytics and user behavior intelligence platform built to understand how users interact with digital experiences.',
-  },
-  {
-    title: 'De-beers',
-    platform: 'Interactive Web',
-    image: '/projects/indra.png',
-    description:
-      'An interactive digital experience created for De Beers Indra Online.',
-  },
-  {
-    title: 'AI Studio',
-    platform: 'AI Platform',
-    image: '/projects/vertex.png',
-    description:
-      'An AI-powered digital experience developed for Ogilvy AI Studio.',
-  },
-  {
-    title: 'Basecamp',
-    platform: 'Web Platform',
-    image: '/projects/basecamp.png',
-    description: 'A digital platform created for Ogilvy Basecamp.',
-  },
-  {
-    title: 'Fevikwik',
-    platform: 'Digital Campaign',
-    image: '/projects/fevikwik.png',
-    description:
-      'An AI-powered digital campaign experience created for Fevikwik.',
-  },
-  {
-    title: 'Milka',
-    platform: 'Digital Campaign',
-    image: '/projects/milka-pokora.png',
-    description:
-      'An engaging digital campaign experience created for Milka Pokora.',
-  },
-]
-
-type Project = (typeof projects)[number]
+type Project = (typeof PROJECTS)[number]
 
 export const Projects = ({
   handleScrollToSection,
@@ -96,8 +53,8 @@ export const Projects = ({
   }
 
   const openProjectPage = (project: Project) => {
-    transitionTo('/projects/$title', project.title, {
-      title: project.title.toLowerCase(),
+    transitionTo('/work/$title', project.title, {
+      title: project.id.toLowerCase(),
     })
   }
 
@@ -131,7 +88,7 @@ export const Projects = ({
             />
             <Button
               onClick={() => handleScrollToSection('all-work')}
-              text="Explore AI Work"
+              text="Explore All Work"
               showIcon
             />
           </div>
@@ -141,7 +98,7 @@ export const Projects = ({
       {/* Parent for grid + cursor card */}
       <div ref={projectsRef} className="relative">
         <div className="grid divide-y border-t p-4 md:grid-cols-3 md:divide-x md:divide-y-0 md:p-0 lg:grid-cols-6">
-          {projects.map((project, i) => {
+          {PROJECTS.map((project, i) => {
             const isOpen = openProject === i
 
             return (

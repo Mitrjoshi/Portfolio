@@ -13,10 +13,9 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ProfileRouteImport } from './routes/profile'
-import { Route as WorkRouteImport } from './routes/work'
-import { Route as ProjectsIndexRouteImport } from './routes/projects/index'
-import { Route as ProjectsTitleRouteRouteImport } from './routes/projects/$title/route'
-import { Route as ProjectsTitleIndexRouteImport } from './routes/projects/$title/index'
+import { Route as WorkIndexRouteImport } from './routes/work/index'
+import { Route as WorkTitleRouteRouteImport } from './routes/work/$title/route'
+import { Route as WorkTitleIndexRouteImport } from './routes/work/$title/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -38,25 +37,20 @@ const ProfileRoute = ProfileRouteImport.update({
   path: '/profile',
   getParentRoute: () => rootRouteImport,
 } as any)
-const WorkRoute = WorkRouteImport.update({
-  id: '/work',
-  path: '/work',
+const WorkIndexRoute = WorkIndexRouteImport.update({
+  id: '/work/',
+  path: '/work/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProjectsIndexRoute = ProjectsIndexRouteImport.update({
-  id: '/projects/',
-  path: '/projects/',
+const WorkTitleRouteRoute = WorkTitleRouteRouteImport.update({
+  id: '/work/$title',
+  path: '/work/$title',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProjectsTitleRouteRoute = ProjectsTitleRouteRouteImport.update({
-  id: '/projects/$title',
-  path: '/projects/$title',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProjectsTitleIndexRoute = ProjectsTitleIndexRouteImport.update({
+const WorkTitleIndexRoute = WorkTitleIndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => ProjectsTitleRouteRoute,
+  getParentRoute: () => WorkTitleRouteRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -64,19 +58,17 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
-  '/work': typeof WorkRoute
-  '/projects/$title': typeof ProjectsTitleRouteRouteWithChildren
-  '/projects/': typeof ProjectsIndexRoute
-  '/projects/$title/': typeof ProjectsTitleIndexRoute
+  '/work/$title': typeof WorkTitleRouteRouteWithChildren
+  '/work/': typeof WorkIndexRoute
+  '/work/$title/': typeof WorkTitleIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
   '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
-  '/work': typeof WorkRoute
-  '/projects': typeof ProjectsIndexRoute
-  '/projects/$title': typeof ProjectsTitleIndexRoute
+  '/work': typeof WorkIndexRoute
+  '/work/$title': typeof WorkTitleIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -84,10 +76,9 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
-  '/work': typeof WorkRoute
-  '/projects/$title': typeof ProjectsTitleRouteRouteWithChildren
-  '/projects/': typeof ProjectsIndexRoute
-  '/projects/$title/': typeof ProjectsTitleIndexRoute
+  '/work/$title': typeof WorkTitleRouteRouteWithChildren
+  '/work/': typeof WorkIndexRoute
+  '/work/$title/': typeof WorkTitleIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -96,29 +87,20 @@ export interface FileRouteTypes {
     | '/contact'
     | '/privacy'
     | '/profile'
-    | '/work'
-    | '/projects/$title'
-    | '/projects/'
-    | '/projects/$title/'
+    | '/work/$title'
+    | '/work/'
+    | '/work/$title/'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/contact'
-    | '/privacy'
-    | '/profile'
-    | '/work'
-    | '/projects'
-    | '/projects/$title'
+  to: '/' | '/contact' | '/privacy' | '/profile' | '/work' | '/work/$title'
   id:
     | '__root__'
     | '/'
     | '/contact'
     | '/privacy'
     | '/profile'
-    | '/work'
-    | '/projects/$title'
-    | '/projects/'
-    | '/projects/$title/'
+    | '/work/$title'
+    | '/work/'
+    | '/work/$title/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -126,9 +108,8 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   PrivacyRoute: typeof PrivacyRoute
   ProfileRoute: typeof ProfileRoute
-  WorkRoute: typeof WorkRoute
-  ProjectsTitleRouteRoute: typeof ProjectsTitleRouteRouteWithChildren
-  ProjectsIndexRoute: typeof ProjectsIndexRoute
+  WorkTitleRouteRoute: typeof WorkTitleRouteRouteWithChildren
+  WorkIndexRoute: typeof WorkIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -161,56 +142,49 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProfileRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/work': {
-      id: '/work'
+    '/work/': {
+      id: '/work/'
       path: '/work'
-      fullPath: '/work'
-      preLoaderRoute: typeof WorkRouteImport
+      fullPath: '/work/'
+      preLoaderRoute: typeof WorkIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/projects/': {
-      id: '/projects/'
-      path: '/projects'
-      fullPath: '/projects/'
-      preLoaderRoute: typeof ProjectsIndexRouteImport
+    '/work/$title': {
+      id: '/work/$title'
+      path: '/work/$title'
+      fullPath: '/work/$title'
+      preLoaderRoute: typeof WorkTitleRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/projects/$title': {
-      id: '/projects/$title'
-      path: '/projects/$title'
-      fullPath: '/projects/$title'
-      preLoaderRoute: typeof ProjectsTitleRouteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/projects/$title/': {
-      id: '/projects/$title/'
+    '/work/$title/': {
+      id: '/work/$title/'
       path: '/'
-      fullPath: '/projects/$title/'
-      preLoaderRoute: typeof ProjectsTitleIndexRouteImport
-      parentRoute: typeof ProjectsTitleRouteRoute
+      fullPath: '/work/$title/'
+      preLoaderRoute: typeof WorkTitleIndexRouteImport
+      parentRoute: typeof WorkTitleRouteRoute
     }
   }
 }
 
-interface ProjectsTitleRouteRouteChildren {
-  ProjectsTitleIndexRoute: typeof ProjectsTitleIndexRoute
+interface WorkTitleRouteRouteChildren {
+  WorkTitleIndexRoute: typeof WorkTitleIndexRoute
 }
 
-const ProjectsTitleRouteRouteChildren: ProjectsTitleRouteRouteChildren = {
-  ProjectsTitleIndexRoute: ProjectsTitleIndexRoute,
+const WorkTitleRouteRouteChildren: WorkTitleRouteRouteChildren = {
+  WorkTitleIndexRoute: WorkTitleIndexRoute,
 }
 
-const ProjectsTitleRouteRouteWithChildren =
-  ProjectsTitleRouteRoute._addFileChildren(ProjectsTitleRouteRouteChildren)
+const WorkTitleRouteRouteWithChildren = WorkTitleRouteRoute._addFileChildren(
+  WorkTitleRouteRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactRoute: ContactRoute,
   PrivacyRoute: PrivacyRoute,
   ProfileRoute: ProfileRoute,
-  WorkRoute: WorkRoute,
-  ProjectsTitleRouteRoute: ProjectsTitleRouteRouteWithChildren,
-  ProjectsIndexRoute: ProjectsIndexRoute,
+  WorkTitleRouteRoute: WorkTitleRouteRouteWithChildren,
+  WorkIndexRoute: WorkIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

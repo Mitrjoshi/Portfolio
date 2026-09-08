@@ -4,7 +4,7 @@ import { Header } from '../../../components/header'
 import { DotContainer } from '../../../components/dot-container'
 import { Footer } from '../../../components/footer'
 
-export const Route = createFileRoute('/projects/$title')({
+export const Route = createFileRoute('/work/$title')({
   component: RouteComponent,
 })
 
