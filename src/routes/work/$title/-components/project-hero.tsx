@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight } from 'lucide-react'
+import { ArrowLeft, ArrowRight, LockIcon } from 'lucide-react'
 import { useTransitionNavigate } from '../../../../providers/transition-navigation'
 import { RevealText } from '../../../../components/reveal-text'
 import { InView } from '../../../../components/in-view'
@@ -6,8 +6,10 @@ import type { Project } from '../../../../constants/projects'
 
 export const ProjectHero = ({
   project_details,
+  color,
 }: {
   project_details: Project
+  color: string
 }) => {
   const { transitionTo } = useTransitionNavigate()
 
@@ -17,7 +19,9 @@ export const ProjectHero = ({
         onClick={() => {
           transitionTo('/work', 'Selected Projects')
         }}
-        className="hover:text-green-accent flex cursor-pointer items-center gap-2 text-sm duration-200"
+        onMouseEnter={(e) => (e.currentTarget.style.color = color)}
+        onMouseLeave={(e) => (e.currentTarget.style.color = '')}
+        className="flex cursor-pointer items-center gap-2 text-sm duration-200"
       >
         <ArrowLeft size={20} strokeWidth={1.5} />
         <p>All Work</p>
@@ -43,27 +47,56 @@ export const ProjectHero = ({
           value={project_details.details.technologies.join(', ')}
         />
         <DetailsBox label={'year'} value={project_details.details.year} />
-        <DetailsBox label={'live'} value={project_details.details.live} />
+        <DetailsBox
+          label={'live'}
+          value={project_details.details.live}
+          confidential={project_details.confidential}
+          color={color}
+        />
       </div>
     </div>
   )
 }
 
-const DetailsBox = ({ label, value }: { label: string; value: string }) => {
+const DetailsBox = ({
+  label,
+  value,
+  confidential,
+  color,
+}: {
+  label: string
+  value: string
+  confidential?: boolean
+  color?: string
+}) => {
   return (
     <div className="bg-primary/10 space-y-2 p-4 dark:bg-transparent">
       <p className="text-secondary text-sm uppercase">{label}</p>
       {label === 'live' ? (
-        <a href={value} target="_blank" rel="noopener noreferrer">
-          <p className="group text-green-accent flex cursor-pointer items-center font-medium underline underline-offset-4">
-            {value}
-
-            <ArrowRight
-              strokeWidth={1.5}
-              className="-rotate-45 duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"
-            />
-          </p>
-        </a>
+        <>
+          {confidential ? (
+            <p
+              className="group flex items-center gap-2 font-medium"
+              style={{ color }}
+            >
+              <LockIcon size={16} className="" />
+              Confidential
+            </p>
+          ) : (
+            <a href={value} target="_blank" rel="noopener noreferrer">
+              <p
+                className="group inline cursor-pointer font-medium underline underline-offset-4"
+                style={{ color }}
+              >
+                {value}{' '}
+                <ArrowRight
+                  strokeWidth={1.5}
+                  className="ml-2 inline-block -rotate-45 duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"
+                />
+              </p>
+            </a>
+          )}
+        </>
       ) : (
         <p className="font-medium">{value}</p>
       )}

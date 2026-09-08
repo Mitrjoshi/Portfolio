@@ -7,6 +7,7 @@ import {
   type Project,
   type ProjectSection as ProjectSectionType,
   type ProjectSectionItem,
+  PROJECT_COLORS,
 } from '../../../constants/projects'
 import { Separator } from '../../../components/separator'
 import { ProjectNextCase } from './-components/project-next-case'
@@ -24,6 +25,9 @@ function RouteComponent() {
   const { title } = Route.useParams()
   const project_details = PROJECTS.filter((item) => item.id === title)[0]
 
+  const project_color =
+    PROJECT_COLORS[project_details.id as keyof typeof PROJECT_COLORS]
+
   const SECTIONS = useMemo(() => {
     if (!project_details) return []
 
@@ -34,9 +38,9 @@ function RouteComponent() {
       ][]
     )
       .filter(([, item]) => item?.title && item.details?.length)
-      .map(([key, item]) => ({
+      .map(([key, _]) => ({
         key,
-        label: item.title || capitalize(key),
+        label: capitalize(key),
       }))
   }, [project_details])
 
@@ -151,22 +155,23 @@ function RouteComponent() {
                 <div
                   style={{
                     width: isActive ? 40 : 20,
+                    backgroundColor: isActive ? project_color : undefined,
                   }}
                   className={`group-hover/row:bg-foreground h-0.5 duration-200 ${
-                    isActive
-                      ? 'bg-green-accent group-hover/row:bg-green-accent'
-                      : 'bg-secondary'
+                    isActive ? '' : 'bg-secondary'
                   }`}
                 />
                 <p
-                  className={`${isActive ? 'text-green-accent' : 'text-secondary hover:text-foreground'} duration-200`}
+                  style={{ color: isActive ? project_color : undefined }}
+                  className={`${isActive ? '' : 'text-secondary hover:text-foreground'} duration-200`}
                 >
                   0{index + 1}
                 </p>
               </div>
               <p
+                style={{ color: isActive ? project_color : undefined }}
                 className={`uppercase duration-200 group-hover/row:opacity-100 ${
-                  isActive ? 'text-green-accent opacity-0' : 'opacity-0'
+                  isActive ? 'opacity-0' : 'opacity-0'
                 }`}
               >
                 {key}
@@ -176,8 +181,11 @@ function RouteComponent() {
         })}
       </div>
 
-      <Container className="">
-        <ProjectHero project_details={project_details as Project} />
+      <Container>
+        <ProjectHero
+          color={project_color}
+          project_details={project_details as Project}
+        />
       </Container>
 
       <Container>
@@ -197,6 +205,7 @@ function RouteComponent() {
             }}
           >
             <ProjectSection
+              color={project_color}
               index={index + 1}
               label={label}
               project_section={

@@ -1,22 +1,26 @@
+import { ArrowUpRightIcon } from 'lucide-react'
 import { InView } from '../../../../components/in-view'
 import { RevealText } from '../../../../components/reveal-text'
+import { Separator } from '../../../../components/separator'
 import type { ProjectSectionItem } from '../../../../constants/projects'
 
 export const ProjectSection = ({
   project_section,
   index,
   label,
+  color,
 }: {
   project_section: ProjectSectionItem
   index: number
   label: string
+  color: string
 }) => {
   return (
     <div className="space-y-10 p-5 pt-10! pb-20! md:space-y-20 md:p-10 md:pt-20! md:pb-40!">
       <div className="grid gap-4 md:grid-cols-2">
         <div className="space-y-4">
           <p className="text-secondary text-sm">
-            <span className="text-green-accent">0{index}</span> · {label}
+            <span style={{ color }}>0{index}</span> · {label}
           </p>
           <InView className="space-y-4 md:space-y-8">
             <RevealText
@@ -52,6 +56,66 @@ export const ProjectSection = ({
           )}
         </div>
       </div>
+
+      {project_section.numbers && project_section.numbers.length > 0 && (
+        <div className="space-y-5">
+          <Separator />
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: `repeat(${project_section.numbers.length}, minmax(0, 1fr))`,
+            }}
+            className="w-full"
+          >
+            {project_section.numbers.map((item, index) => (
+              <div className="w-full" key={index}>
+                <p
+                  style={{
+                    color,
+                  }}
+                  className="text-5xl font-medium"
+                >
+                  {item.value}
+                </p>
+                <p className="text-secondary mt-2">{item.label}</p>
+              </div>
+            ))}
+          </div>
+
+          <Separator />
+        </div>
+      )}
+
+      {project_section.review && (
+        <div className="space-y-8">
+          <p className="text-6xl font-medium">{`“${project_section.review.message}”`}</p>
+          <p className="text-secondary tracking-wider uppercase">
+            {project_section.review.by}
+          </p>
+        </div>
+      )}
+
+      {project_section.shipped && (
+        <div className="space-y-10">
+          <Separator />
+          <div className="space-y-4">
+            <p className="text-secondary tracking-wider uppercase">
+              What shipped
+            </p>
+            <div className="divide-y">
+              {project_section.shipped.map((item, index) => (
+                <div className="flex items-center gap-2 py-4">
+                  <ArrowUpRightIcon color={color} size={18} />
+                  <p className="text-sm" key={index}>
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
 
       {project_section?.images && project_section.images.length > 0 && (
         <div className="space-y-4">
