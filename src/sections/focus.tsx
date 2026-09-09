@@ -44,19 +44,19 @@ const carouselItems = [
     title: 'React Development',
     description:
       'Building scalable, responsive, and high-performance web applications with React and TypeScript.',
-    duration: '3+ YEARS',
+    duration: `${new Date().getFullYear() - 2022}+ Years`,
   },
   {
     title: 'Frontend Engineering',
     description:
       'Creating maintainable frontend architectures, reusable components, and seamless API integrations.',
-    duration: '4+ YEARS',
+    duration: `${new Date().getFullYear() - 2022}+ Years`,
   },
   {
     title: 'Creative Development',
     description:
       'Crafting interactive interfaces with smooth animations, modern UI patterns, and engaging digital experiences.',
-    duration: '4+ YEARS',
+    duration: `${new Date().getFullYear() - 2022}+ Years`,
   },
 ]
 

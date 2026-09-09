@@ -61,24 +61,20 @@ export const ProjectSection = ({
         <div className="space-y-5">
           <Separator />
 
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: `repeat(${project_section.numbers.length}, minmax(0, 1fr))`,
-            }}
-            className="w-full"
-          >
+          <div className="flex flex-wrap gap-10">
             {project_section.numbers.map((item, index) => (
-              <div className="w-full" key={index}>
+              <div className="flex-1" key={index}>
                 <p
                   style={{
                     color,
                   }}
-                  className="text-5xl font-medium"
+                  className="text-2xl font-medium text-nowrap md:text-5xl"
                 >
                   {item.value}
                 </p>
-                <p className="text-secondary mt-2">{item.label}</p>
+                <p className="text-secondary mt-2 text-xs md:text-lg">
+                  {item.label}
+                </p>
               </div>
             ))}
           </div>
@@ -88,10 +84,10 @@ export const ProjectSection = ({
       )}
 
       {project_section.review && (
-        <div className="space-y-8">
-          <p className="text-6xl font-medium">{`“${project_section.review.message}”`}</p>
-          <p className="text-secondary tracking-wider uppercase">
-            {project_section.review.by}
+        <div className="space-y-4">
+          <p className="text-3xl font-medium md:text-5xl">{`“${project_section.review.message}”`}</p>
+          <p className="text-secondary md:text-md text-xs tracking-wider uppercase">
+            - {project_section.review.by}
           </p>
         </div>
       )}

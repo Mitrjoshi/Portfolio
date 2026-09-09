@@ -54,7 +54,7 @@ export const Skills = () => {
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ['start 80%', 'end 20%'],
+    offset: ['start 50%', 'end 50%'],
   })
 
   return (
@@ -83,7 +83,7 @@ export const Skills = () => {
               </p>
             </InView>
 
-            <div className="grid grid-cols-5 gap-2 md:grid-cols-10">
+            <div className="grid grid-cols-4 gap-2 md:grid-cols-5 lg:grid-cols-10">
               {skills.map((skill, i) => (
                 <SkillCard
                   index={i}
@@ -115,7 +115,7 @@ const SkillCard = ({
   const opacity = useTransform(
     scrollProgress,
     [start, end, 0.85, 1],
-    [0, 1, 1, 0]
+    [0, 1, 1, 1]
   )
 
   const y = useTransform(scrollProgress, [start, end, 0.85, 1], [40, 0, 0, -20])

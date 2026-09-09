@@ -133,6 +133,11 @@ function RouteComponent() {
     })
   }
 
+  useEffect(() => {
+    setShowNav(false)
+    setActiveIndex(0)
+  }, [project_details])
+
   return (
     <>
       <div

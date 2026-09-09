@@ -76,7 +76,7 @@ const DetailsBox = ({
         <>
           {confidential ? (
             <p
-              className="group flex items-center gap-2 font-medium"
+              className="group flex items-center gap-2 text-sm font-medium"
               style={{ color }}
             >
               <LockIcon size={16} className="" />
@@ -85,7 +85,7 @@ const DetailsBox = ({
           ) : (
             <a href={value} target="_blank" rel="noopener noreferrer">
               <p
-                className="group inline cursor-pointer font-medium underline underline-offset-4"
+                className="group inline cursor-pointer text-sm font-medium underline underline-offset-4"
                 style={{ color }}
               >
                 {value}{' '}
@@ -98,7 +98,7 @@ const DetailsBox = ({
           )}
         </>
       ) : (
-        <p className="font-medium">{value}</p>
+        <p className="text-sm font-medium">{value}</p>
       )}
     </div>
   )

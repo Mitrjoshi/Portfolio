@@ -16,7 +16,7 @@ export const ShortStory = () => {
               <p className="text-3xl font-medium">Long story short, </p>,
               <p className="text-3xl font-medium">I've been designing</p>,
               <p className="text-secondary text-3xl font-medium">
-                for over 4 years
+                for over {new Date().getFullYear() - 2022} years
               </p>,
             ]}
           />
@@ -31,7 +31,8 @@ export const ShortStory = () => {
 
           <div className="space-y-2">
             <p className="text-secondary text-lg font-light">
-              And yes — I'm still deep in UX/UI and Figma every day.
+              And yes — I’m still hands-on with React, TypeScript, and modern
+              frontend architecture every day.
             </p>
             <p className="text-primary text-lg font-light">
               That's the fun part.
@@ -40,19 +41,22 @@ export const ShortStory = () => {
 
           <div className="flex flex-wrap items-center gap-4">
             <div className="border px-4 py-1">
-              <p className="text-secondary">hellohello</p>
+              <p className="text-secondary">React / TypeScript</p>
             </div>
             <div className="border px-4 py-1">
-              <p className="text-secondary">hello</p>
+              <p className="text-secondary">Frontend architecture</p>
             </div>
             <div className="border px-4 py-1">
-              <p className="text-secondary">hellohellohello</p>
+              <p className="text-secondary">Design systems</p>
             </div>
             <div className="border px-4 py-1">
-              <p className="text-secondary">hello</p>
+              <p className="text-secondary">API integrations</p>
             </div>
             <div className="border px-4 py-1">
-              <p className="text-secondary">hehellollo</p>
+              <p className="text-secondary">Performance</p>
+            </div>
+            <div className="border px-4 py-1">
+              <p className="text-secondary">AI workflows</p>
             </div>
           </div>
         </div>
@@ -61,25 +65,21 @@ export const ShortStory = () => {
   )
 }
 
-const text = `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-Exercitationem, atque rerum unde harum veniam dolores adipisci labore minima
-ipsa quis Lorem ipsum dolor sit amet consectetur adipisicing elit.
-Exercitationem, atque rerum unde harum veniam dolores adipisci labore minima
-ipsa quis`
+const text = `I’ve led teams, mentored designers, and helped turn complicated challenges into clear, meaningful digital experiences. Along the way, I’ve worked across brands, products, and industries — shaping ideas, improving processes, and shipping work that balances user needs, business goals, and thoughtful design.`
 
 export const ScrollText = () => {
   const ref = useRef<HTMLDivElement>(null)
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start 80%', 'end 20%'],
+    offset: ['start 50%', 'end 50%'],
   })
 
   const words = text.split(' ')
 
   return (
     <div ref={ref}>
-      <p className="text-2xl font-medium tracking-widest md:text-4xl">
+      <p className="text-2xl font-medium tracking-widest md:text-5xl">
         {words.map((word, index) => (
           <Word
             key={index}

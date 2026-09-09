@@ -96,20 +96,20 @@ const ContactCard = ({
         className={`${highlight ? 'bg-primary border border-[#c47f22]' : 'hover:border-foreground border'} slide-up-fade-in group relative cursor-pointer p-4 duration-300 hover:-translate-y-1`}
       >
         <p
-          className={`${highlight ? 'text-background/80 group-hover:text-foreground/80 duration-200' : 'text-foreground/50'} text-sm uppercase`}
+          className={`${highlight ? 'text-background/80 group-hover:text-background/80 duration-200' : 'text-foreground/50'} text-sm uppercase`}
         >
           {label}
         </p>
         <div className="flex items-center gap-2">
           <p
-            className={`${highlight ? 'text-background group-hover:text-foreground duration-200' : 'text-foreground'} text-lg font-medium`}
+            className={`${highlight ? 'text-background group-hover:text-background duration-200' : 'text-foreground'} text-lg font-medium`}
           >
             {value}
           </p>
 
           {!highlight && (
             <ArrowRight
-              className={`${highlight ? 'text-background' : 'text-foreground mr-6'} -rotate-45 duration-200 group-hover:translate-x-1 group-hover:-translate-y-1`}
+              className={`${highlight ? 'text-background' : 'mr-6'} -rotate-45 duration-200 group-hover:translate-x-1 group-hover:-translate-y-1`}
               strokeWidth={1}
               size={20}
             />
