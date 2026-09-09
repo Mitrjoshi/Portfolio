@@ -15,7 +15,7 @@ function RouteComponent() {
       <BorderContainer>
         <Container>
           <div className="py-20">
-            <p className="mx-auto px-8 text-xl font-medium md:max-w-[40ch] md:px-10 md:text-center md:text-3xl">
+            <p className="mx-auto px-8 text-xl font-medium md:max-w-[60ch] md:px-10 md:text-center md:text-3xl">
               <span>
                 Over the last decade, I’ve worked across startups and global
                 companies, building everything from responsive websites to

@@ -80,25 +80,16 @@ export const WORK_FLOW: WorkFlowEntry[] = [
 
   {
     id: 'pathlens',
-
     name: 'Pathlens',
-
     category: 'Full Stack',
-
     year: '2026',
-
     status: 'In development',
-
     headline:
       'Privacy-focused product analytics built from tracking script to dashboard.',
-
     purpose:
       'Capture visitor behaviour, process interaction data, and turn sessions and events into clear product analytics without relying on heavyweight analytics platforms.',
-
     liveUrl: 'https://d1zadf3to2hh75.cloudfront.net/',
-
     githubUrl: 'https://github.com/Mitrjoshi/Airship-x-Pathlens',
-
     stack: [
       'React',
       'TypeScript',
@@ -107,7 +98,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
       'REST API',
       'Vercel',
     ],
-
     flow: [
       {
         step: '01',
@@ -131,7 +121,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
         description: 'Transform analytics queries into dashboard insights.',
       },
     ],
-
     metrics: [
       {
         value: '7+',
@@ -150,11 +139,8 @@ export const WORK_FLOW: WorkFlowEntry[] = [
         label: 'Responsive',
       },
     ],
-
     tags: ['Full Stack', 'SaaS', 'Analytics', 'React', 'Node.js', 'PostgreSQL'],
-
-    defaultCommand: 'pathlens build',
-
+    defaultCommand: 'pathlens api health',
     terminalRuns: [
       {
         command: 'pathlens build',
@@ -172,7 +158,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
           '·production build · exit 0 · 2.6s',
         ],
       },
-
       {
         command: 'pathlens track --live',
         lines: [
@@ -186,7 +171,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
           '·3 events · exit 0 · 0.18s',
         ],
       },
-
       {
         command: 'pathlens analyse --session=84f2',
         lines: [
@@ -202,7 +186,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
           '·session processed · exit 0 · 0.42s',
         ],
       },
-
       {
         command: 'pathlens heatmap --page=/pricing',
         lines: [
@@ -218,7 +201,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
           '·heatmap ready · exit 0 · 0.31s',
         ],
       },
-
       {
         command: 'pathlens api health',
         lines: [
@@ -232,7 +214,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
           '·12 endpoints · 0 failures',
         ],
       },
-
       {
         command: 'pathlens visitors --live',
         lines: [
@@ -246,7 +227,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
           '·9 events in last 60s',
         ],
       },
-
       {
         command: 'pathlens query --metric=conversion',
         lines: [
@@ -263,7 +243,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
         ],
       },
     ],
-
     architecture: [
       'User Website / App',
       'Tracking Script',
@@ -272,7 +251,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
       'Analytics Processing',
       'Product Dashboard',
     ],
-
     data: [
       'Visitors',
       'Sessions',
@@ -281,25 +259,20 @@ export const WORK_FLOW: WorkFlowEntry[] = [
       'Heatmap Data',
       'Live Visitor Activity',
     ],
-
     actions: {
       previous: 'Prev',
-
       next: 'Next',
-
       primary: {
         type: 'live',
         label: 'Live',
         url: 'https://d1zadf3to2hh75.cloudfront.net/',
       },
-
       secondary: {
         type: 'code',
         label: 'Code',
         url: 'https://github.com/Mitrjoshi/Airship-x-Pathlens',
       },
     },
-
     footer:
       'Full-stack analytics product covering tracking, APIs, structured data, processing and dashboard delivery.',
   },
@@ -310,21 +283,14 @@ export const WORK_FLOW: WorkFlowEntry[] = [
 
   {
     id: 'vertex',
-
     name: 'Vertex',
-
     category: 'AI Platform',
-
     year: '2026',
-
     status: 'Live',
-
     headline:
       'AI-powered content generation platform connecting enterprise workflows with Google Vertex AI.',
-
     purpose:
       'Give teams a controlled interface for generating production-ready image, video and AI content through Vertex AI while managing users, credits, requests and model access through a secure application layer.',
-
     stack: [
       'React',
       'TypeScript',
@@ -334,7 +300,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
       'Veo',
       'Imagen',
     ],
-
     flow: [
       {
         step: '01',
@@ -360,7 +325,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
         description: 'Return generated assets while tracking usage and access.',
       },
     ],
-
     metrics: [
       {
         value: 'Gemini',
@@ -379,11 +343,8 @@ export const WORK_FLOW: WorkFlowEntry[] = [
         label: 'Usage Control',
       },
     ],
-
     tags: ['AI Platform', 'Full Stack', 'Vertex AI', 'Gemini', 'Veo', 'Imagen'],
-
     defaultCommand: 'vertex models --status',
-
     terminalRuns: [
       {
         command: 'vertex models --status',
@@ -399,7 +360,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
           '·3 model services · ready',
         ],
       },
-
       {
         command: 'vertex generate --type=image',
         lines: [
@@ -416,7 +376,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
           '·job complete · exit 0',
         ],
       },
-
       {
         command: 'vertex generate --type=video',
         lines: [
@@ -433,7 +392,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
           '·job complete · exit 0',
         ],
       },
-
       {
         command: 'vertex credits --check',
         lines: [
@@ -448,7 +406,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
           '·request authorised · exit 0',
         ],
       },
-
       {
         command: 'vertex api health',
         lines: [
@@ -462,7 +419,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
           '·services online · 0 failures',
         ],
       },
-
       {
         command: 'vertex route --model=auto',
         lines: [
@@ -476,7 +432,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
           '·request routed · exit 0',
         ],
       },
-
       {
         command: 'vertex audit --usage',
         lines: [
@@ -492,7 +447,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
         ],
       },
     ],
-
     architecture: [
       'User Interface',
       'Application API',
@@ -502,7 +456,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
       'Gemini / Imagen / Veo',
       'Generated Assets',
     ],
-
     data: [
       'Users',
       'Generation Requests',
@@ -511,21 +464,16 @@ export const WORK_FLOW: WorkFlowEntry[] = [
       'Credit Usage',
       'Generated Assets',
     ],
-
     caseStudyUrl: '#vertex',
-
     actions: {
       previous: 'Prev',
-
       next: 'Next',
-
       primary: {
         type: 'writeup',
         label: 'Details',
         url: '#vertex',
       },
     },
-
     footer:
       'Enterprise AI generation workflow connecting application logic, access control, usage management and multimodal Vertex AI services.',
   },
@@ -536,21 +484,14 @@ export const WORK_FLOW: WorkFlowEntry[] = [
 
   {
     id: 'basecamp',
-
     name: 'Basecamp',
-
     category: 'Workshop Platform',
-
     year: '2026',
-
     status: 'Live',
-
     headline:
       'Collaborative workshop platform built for live ideation, AI-assisted refinement, voting and presentation.',
-
     purpose:
       'Replace fragmented workshop tools with one structured system where participants submit and refine ideas, teams shortlist them, admins control voting, and winning ideas move into a presentation-ready workshop outcome.',
-
     stack: [
       'React',
       'TypeScript',
@@ -559,7 +500,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
       'SQL',
       'AI Integration',
     ],
-
     flow: [
       {
         step: '01',
@@ -583,7 +523,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
           'Winning ideas are surfaced through the Big Screen experience.',
       },
     ],
-
     metrics: [
       {
         value: '30–70',
@@ -602,11 +541,8 @@ export const WORK_FLOW: WorkFlowEntry[] = [
         label: 'Voting',
       },
     ],
-
     tags: ['Full Stack', 'Real-time', 'Workshops', 'AI', 'Voting', 'Admin'],
-
     defaultCommand: 'basecamp workshop --status',
-
     terminalRuns: [
       {
         command: 'basecamp workshop --status',
@@ -623,7 +559,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
           '·room ready · exit 0',
         ],
       },
-
       {
         command: 'basecamp idea add',
         lines: [
@@ -638,7 +573,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
           '·idea created · exit 0',
         ],
       },
-
       {
         command: 'basecamp coach --idea=42',
         lines: [
@@ -653,7 +587,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
           '·refinement complete · exit 0',
         ],
       },
-
       {
         command: 'basecamp scout --pillar=growth',
         lines: [
@@ -667,7 +600,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
           '·scout complete · exit 0',
         ],
       },
-
       {
         command: 'basecamp voting --start',
         lines: [
@@ -682,7 +614,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
           '·voting live · exit 0',
         ],
       },
-
       {
         command: 'basecamp votes --tally',
         lines: [
@@ -699,7 +630,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
           '·tally complete · exit 0',
         ],
       },
-
       {
         command: 'basecamp bigscreen --present',
         lines: [
@@ -715,7 +645,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
         ],
       },
     ],
-
     architecture: [
       'Participant Device',
       'Workshop UI',
@@ -726,7 +655,6 @@ export const WORK_FLOW: WorkFlowEntry[] = [
       'Admin Console',
       'Big Screen',
     ],
-
     data: [
       'Participants',
       'Teams',
@@ -737,21 +665,16 @@ export const WORK_FLOW: WorkFlowEntry[] = [
       'Workshop Configuration',
       'Activity Events',
     ],
-
     caseStudyUrl: '#basecamp',
-
     actions: {
       previous: 'Prev',
-
       next: 'Next',
-
       primary: {
         type: 'writeup',
         label: 'Details',
         url: '#basecamp',
       },
     },
-
     footer:
       'Live workshop system connecting participant ideation, AI-assisted refinement, controlled voting, administration and presentation workflows.',
   },

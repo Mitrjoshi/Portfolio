@@ -530,6 +530,25 @@ html {
   }
 }
 
+.slide-up-fade-in-kit {
+  opacity: 0;
+  transform: translateY(24px);
+
+  animation: slide-up-fade-in-kit 0.25s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+@keyframes slide-up-fade-in-kit {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .reveal-text-line {
   overflow: hidden;
   line-height: 2.5;

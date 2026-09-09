@@ -14,7 +14,7 @@ export const WorkFlowPill = ({
   title?: string
 }) => {
   const classes = `border font-medium uppercase transition-colors ${
-    highlight ? 'bg-secondary/5 px-2 py-1' : 'bg-transparent px-3 py-1.5'
+    highlight ? 'bg-background px-2 py-1' : 'bg-transparent px-3 py-1.5'
   } ${
     disabled
       ? 'cursor-not-allowed opacity-40'

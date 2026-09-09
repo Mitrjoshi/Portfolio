@@ -18,10 +18,13 @@ const STATUS_DOT_CLASS: Record<string, string> = {
 export const WorkFlow = () => {
   const [activeProject, setActiveProject] = useState<string>(WORK_FLOW[0].id)
   const [activeStep, setActiveStep] = useState(0)
+  const [projectsOpened, setProjectsOpened] = useState<string[]>([
+    activeProject,
+  ])
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveStep((prev) => (prev >= 4 ? 1 : prev + 1))
+      setActiveStep((prev) => (prev + 1) % 4)
     }, 2000)
 
     return () => clearInterval(interval)
@@ -47,7 +50,7 @@ export const WorkFlow = () => {
   }
 
   return (
-    <div className="relative space-y-10 p-5 pt-20! lg:p-10">
+    <div className="relative space-y-10 p-5 pt-20! md:p-10">
       <SectionAttribute text="Engineering" />
 
       <div className="space-y-6">
@@ -68,11 +71,11 @@ export const WorkFlow = () => {
         </InView>
       </div>
 
-      <div className="flex-1 border">
+      <InView className="flex-1 border">
         {/* HEADER */}
-        <div className="bg-primary flex items-center justify-between gap-4 p-2">
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1">
+        <div className="bg-primary flex flex-col justify-between gap-2 p-2 lg:flex-row lg:items-center lg:gap-4">
+          <div className="flex items-start gap-4">
+            <div className="mt-1 flex items-center gap-1">
               <div className="aspect-square h-2 bg-black" />
               <div className="aspect-square h-2 bg-black/50" />
               <div className="aspect-square h-2 bg-black/50" />
@@ -105,13 +108,18 @@ export const WorkFlow = () => {
                   Projects
                 </p>
               </div>
-              <div className="flex w-fit flex-row divide-x border-r border-b-0 lg:w-full lg:flex-col lg:divide-y lg:border-r-0 lg:border-b">
+              <div className="flex w-fit flex-row divide-x border-r border-b-0 lg:w-full lg:flex-col lg:divide-x-0 lg:divide-y lg:border-r-0 lg:border-b">
                 {WORK_FLOW.map((work_flow, index) => {
                   return (
                     <WorkFlowSideMenuItem
                       key={index}
                       active={activeProject === work_flow.id}
-                      onClick={() => setActiveProject(work_flow.id)}
+                      onClick={() => {
+                        setProjectsOpened((prev) => [
+                          ...new Set([...prev, work_flow.id]),
+                        ])
+                        setActiveProject(work_flow.id)
+                      }}
                       title={work_flow.name}
                       description={`${work_flow.category} · ${work_flow.year}`}
                     />
@@ -121,12 +129,19 @@ export const WorkFlow = () => {
             </div>
 
             {/* SIDE MENU FOOTER */}
-            <div className="hidden flex-col items-start justify-between gap-4 p-4 lg:flex">
+            <div className="relative hidden flex-col items-start justify-between gap-4 p-4 lg:flex">
               <p className="text-secondary text-xs tracking-wider uppercase">
-                {activeIndex + 1} / {WORK_FLOW.length} opened
+                {projectsOpened.length} / {WORK_FLOW.length} opened
               </p>
 
-              <div className="bg-secondary h-0.5 w-full rounded-full" />
+              <div className="bg-secondary/50 h-0.5 w-[85%] overflow-hidden rounded-full">
+                <div
+                  style={{
+                    width: `${(projectsOpened.length / WORK_FLOW.length) * 100}%`,
+                  }}
+                  className="bg-secondary h-full rounded-full transition-[width] duration-200"
+                />
+              </div>
             </div>
           </div>
 
@@ -168,9 +183,8 @@ export const WorkFlow = () => {
               <div className="grid grid-cols-2 md:grid-cols-4">
                 {active_work_flow?.flow.map((flow, index) => (
                   <WorkFlowProgressBlock
-                    key={index}
-                    done={activeStep > index + 1}
-                    ongoing={activeStep === index + 1}
+                    key={`${active_work_flow.id}-${index}`}
+                    ongoing={activeStep === index}
                     index={index + 1}
                     text={flow.title}
                     description={flow.description}
@@ -190,9 +204,9 @@ export const WorkFlow = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap items-center gap-4 p-5">
+            <div className="flex flex-wrap items-center gap-2 p-5">
               {active_work_flow?.tags.map((tag, index) => (
-                <WorkFlowPill text={tag} key={index} />
+                <WorkFlowPill text={tag} key={index} highlight />
               ))}
             </div>
 
@@ -214,7 +228,7 @@ export const WorkFlow = () => {
             {active_work_flow?.footer}
           </p>
         </div>
-      </div>
+      </InView>
     </div>
   )
 }
