@@ -9,7 +9,7 @@ import { WorkFlowPill } from '../routes/work/-components/work-flow-pill'
 import { WorkFlowProgressBlock } from '../routes/work/-components/work-flow-progress-block'
 import { WorkFlowSideMenuItem } from '../routes/work/-components/work-flow-sidemenu-item'
 
-const STATUS_DOT_CLASS: Record<string, string> = {
+export const STATUS_DOT_CLASS: Record<string, string> = {
   Live: 'bg-green-700',
   'In development': 'bg-yellow-800',
   Archived: 'bg-black/30',

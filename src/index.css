@@ -112,6 +112,7 @@
 
   --primary: #f0b555;
   --primary-foreground: #fbf7e7;
+  --primary-foreground-active: #efe9d3;
 
   --secondary: #8b8578;
   --secondary-foreground: #262626;
@@ -170,7 +171,8 @@
   --card-foreground: #fafafa;
 
   --primary: #f0b555;
-  --primary-foreground: #221f14;
+  --primary-foreground: #17160f;
+  --primary-foreground-active: #221f14;
 
   --secondary: #928c7f;
   --secondary-foreground: #fafafa;
@@ -228,6 +230,7 @@
 
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-primary-foreground-active: var(--primary-foreground-active);
 
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
@@ -303,6 +306,15 @@ html {
     transparent 6px,
     var(--background-dash) 7px,
     var(--background-dash) 6px
+  );
+}
+
+.diagonal-line-background {
+  background-color: var(--background);
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--color-border) 0 1px,
+    transparent 1px 15px
   );
 }
 

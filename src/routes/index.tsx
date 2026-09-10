@@ -5,7 +5,7 @@ import { Hero } from '../sections/hero'
 import { Skills } from '../sections/skills'
 import { Focus } from '../sections/focus'
 import { Worked } from '../sections/worked'
-import { Separator } from '../components/separator'
+import { ByTheNumbers } from '../sections/by-the-numbers'
 
 export const Route = createFileRoute('/')({
   component: RouteComponent,
@@ -13,17 +13,23 @@ export const Route = createFileRoute('/')({
 
 function RouteComponent() {
   return (
-    <div>
+    <>
       <BorderContainer>
         <Container>
           <Hero />
         </Container>
 
+        {/* <Container className="border-t p-5">
+          <Expertise />
+        </Container> */}
+
         <Container>
           <Focus />
         </Container>
 
-        <Separator />
+        <div className="bg-background border-y">
+          <ByTheNumbers />
+        </div>
 
         <Container>
           <Skills />
@@ -33,6 +39,6 @@ function RouteComponent() {
           <Worked />
         </Container>
       </BorderContainer>
-    </div>
+    </>
   )
 }

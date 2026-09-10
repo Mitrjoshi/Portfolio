@@ -28,7 +28,7 @@ export const Footer = ({
   const [activeDailyKit, setActiveDailyKit] = useState(0)
 
   return (
-    <BorderContainerInner className="corner-border-bottom-left corner-border-bottom-right border-x pt-20">
+    <BorderContainerInner className="corner-border-bottom-left corner-border-bottom-right bg-background! border-x pt-20">
       {type === 'circuit' ? (
         <>
           <div className="space-y-5 pt-20">
