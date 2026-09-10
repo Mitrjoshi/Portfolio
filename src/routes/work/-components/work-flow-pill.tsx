@@ -18,7 +18,7 @@ export const WorkFlowPill = ({
   } ${
     disabled
       ? 'cursor-not-allowed opacity-40'
-      : (href || onClick) && 'hover:bg-primary/10 cursor-pointer'
+      : (href || onClick) && 'hover:bg-primary-foreground cursor-pointer'
   }`
 
   const label = <p className="text-secondary text-xs">{text}</p>

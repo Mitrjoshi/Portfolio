@@ -16,6 +16,11 @@ const RootLayout = () => {
     fuzzy: false,
   })
 
+  const isContactPage = matchRoute({
+    to: '/contact',
+    fuzzy: false,
+  })
+
   const [isReload, setIsReload] = useState(() => {
     if (typeof window === 'undefined') return false
 
@@ -42,7 +47,7 @@ const RootLayout = () => {
 
         {!isProjectPage && (
           <div className="bg-background border-t">
-            <Footer />
+            <Footer type={isContactPage ? 'street' : 'circuit'} />
           </div>
         )}
 

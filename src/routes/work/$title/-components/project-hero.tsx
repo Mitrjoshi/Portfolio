@@ -70,7 +70,7 @@ const DetailsBox = ({
   color?: string
 }) => {
   return (
-    <div className="bg-primary/10 space-y-2 p-4 dark:bg-transparent">
+    <div className="bg-primary-foreground space-y-2 p-4 dark:bg-transparent">
       <p className="text-secondary text-sm uppercase">{label}</p>
       {label === 'live' ? (
         <>

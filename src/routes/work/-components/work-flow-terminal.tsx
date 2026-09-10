@@ -437,10 +437,6 @@ export const WorkFlowTerminal = ({
       setTypedCommand('')
       setVisibleLineCount(0)
       setPhase('idle')
-
-      requestAnimationFrame(() => {
-        inputRef.current?.focus()
-      })
     }, 120)
 
     return () => {

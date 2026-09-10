@@ -187,7 +187,7 @@ export const ToolCircuit = ({
         preserveAspectRatio="xMinYMid meet"
         className="block h-full w-full"
       >
-        <defs>
+        {/* <defs>
           <pattern
             id="circuit-grid"
             width="100"
@@ -218,7 +218,7 @@ export const ToolCircuit = ({
               <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
-        </defs>
+        </defs> */}
 
         {/* STATIC GRID */}
 

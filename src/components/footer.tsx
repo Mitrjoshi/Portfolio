@@ -1,7 +1,6 @@
 import { ArrowRight } from 'lucide-react'
 import { useTransitionNavigate } from '../providers/transition-navigation'
 import { BorderContainerInner } from './border-container-inner'
-import { Button } from './button'
 import { useLocation } from '@tanstack/react-router'
 import { useState } from 'react'
 import { ToolCircuit } from './tool-circuit'
@@ -18,16 +17,22 @@ const DAILY_KIT = [
   'Node.js',
 ]
 
-export const Footer = () => {
+export const Footer = ({
+  type = 'circuit',
+}: {
+  type?: 'circuit' | 'street'
+}) => {
   const { transitionTo } = useTransitionNavigate()
   const { pathname } = useLocation()
 
   const [activeDailyKit, setActiveDailyKit] = useState(0)
 
   return (
-    <BorderContainerInner className="corner-border-bottom-left corner-border-bottom-right space-y-20 border-x">
-      <div className="space-y-5 pt-20">
-        <div className="mx-auto w-fit">
+    <BorderContainerInner className="corner-border-bottom-left corner-border-bottom-right border-x pt-20">
+      {type === 'circuit' ? (
+        <>
+          <div className="space-y-5 pt-20">
+            {/* <div className="mx-auto w-fit">
           <Button
             onClick={() =>
               pathname !== '/work' && transitionTo('/work', 'Selected work')
@@ -35,31 +40,35 @@ export const Footer = () => {
             text="Explore Portfolio"
             showIcon
           />
-        </div>
+        </div> */}
 
-        {/* CONNECTED LABEL */}
-        <div className="mx-auto flex w-fit items-center gap-2">
-          <p className="text-primary mt-1 text-xs">
-            {String(activeDailyKit + 1).padStart(2, '0')}
-          </p>
+            {/* CONNECTED LABEL */}
+            <div className="mx-auto flex w-fit items-center gap-2">
+              <p className="text-primary mt-1 text-xs">
+                {String(activeDailyKit + 1).padStart(2, '0')}
+              </p>
 
-          <p
-            key={`kit-${activeDailyKit}`}
-            className="slide-up-fade-in-kit text-lg font-medium"
-          >
-            {DAILY_KIT[activeDailyKit]}
+              <p
+                key={`kit-${activeDailyKit}`}
+                className="slide-up-fade-in-kit text-lg font-medium"
+              >
+                {DAILY_KIT[activeDailyKit]}
 
-            <span className="text-secondary ml-2 text-xs">Daily Kit</span>
-          </p>
-        </div>
-      </div>
+                <span className="text-secondary ml-2 text-xs">Daily Kit</span>
+              </p>
+            </div>
+          </div>
 
-      {/* CIRCUIT DRIVES THE LABEL */}
-      <ToolCircuit
-        tools={DAILY_KIT}
-        activeIndex={activeDailyKit}
-        onActiveIndexChange={setActiveDailyKit}
-      />
+          {/* CIRCUIT DRIVES THE LABEL */}
+          <ToolCircuit
+            tools={DAILY_KIT}
+            activeIndex={activeDailyKit}
+            onActiveIndexChange={setActiveDailyKit}
+          />
+        </>
+      ) : (
+        <></>
+      )}
 
       <div className="space-y-20 p-5 pt-20 md:p-10">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">

@@ -135,7 +135,7 @@ const SkillCard = ({
       }}
       className="w-full space-y-4"
     >
-      <div className="border-primary bg-accent flex aspect-square items-center justify-center border">
+      <div className="bg-accent flex aspect-square items-center justify-center border">
         <img
           src={skill.image}
           alt={skill.title}

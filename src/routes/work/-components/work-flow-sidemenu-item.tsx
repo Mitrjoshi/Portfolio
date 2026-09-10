@@ -12,7 +12,7 @@ export const WorkFlowSideMenuItem = ({
   return (
     <div
       onClick={onClick}
-      className={`${active ? 'bg-primary/10' : 'bg-transparent'} hover:bg-primary/10 relative flex cursor-pointer items-start gap-2 p-3 px-4 duration-200`}
+      className={`${active ? 'bg-primary-foreground brightness-150' : 'bg-transparent'} hover:bg-primary-foreground relative flex cursor-pointer items-start gap-2 p-3 px-4 duration-200 hover:brightness-150`}
     >
       <div
         style={{

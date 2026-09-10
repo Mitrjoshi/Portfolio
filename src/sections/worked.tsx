@@ -71,7 +71,7 @@ const TeamsCard = ({
   index: number
 }) => {
   return (
-    <div className="hover:bg-primary/5 group grid w-full grid-rows-[20px_72px_1fr] gap-5 p-4 transition-colors duration-200 md:aspect-square">
+    <div className="hover:bg-primary-foreground group grid w-full grid-rows-[20px_72px_1fr] gap-5 p-4 transition-colors duration-200 md:aspect-square">
       {/* Index */}
       <p className="text-secondary group-hover:text-primary text-xs transition-colors duration-200">
         A{index + 1}

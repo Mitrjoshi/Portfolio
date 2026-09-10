@@ -101,7 +101,7 @@ export const WorkFlow = () => {
 
         <div className="grid lg:grid-cols-[220px_1fr]">
           {/* SIDE MENU */}
-          <div className="flex h-full w-full flex-1 flex-col justify-between divide-y border-r">
+          <div className="bg-primary-foreground flex h-full w-full flex-1 flex-col justify-between divide-y border-r">
             <div className="divide-y">
               <div className="p-2 lg:p-4">
                 <p className="text-secondary text-xs tracking-wider uppercase">
@@ -223,7 +223,7 @@ export const WorkFlow = () => {
         </div>
 
         {/* FOOTER */}
-        <div className="bg-primary/10 flex flex-col items-center gap-4 border-t p-4 md:flex-row md:justify-between">
+        <div className="bg-primary-foreground flex flex-col items-center gap-4 border-t p-4 md:flex-row md:justify-between">
           <p className="text-secondary text-xs tracking-wider">
             {active_work_flow?.footer}
           </p>

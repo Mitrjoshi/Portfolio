@@ -34,7 +34,7 @@ export default function ThemeButton() {
     <button
       data-dark={isDark}
       onClick={toggleTheme}
-      className="hover:bg-primary/15 data-[dark=true]:text-primary aspect-square cursor-pointer rounded-full p-2 duration-200"
+      className="hover:bg-primary-foreground data-[dark=true]:text-primary aspect-square cursor-pointer rounded-full p-2 duration-200"
     >
       <IconBrightness
         className={`${isDark ? '0' : '-rotate-180'} duration-200`}

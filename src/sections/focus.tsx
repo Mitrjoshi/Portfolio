@@ -6,6 +6,9 @@ import { RevealText } from '../components/reveal-text'
 import { InView } from '../components/in-view'
 import { AnimatePresence, motion } from 'motion/react'
 import { SectionAttribute } from '../components/section-attribute'
+import { ReactDevelopmentScene } from '../components/react-development-scene'
+import { FrontendEngineeringScene } from '../components/frontend-engineer-scene'
+import { CreativeDevelopmentScene } from '../components/creative-development-scene'
 
 export const Focus = () => {
   return (
@@ -14,23 +17,23 @@ export const Focus = () => {
         <div className="p-5 py-20! md:p-10">
           <SectionAttribute text="Tracks" />
 
-          <div>
+          <div className="flex w-full flex-col items-center">
             <RevealText
               lines={[
-                <p className="text-center text-3xl font-medium md:text-5xl">
+                <p className="mx-auto w-fit text-center text-3xl font-medium md:text-5xl">
                   Primarily <span className="text-secondary">focused on</span>
                 </p>,
               ]}
             />
             <InView>
-              <p className="text-secondary slide-up-fade-in mx-auto mt-4 text-center text-lg lg:max-w-[40%]">
-                Ten years of shipping, settled into three tracks that sharpen
-                each other every day.
+              <p className="text-secondary slide-up-fade-in mx-auto mt-2 text-center text-lg lg:max-w-[40ch]">
+                {new Date().getFullYear() - 2022} years of shipping, settled
+                into three tracks that sharpen each other every day.
               </p>
             </InView>
           </div>
 
-          <div className="mt-10 md:mt-20">
+          <div className="mt-10">
             <Carousel />
           </div>
         </div>
@@ -77,19 +80,25 @@ const Carousel = () => {
     <div className="mx-auto grid items-center gap-10 md:grid-cols-2 lg:max-w-[75%]">
       <div className="relative aspect-square w-full">
         <AnimatePresence mode="wait">
-          <motion.img
+          <motion.div
             key={activeIndex}
-            src={`/focus/focus_${activeIndex + 1}.svg`}
-            alt={activeItem.title}
             className="absolute inset-0 h-full w-full object-contain"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{
-              duration: 0.35,
+              duration: 0.15,
               ease: 'easeInOut',
             }}
-          />
+          >
+            {activeIndex === 0 ? (
+              <ReactDevelopmentScene />
+            ) : activeIndex === 1 ? (
+              <FrontendEngineeringScene />
+            ) : (
+              <CreativeDevelopmentScene />
+            )}
+          </motion.div>
         </AnimatePresence>
       </div>
 

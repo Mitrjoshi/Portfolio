@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react'
 import { useState } from 'react'
 import { RevealText } from '../components/reveal-text'
 import { InView } from '../components/in-view'
+import { AnimatedStreetScene } from '../components/street-scene'
 
 export const Route = createFileRoute('/contact')({
   component: RouteComponent,
@@ -14,7 +15,7 @@ function RouteComponent() {
   return (
     <BorderContainer>
       <Container>
-        <div className="space-y-4 px-10 py-20">
+        <div className="space-y-4 p-5 py-20 md:px-10">
           <InView>
             <p className="text-primary slide-up-fade-in text-xs tracking-[.16em] uppercase">
               Contact — Mitr · IST India
@@ -36,11 +37,11 @@ function RouteComponent() {
             </p>
           </InView>
 
-          <div className="mt-12 flex flex-wrap gap-4">
+          <div className="mt-12 flex flex-wrap gap-2 md:gap-4">
             <ContactCard
               label="Email"
               value="mitrjoshi26@gmail.com"
-              link="mailto:mitrjoshi26@gmail.com"
+              link="mitrjoshi26@gmail.com"
               highlight
             />
 
@@ -57,6 +58,10 @@ function RouteComponent() {
             />
           </div>
         </div>
+      </Container>
+
+      <Container>
+        <AnimatedStreetScene />
       </Container>
     </BorderContainer>
   )
@@ -96,13 +101,13 @@ const ContactCard = ({
         className={`${highlight ? 'bg-primary border border-[#c47f22]' : 'hover:border-foreground border'} slide-up-fade-in group relative cursor-pointer p-4 duration-300 hover:-translate-y-1`}
       >
         <p
-          className={`${highlight ? 'text-background/80 group-hover:text-background/80 duration-200' : 'text-foreground/50'} text-sm uppercase`}
+          className={`${highlight ? 'text-background/80 group-hover:text-background/80 duration-200' : 'text-foreground/50'} text-xs uppercase`}
         >
           {label}
         </p>
         <div className="flex items-center gap-2">
           <p
-            className={`${highlight ? 'text-background group-hover:text-background duration-200' : 'text-foreground'} text-lg font-medium`}
+            className={`${highlight ? 'text-background group-hover:text-background duration-200' : 'text-foreground'} font-medium`}
           >
             {value}
           </p>
