@@ -29,4 +29,9 @@ export const routes: RouteItem[] = [
     label: 'Profile',
     transitionLabel: 'Profile',
   },
+  {
+    path: '/contact',
+    label: 'Contact',
+    transitionLabel: 'Contact',
+  },
 ]

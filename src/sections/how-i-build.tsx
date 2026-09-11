@@ -1,6 +1,7 @@
 import { SectionAttribute } from '../components/section-attribute'
 import { RevealText } from '../components/reveal-text'
 import { InView } from '../components/in-view'
+import { motion } from 'framer-motion'
 
 const BUILD_PROCESS = [
   {
@@ -88,24 +89,40 @@ export const HowIBuild = () => {
 
       <div className="divide-y border-y">
         {BUILD_PROCESS.map((item, index) => (
-          <div
-            className="grid items-center gap-2 py-8! md:grid-cols-[0.1fr_0.4fr_1fr] md:gap-4 md:py-4 lg:grid-cols-[0.1fr_0.5fr_1fr_1fr]"
-            key={index}
-          >
-            <p className="text-primary text-xs">{item.index}</p>
-            <p className="text-secondary text-xs tracking-wider text-nowrap uppercase">
-              {item.category}
-            </p>
-            <div>
-              <p className="text-xl font-medium md:text-2xl lg:text-3xl">
-                {item.title}
+          <InView key={index}>
+            <motion.div
+              variants={{
+                hidden: {
+                  opacity: 0,
+                },
+                visible: {
+                  opacity: 1,
+                  transition: {
+                    duration: 0.5,
+                    ease: 'easeOut',
+                    delay: index * 0.1,
+                  },
+                },
+              }}
+              className="grid items-center gap-2 py-8! md:grid-cols-[0.1fr_0.4fr_1fr] md:gap-4 md:py-4 lg:grid-cols-[0.1fr_0.5fr_1fr_1fr]"
+            >
+              <p className="text-primary text-xs">{item.index}</p>
+              <p className="text-secondary text-xs tracking-wider text-nowrap uppercase">
+                {item.category}
               </p>
-              <p className="text-secondary block lg:hidden">
+              <div>
+                <p className="text-xl font-medium md:text-2xl lg:text-3xl">
+                  {item.title}
+                </p>
+                <p className="text-secondary block lg:hidden">
+                  {item.description}
+                </p>
+              </div>
+              <p className="text-secondary hidden lg:block">
                 {item.description}
               </p>
-            </div>
-            <p className="text-secondary hidden lg:block">{item.description}</p>
-          </div>
+            </motion.div>
+          </InView>
         ))}
       </div>
     </div>

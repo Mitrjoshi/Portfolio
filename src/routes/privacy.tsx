@@ -1,7 +1,8 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { Container } from '../components/container'
-import { BorderContainer } from '../components/border-container'
 import { ArrowRight } from 'lucide-react'
+
+import { BorderContainer } from '../components/border-container'
+import { Container } from '../components/container'
 
 export const Route = createFileRoute('/privacy')({
   component: RouteComponent,
@@ -13,12 +14,15 @@ function RouteComponent() {
       <Container className="space-y-6 px-6 py-20">
         <div className="space-y-6">
           <p className="text-primary text-xs font-extralight uppercase">
-            Last updated 3 September 2026
+            Last updated 11 September 2026
           </p>
+
           <p className="text-5xl font-semibold">Privacy</p>
+
           <p className="text-secondary md:max-w-[40ch]">
-            What this site records while you read it, who receives it, and how
-            to have it stopped. It is a portfolio, so the answer is short.
+            What this site records while you explore it, why it is collected,
+            and how you can stop it. It is a portfolio, so the answer is fairly
+            short.
           </p>
 
           <Separator />
@@ -26,15 +30,18 @@ function RouteComponent() {
 
         <div className="space-y-4">
           <p className="text-3xl font-medium">The short version</p>
+
           <p className="text-secondary md:max-w-[45%]">
-            This site measures how it is used — which pages get read, what gets
-            clicked, roughly where in the world you are. It does not know your
-            name, and nothing here is sold or shared with advertisers.
+            This site uses analytics to understand how people move through it —
+            which pages get viewed, what gets clicked, how far people scroll,
+            and where the experience could be improved. It does not need to know
+            who you are to do that.
           </p>
+
           <p className="text-secondary md:max-w-[45%]">
-            There is no account to make, no newsletter, and no form. If you want
-            to reach me you send an email, and then I have your email address
-            because you sent it to me.
+            There is no account to create, no newsletter to subscribe to, and no
+            contact form collecting personal information. If you email me, I
+            will have your email address because you chose to send it.
           </p>
 
           <Separator />
@@ -42,21 +49,24 @@ function RouteComponent() {
 
         <div className="space-y-4">
           <p className="text-3xl font-medium">What is recorded</p>
+
           <p className="text-secondary md:max-w-[45%]">
-            Pages you open and the order you open them in. Clicks, scrolls, and
-            the occasional frustrated repeat-click on something that is not a
-            button — that last one exists so I can find the things that look
-            clickable and are not.
+            Pathlens records basic interaction data such as pages visited,
+            navigation between pages, clicks, scroll activity, and repeated
+            clicks on elements that may look interactive. That information helps
+            me understand what works and what needs improving.
           </p>
+
           <p className="text-secondary md:max-w-[45%]">
-            Your approximate location (country and city, worked out from your IP
-            address, which is not stored), your device, browser and screen size,
-            and the site that sent you here if you followed a link.
+            It may also record general technical information such as your device
+            type, browser, screen size, referring page, and an approximate
+            location derived from your network connection.
           </p>
+
           <p className="text-secondary md:max-w-[45%]">
-            A random identifier is kept in your browser so that a second visit
-            is recognized as the same visitor rather than a new one. It is a
-            number. It is not tied to anything about you.
+            A random visitor identifier may be stored in your browser so that
+            separate visits can be understood as part of the same anonymous
+            journey. It is not intended to identify you personally.
           </p>
 
           <Separator />
@@ -64,21 +74,42 @@ function RouteComponent() {
 
         <div className="space-y-4">
           <p className="text-3xl font-medium">Who receives it</p>
+
           <p className="text-secondary md:max-w-[45%]">
-            PostHog, a product-analytics company, and Google Analytics, both on
-            servers in the United States. They process it on my behalf and for
-            no purpose of their own.
+            Pathlens is the product-analytics platform used on this site to help
+            me understand visitor journeys, interactions, and usability. Google
+            Analytics may also be used for broader traffic and audience
+            measurement.
           </p>
+
           <p className="text-secondary md:max-w-[45%]">
-            Vercel, who host the site, keep their own aggregate count of page
-            views and no identifiers at all.
+            Vercel hosts this website and may process the normal technical
+            information required to deliver pages and assets when you visit.
           </p>
+
           <p className="text-secondary md:max-w-[45%]">
-            The site also loads fonts from Fontshare and Google Fonts, images
-            and text from Sanity, and shows links to Dribbble, LinkedIn,
-            Awwwards and ThemeForest. Loading a file from any of those means
-            your browser told them it asked for it — the ordinary mechanics of
-            the web, and nothing I send them.
+            The site may also load fonts, images, and other assets from external
+            services and includes links to platforms such as Dribbble, LinkedIn,
+            Awwwards, and ThemeForest. If you visit an external service, its own
+            privacy policy applies.
+          </p>
+
+          <Separator />
+        </div>
+
+        <div className="space-y-4">
+          <p className="text-3xl font-medium">What Pathlens is used for</p>
+
+          <p className="text-secondary md:max-w-[45%]">
+            Pathlens is used to understand the experience rather than the
+            individual. I use the data to see which work gets explored, where
+            visitors lose interest, which interactions are useful, and where
+            something in the interface may be confusing.
+          </p>
+
+          <p className="text-secondary md:max-w-[45%]">
+            Analytics collected through this site is not used to build an
+            advertising profile or sold to advertisers.
           </p>
 
           <Separator />
@@ -86,14 +117,17 @@ function RouteComponent() {
 
         <div className="space-y-4">
           <p className="text-3xl font-medium">Turning it off</p>
+
           <p className="text-secondary md:max-w-[45%]">
-            Any tracker-blocking extension will stop it, and I have no objection
-            whatsoever — the site works exactly the same without it.
-            Browser-level "do not track" and cookie-clearing both work too.
+            Tracker-blocking and privacy extensions may prevent analytics from
+            loading, and that is completely fine. The portfolio is designed to
+            work without analytics.
           </p>
+
           <p className="text-secondary md:max-w-[45%]">
-            If you would rather I deleted what has already been collected, email
-            me and I will. There is no form to fill in and I will not ask why.
+            Clearing your browser storage can also remove locally stored
+            identifiers. If you have a question about information collected
+            through this site, you can email me directly.
           </p>
 
           <Separator />
@@ -101,7 +135,11 @@ function RouteComponent() {
 
         <div className="w-fit space-y-4">
           <p className="text-3xl font-medium">Questions about any of this</p>
-          <div className="group flex w-fit cursor-pointer items-center gap-2">
+
+          <a
+            href="mailto:mitrjoshi26@gmail.com"
+            className="group flex w-fit items-center gap-2"
+          >
             <p className="text-secondary group-hover:text-primary text-lg font-medium underline underline-offset-10 duration-200">
               mitrjoshi26@gmail.com
             </p>
@@ -111,7 +149,7 @@ function RouteComponent() {
               strokeWidth={1}
               size={18}
             />
-          </div>
+          </a>
         </div>
       </Container>
     </BorderContainer>

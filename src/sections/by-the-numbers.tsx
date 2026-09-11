@@ -10,32 +10,36 @@ import { BorderContainerInner } from '../components/border-container-inner'
 import { InView } from '../components/in-view'
 import { RevealText } from '../components/reveal-text'
 import { SectionAttribute } from '../components/section-attribute'
+import { ArrowRight } from 'lucide-react'
+import { useTransitionNavigate } from '../providers/transition-navigation'
 
 const STATS = [
   {
-    value: '10+',
+    value: `${new Date().getFullYear() - 2022}+`,
     label: 'Years designing',
-    height: 46,
-  },
-  {
-    value: '150+',
-    label: 'Websites designed',
-    height: 100,
+    height: 40,
   },
   {
     value: '50+',
-    label: 'Products shipped',
-    height: 47,
+    label: 'Websites developed',
+    height: 100,
   },
   {
     value: '10+',
+    label: 'Products shipped',
+    height: 50,
+  },
+  {
+    value: '5+',
     label: 'Industries worked',
-    height: 38,
+    height: 16,
   },
 ]
 
 export const ByTheNumbers = () => {
   const sectionRef = useRef<HTMLDivElement>(null)
+
+  const { transitionTo } = useTransitionNavigate()
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -52,7 +56,7 @@ export const ByTheNumbers = () => {
       {/*
        * Keep the actual section pinned below the 81px header.
        */}
-      <div className="sticky top-[81px] h-[calc(100vh-81px)] overflow-hidden">
+      <div className="sticky top-[69px] h-[calc(100vh-69px)] overflow-hidden md:top-[81px] md:h-[calc(100vh-81px)]">
         <BorderContainerInner className="corner-border-top-right bg-background! h-full w-full border-x">
           <div className="flex h-full flex-col p-5 py-10 md:p-10">
             <SectionAttribute text="By The Numbers" />
@@ -73,6 +77,17 @@ export const ByTheNumbers = () => {
                   decade counted rather than described.
                 </p>
               </InView>
+
+              <button
+                onClick={() => transitionTo('/profile', 'Profile')}
+                className="group hover:text-primary hover:border-primary mt-8 flex w-fit cursor-pointer items-center gap-1 border-b pb-1 duration-200"
+              >
+                <p className="">Read the full profile</p>
+                <ArrowRight
+                  className="duration-200 group-hover:translate-x-1"
+                  size={18}
+                />
+              </button>
             </div>
 
             {/*

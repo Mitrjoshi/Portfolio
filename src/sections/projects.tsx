@@ -317,7 +317,7 @@ const ProjectCard = ({
       }}
       className="pointer-events-none absolute top-0 left-0 z-50 hidden md:block"
     >
-      <div className="project-cursor-card bg-background w-[380px] -translate-x-1/2 -translate-y-1/2 border">
+      <div className="project-cursor-card bg-primary-foreground w-120 -translate-x-1/2 -translate-y-1/2 border">
         <img
           src={project.image}
           className="aspect-16/10 w-full object-cover"

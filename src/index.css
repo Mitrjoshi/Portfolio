@@ -157,6 +157,26 @@
 
   --react-scene-signal: #726b60;
   --react-scene-shadow: #c9c1b1;
+
+  /* Human */
+  --human-skin: #e6bf9e;
+  --human-skin-detail: #cea98a;
+
+  --human-hair: #683e23;
+  --human-hair-detail: #7b4f34;
+
+  --human-coat: #8c9570;
+  --human-coat-detail: #5b644d;
+
+  --human-jeans: #94a2b1;
+  --human-jeans-detail: #aab7c6;
+
+  --human-shoe: #333b4f;
+  --human-shoe-detail: #c1beb4;
+
+  --human-bag: #936246;
+  --human-bag-detail: #744a35;
+  --scene-stroke-width: 2;
 }
 
 /* --------------------------------
@@ -215,6 +235,26 @@
 
   --react-scene-signal: #928c7f;
   --react-scene-shadow: #090806;
+
+  /* Human */
+  --human-skin: #b9987e;
+  --human-skin-detail: #89563e;
+
+  --human-hair: #55321c;
+  --human-hair-detail: #3f2415;
+
+  --human-coat: #727a5b;
+  --human-coat-detail: #979f86;
+
+  --human-jeans: #718399;
+  --human-jeans-detail: #596b80;
+
+  --human-shoe: #a0a9bb;
+  --human-shoe-detail: #777b85;
+
+  --human-bag: #b47b59;
+  --human-bag-detail: #936246;
+  --scene-stroke-width: 2;
 }
 
 /* --------------------------------
@@ -281,6 +321,27 @@
 
   --color-react-signal: var(--react-scene-signal);
   --color-react-shadow: var(--react-scene-shadow);
+
+  /* Human */
+  --color-human-skin: var(--human-skin);
+  --color-human-skin-detail: var(--human-skin-detail);
+
+  --color-human-hair: var(--human-hair);
+  --color-human-hair-detail: var(--human-hair-detail);
+
+  --color-human-coat: var(--human-coat);
+  --color-human-coat-detail: var(--human-coat-detail);
+
+  --color-human-jeans: var(--human-jeans);
+  --color-human-jeans-detail: var(--human-jeans-detail);
+
+  --color-human-shoe: var(--human-shoe);
+  --color-human-shoe-detail: var(--human-shoe-detail);
+
+  --color-human-bag: var(--human-bag);
+  --color-human-bag-detail: var(--human-bag-detail);
+
+  --scene-stroke-width: var(--scene-stroke-width);
 }
 
 @layer base {

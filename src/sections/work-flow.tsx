@@ -71,7 +71,7 @@ export const WorkFlow = () => {
         </InView>
       </div>
 
-      <InView className="flex-1 border">
+      <div className="flex-1 border">
         {/* HEADER */}
         <div className="bg-primary flex flex-col justify-between gap-2 p-2 lg:flex-row lg:items-center lg:gap-4">
           <div className="flex items-start gap-4">
@@ -228,7 +228,7 @@ export const WorkFlow = () => {
             {active_work_flow?.footer}
           </p>
         </div>
-      </InView>
+      </div>
     </div>
   )
 }

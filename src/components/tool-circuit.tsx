@@ -187,39 +187,6 @@ export const ToolCircuit = ({
         preserveAspectRatio="xMinYMid meet"
         className="block h-full w-full"
       >
-        {/* <defs>
-          <pattern
-            id="circuit-grid"
-            width="100"
-            height="6"
-            patternUnits="userSpaceOnUse"
-          >
-            <path
-              d="M0 0 H100"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1"
-              strokeOpacity="0.075"
-            />
-          </pattern>
-
-          <filter
-            id="circuit-glow"
-            x="-100%"
-            y="-100%"
-            width="300%"
-            height="300%"
-          >
-            <feGaussianBlur stdDeviation="2.5" result="blur" />
-
-            <feMerge>
-              <feMergeNode in="blur" />
-
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-        </defs> */}
-
         {/* STATIC GRID */}
 
         <rect

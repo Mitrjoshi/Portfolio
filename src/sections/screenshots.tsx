@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 import { InView } from '../components/in-view'
 import { RevealText } from '../components/reveal-text'
 import { SectionAttribute } from '../components/section-attribute'
@@ -165,24 +166,45 @@ export const Screenshots = () => {
           </button>
         </div>
 
-        <InView
-          className="grid gap-4 md:grid-cols-4"
+        <motion.div
           key={`${currentTab}-${currentPage}`}
+          className="grid gap-4 md:grid-cols-4"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.06,
+              },
+            },
+          }}
         >
           {currentItems.map((item, index) => (
-            <div
+            <motion.div
               key={index}
               onClick={() => setSelectedImage(item)}
-              style={{ animationDelay: `${index * 60}ms` }}
-              className="slide-up-fade-in group hover:border-primary/75 flex aspect-4/3 cursor-pointer items-center justify-center overflow-hidden border border-transparent bg-linear-to-b from-gray-200 to-gray-100 duration-400"
+              variants={{
+                hidden: {
+                  opacity: 0,
+                },
+                visible: {
+                  opacity: 1,
+                  transition: {
+                    duration: 0.5,
+                    ease: 'easeOut',
+                  },
+                },
+              }}
+              className="group hover:border-primary/75 flex aspect-4/3 cursor-pointer items-center justify-center overflow-hidden border border-transparent bg-linear-to-b from-gray-200 to-gray-100 duration-400"
             >
               <img
                 src={item.image}
                 className="max-h-[85%] max-w-[85%] object-contain duration-500 group-hover:scale-105"
               />
-            </div>
+            </motion.div>
           ))}
-        </InView>
+        </motion.div>
 
         {totalPages > 1 && (
           <div className="flex w-full items-center justify-between gap-4">

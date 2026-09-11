@@ -34,7 +34,7 @@ export const WorkFlowProgressBlock = ({
   return (
     <div
       data-ongoing={ongoing}
-      className="bg-background relative border p-3 transition-[filter] duration-200 data-[ongoing=true]:brightness-120 md:p-4"
+      className="bg-background data-[ongoing=true]:bg-primary-foreground-active relative border p-3 transition-[filter] duration-200 md:p-4"
     >
       <div className="space-y-4">
         <p
