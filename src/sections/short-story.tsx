@@ -14,14 +14,14 @@ export const ShortStory = () => {
           <RevealText
             lines={[
               <p className="text-3xl font-medium">Long story short, </p>,
-              <p className="text-3xl font-medium">I've been designing</p>,
+              <p className="text-3xl font-medium">I've been building</p>,
               <p className="text-secondary text-3xl font-medium">
                 for over {new Date().getFullYear() - 2022} years
               </p>,
             ]}
           />
 
-          <p className="text-secondary mt-4">2023 — Now · India, IST</p>
+          <p className="text-secondary mt-4">2022 — Now · India, IST</p>
         </InView>
 
         <div className="space-y-8">
@@ -31,11 +31,12 @@ export const ShortStory = () => {
 
           <div className="space-y-2">
             <p className="text-secondary text-lg font-light">
-              And yes — I’m still hands-on with React, TypeScript, and modern
-              frontend architecture every day.
+              And yes — I’m still hands-on with React, TypeScript, APIs, cloud
+              services, and AI-powered development every day.
             </p>
+
             <p className="text-primary text-lg font-light">
-              That's the fun part.
+              That’s still the fun part.
             </p>
           </div>
 
@@ -43,20 +44,25 @@ export const ShortStory = () => {
             <div className="border px-4 py-1">
               <p className="text-secondary">React / TypeScript</p>
             </div>
+
             <div className="border px-4 py-1">
-              <p className="text-secondary">Frontend architecture</p>
+              <p className="text-secondary">Frontend Architecture</p>
             </div>
+
             <div className="border px-4 py-1">
-              <p className="text-secondary">Design systems</p>
+              <p className="text-secondary">Component Systems</p>
             </div>
+
             <div className="border px-4 py-1">
-              <p className="text-secondary">API integrations</p>
+              <p className="text-secondary">API Integration</p>
             </div>
+
             <div className="border px-4 py-1">
-              <p className="text-secondary">Performance</p>
+              <p className="text-secondary">Cloud & GCP</p>
             </div>
+
             <div className="border px-4 py-1">
-              <p className="text-secondary">AI workflows</p>
+              <p className="text-secondary">AI Integration</p>
             </div>
           </div>
         </div>
@@ -65,7 +71,7 @@ export const ShortStory = () => {
   )
 }
 
-const text = `I’ve led teams, mentored designers, and helped turn complicated challenges into clear, meaningful digital experiences. Along the way, I’ve worked across brands, products, and industries — shaping ideas, improving processes, and shipping work that balances user needs, business goals, and thoughtful design.`
+const text = `I’ve built frontend systems, scalable applications, and AI-powered products that turn complex requirements into reliable digital experiences. Along the way, I’ve worked across different products and industries — improving architecture, integrating APIs, solving technical challenges, and shipping production-ready features with a focus on performance, usability, and maintainability.`
 
 export const ScrollText = () => {
   const ref = useRef<HTMLDivElement>(null)
@@ -79,7 +85,7 @@ export const ScrollText = () => {
 
   return (
     <div ref={ref}>
-      <p className="text-2xl font-medium tracking-widest md:text-5xl">
+      <p className="text-2xl font-medium tracking-widest md:text-4xl">
         {words.map((word, index) => (
           <Word
             key={index}

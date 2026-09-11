@@ -16,24 +16,12 @@ import { useTransitionNavigate } from '../providers/transition-navigation'
 const STATS = [
   {
     value: `${new Date().getFullYear() - 2022}+`,
-    label: 'Years designing',
+    label: 'Years building',
     height: 40,
   },
-  {
-    value: '50+',
-    label: 'Websites developed',
-    height: 100,
-  },
-  {
-    value: '10+',
-    label: 'Products shipped',
-    height: 50,
-  },
-  {
-    value: '5+',
-    label: 'Industries worked',
-    height: 16,
-  },
+  { value: '50+', label: 'Websites developed', height: 100 },
+  { value: '10+', label: 'Products shipped', height: 50 },
+  { value: '5+', label: 'Industries worked in', height: 16 },
 ]
 
 export const ByTheNumbers = () => {
@@ -56,7 +44,7 @@ export const ByTheNumbers = () => {
       {/*
        * Keep the actual section pinned below the 81px header.
        */}
-      <div className="sticky top-[69px] h-[calc(100vh-69px)] overflow-hidden md:top-[81px] md:h-[calc(100vh-81px)]">
+      <div className="sticky top-17.25 h-[calc(100vh-69px)] overflow-hidden md:top-20.25 md:h-[calc(100vh-81px)]">
         <BorderContainerInner className="corner-border-top-right bg-background! h-full w-full border-x">
           <div className="flex h-full flex-col p-5 py-10 md:p-10">
             <SectionAttribute text="By The Numbers" />
@@ -65,19 +53,19 @@ export const ByTheNumbers = () => {
               <RevealText
                 lines={[
                   <p className="mx-auto w-fit text-center text-3xl font-medium md:text-5xl">
-                    Ten years{' '}
-                    <span className="text-secondary">by the numbers.</span>
+                    Built over the years,{' '}
+                    <span className="text-secondary">
+                      measured by the numbers.
+                    </span>
                   </p>,
                 ]}
               />
-
               <InView>
                 <p className="text-secondary slide-up-fade-in mx-auto mt-2 text-center text-lg lg:max-w-[60ch]">
-                  Products shipped, teams joined, systems maintained — the
-                  decade counted rather than described.
+                  Websites developed, products shipped, and industries explored
+                  — a snapshot of the work behind the code.
                 </p>
               </InView>
-
               <button
                 onClick={() => transitionTo('/profile', 'Profile')}
                 className="group hover:text-primary hover:border-primary mt-8 flex w-fit cursor-pointer items-center gap-1 border-b pb-1 duration-200"
@@ -175,7 +163,9 @@ const StatBar = ({ stat, index, progress }: StatBarProps) => {
         )}
       </div>
 
-      <p className="text-secondary mt-4 shrink-0 text-sm">{stat.label}</p>
+      <p className="text-secondary mt-4 shrink-0 text-center text-sm">
+        {stat.label}
+      </p>
     </div>
   )
 }

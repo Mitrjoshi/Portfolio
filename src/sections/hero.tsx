@@ -1,5 +1,5 @@
 import { Button } from '../components/button'
-import { CityWalkerSvg } from '../components/city-walker'
+import { CityWalkerSvg } from '../components/svg/city-walker'
 import { InView } from '../components/in-view'
 import { RevealText } from '../components/reveal-text'
 import { useTransitionNavigate } from '../providers/transition-navigation'
@@ -15,23 +15,25 @@ export const Hero = () => {
             <RevealText
               lines={[
                 <span className="text-3xl font-medium md:text-5xl">
-                  I design apps, websites,
+                  I engineer web apps,
                 </span>,
                 <>
-                  <span className="text-3xl font-medium md:text-5xl">and </span>
+                  <span className="text-3xl font-medium md:text-5xl">
+                    interfaces{' '}
+                  </span>
                   <span className="text-foreground/40 text-3xl font-medium md:text-5xl">
-                    AI-powered systems
+                    and AI systems
                   </span>
                 </>,
               ]}
             />
           </div>
-          <div className="space-y-10">
+          <div className="space-y-5">
             <InView>
               <p className="text-secondary slide-up-fade-in text-lg">
-                10+ years designing the systems, brands and AI workflows behind
-                products people actually use, serving millions of users every
-                day.
+                {new Date().getFullYear() - 2022}+ years turning complex ideas
+                into fast, scalable web applications and AI-powered digital
+                products.
               </p>
             </InView>
 
@@ -56,8 +58,8 @@ export const Hero = () => {
             </InView>
           </div>
         </div>
-        <div className="flex items-end justify-between md:items-center">
-          <div className="flex flex-col gap-2 md:flex-row md:items-end">
+        <div className="flex items-center justify-between">
+          <div className="flex items-end gap-2">
             <div className="flex items-end gap-2">
               <InView>
                 <p className="text-primary/50 slide-up-fade-in pb-1 text-xs">
@@ -75,8 +77,8 @@ export const Hero = () => {
             </InView>
           </div>
 
-          <div>
-            <p className="text-secondary text-xs uppercase">next project</p>
+          <div className="hidden md:block">
+            <p className="text-secondary">Next project</p>
           </div>
         </div>
       </div>

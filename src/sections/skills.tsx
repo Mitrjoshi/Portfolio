@@ -68,8 +68,10 @@ export const Skills = () => {
               <RevealText
                 lines={[
                   <p className="text-3xl font-medium md:max-w-[40%] md:text-5xl">
-                    Built with a stack that values{' '}
-                    <span className="text-secondary">speed, scale & craft</span>
+                    Built with tools that prioritize{' '}
+                    <span className="text-secondary">
+                      performance, scale & reliability
+                    </span>
                     .
                   </p>,
                 ]}
@@ -78,8 +80,8 @@ export const Skills = () => {
 
             <InView>
               <p className="slide-up-fade-in text-secondary text-lg md:max-w-[40%]">
-                Not just a stack — a daily practice. These are the tools I rely
-                on to turn ideas into fast, polished, production-ready products.
+                More than a tech stack — these are the tools I use every day to
+                build, refine, and ship reliable production-ready applications.
               </p>
             </InView>
 

@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react'
 import { useState } from 'react'
 import { RevealText } from '../components/reveal-text'
 import { InView } from '../components/in-view'
-import { AnimatedStreetScene } from '../components/street-scene'
+import { AnimatedStreetScene } from '../components/svg/street-scene'
 
 export const Route = createFileRoute('/contact')({
   component: RouteComponent,
@@ -18,22 +18,22 @@ function RouteComponent() {
         <div className="space-y-4 p-5 py-20 md:px-10">
           <InView>
             <p className="text-primary slide-up-fade-in text-xs tracking-[.16em] uppercase">
-              Contact — Mitr · IST India
+              Contact — Mitr · Mumbai, India
             </p>
           </InView>
 
           <RevealText
             lines={[
               <p className="text-5xl font-medium">
-                Let's <span className="text-secondary">talk</span>
+                Let's <span className="text-secondary">build something</span>
               </p>,
             ]}
           />
 
           <InView>
             <p className="text-secondary slide-up-fade-in text-lg md:max-w-[40%]">
-              Software development, scalable systems, web apps & AI solutions —
-              based in Mumbai, working with teams everywhere.
+              Open to conversations around software development, scalable web
+              products, frontend systems, and AI-powered experiences.
             </p>
           </InView>
 

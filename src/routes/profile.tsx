@@ -17,15 +17,16 @@ function RouteComponent() {
           <div className="py-20">
             <p className="mx-auto px-8 text-xl font-medium md:max-w-[60ch] md:px-10 md:text-center md:text-3xl">
               <span>
-                Over the last decade, I’ve worked across startups and global
-                companies, building everything from responsive websites to
-                complex, scalable software products. Along the way, I’ve
-                developed frontend systems, backend services, APIs, and
-                AI-powered solutions that help teams move faster and{' '}
+                Over the past {new Date().getFullYear() - 2022}+ years, I’ve
+                grown from frontend development into building scalable
+                applications, interactive product experiences, workflow systems,
+                and AI-powered platforms. Along the way, I’ve worked across
+                frontend architecture, APIs, cloud integrations, and
+                production-ready features that turn complex ideas into{' '}
               </span>
 
               <span className="text-secondary">
-                deliver reliable digital experiences to millions of users.
+                fast, reliable, and thoughtfully engineered digital products.
               </span>
             </p>
           </div>

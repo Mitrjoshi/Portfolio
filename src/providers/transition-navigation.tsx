@@ -14,11 +14,12 @@ import ScreenTransition from '../components/screen-transition'
 export type RoutePath =
   | '/'
   | '/work'
-  // | '/projects'
+  // | '/work/projects'
   | '/work/$title'
   | '/profile'
   | '/contact'
   | '/privacy'
+  | '/development'
 
 type RouteParams = Record<string, string>
 

@@ -67,7 +67,7 @@ export const Header = () => {
 
       <div className="hidden items-center gap-4 md:flex">
         <ul className="flex items-center gap-4">
-          {routes.slice(0, 3).map((route) => (
+          {routes.slice(0, 4).map((route) => (
             <li key={route.path}>
               <button
                 className="hover:text-secondary relative cursor-pointer font-medium duration-200"

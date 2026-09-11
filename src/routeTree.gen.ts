@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DevelopmentRouteImport } from './routes/development'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ProfileRouteImport } from './routes/profile'
 import { Route as WorkIndexRouteImport } from './routes/work/index'
@@ -25,6 +26,11 @@ const IndexRoute = IndexRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DevelopmentRoute = DevelopmentRouteImport.update({
+  id: '/development',
+  path: '/development',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyRoute = PrivacyRouteImport.update({
@@ -56,6 +62,7 @@ const WorkTitleIndexRoute = WorkTitleIndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/development': typeof DevelopmentRoute
   '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
   '/work/$title': typeof WorkTitleRouteRouteWithChildren
@@ -65,6 +72,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/development': typeof DevelopmentRoute
   '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
   '/work': typeof WorkIndexRoute
@@ -74,6 +82,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/development': typeof DevelopmentRoute
   '/privacy': typeof PrivacyRoute
   '/profile': typeof ProfileRoute
   '/work/$title': typeof WorkTitleRouteRouteWithChildren
@@ -85,17 +94,26 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/contact'
+    | '/development'
     | '/privacy'
     | '/profile'
     | '/work/$title'
     | '/work/'
     | '/work/$title/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contact' | '/privacy' | '/profile' | '/work' | '/work/$title'
+  to:
+    | '/'
+    | '/contact'
+    | '/development'
+    | '/privacy'
+    | '/profile'
+    | '/work'
+    | '/work/$title'
   id:
     | '__root__'
     | '/'
     | '/contact'
+    | '/development'
     | '/privacy'
     | '/profile'
     | '/work/$title'
@@ -106,6 +124,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactRoute: typeof ContactRoute
+  DevelopmentRoute: typeof DevelopmentRoute
   PrivacyRoute: typeof PrivacyRoute
   ProfileRoute: typeof ProfileRoute
   WorkTitleRouteRoute: typeof WorkTitleRouteRouteWithChildren
@@ -126,6 +145,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/development': {
+      id: '/development'
+      path: '/development'
+      fullPath: '/development'
+      preLoaderRoute: typeof DevelopmentRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy': {
@@ -181,6 +207,7 @@ const WorkTitleRouteRouteWithChildren = WorkTitleRouteRoute._addFileChildren(
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactRoute: ContactRoute,
+  DevelopmentRoute: DevelopmentRoute,
   PrivacyRoute: PrivacyRoute,
   ProfileRoute: ProfileRoute,
   WorkTitleRouteRoute: WorkTitleRouteRouteWithChildren,

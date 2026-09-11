@@ -19,11 +19,11 @@ export const routes: RouteItem[] = [
     label: 'Work',
     transitionLabel: 'Selected Work',
   },
-  // {
-  //   path: '/projects',
-  //   label: 'Projects',
-  //   transitionLabel: 'Selected Projects',
-  // },
+  {
+    path: '/development',
+    label: 'Development',
+    transitionLabel: 'Development',
+  },
   {
     path: '/profile',
     label: 'Profile',

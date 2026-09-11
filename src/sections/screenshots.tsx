@@ -118,7 +118,7 @@ export const Screenshots = () => {
         <InView>
           <RevealText
             lines={[
-              <p className="text-3xl font-medium md:text-5xl">Everything,</p>,
+              <p className="text-3xl font-medium md:text-5xl">Built work,</p>,
               <p className="text-secondary text-3xl font-medium md:text-5xl">
                 Up close.
               </p>,

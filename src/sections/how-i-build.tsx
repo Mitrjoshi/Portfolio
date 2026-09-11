@@ -9,56 +9,56 @@ const BUILD_PROCESS = [
     category: 'Discovery',
     title: 'Understand the Problem',
     description:
-      'Break down requirements, user needs, constraints and edge cases before writing code.',
+      'Break down requirements, user needs, constraints, and edge cases before writing code.',
   },
   {
     index: '02',
     category: 'Architecture',
     title: 'Design the System',
     description:
-      'Map application flows, data models, APIs, component boundaries and technical decisions.',
+      'Plan application flows, data models, APIs, component boundaries, and key technical decisions.',
   },
   {
     index: '03',
     category: 'Frontend',
     title: 'Build the Interface',
     description:
-      'Develop responsive applications with React, TypeScript, reusable components and scalable UI patterns.',
+      'Develop responsive applications with React, TypeScript, reusable components, and scalable UI patterns.',
   },
   {
     index: '04',
     category: 'Backend',
     title: 'Build the Logic',
     description:
-      'Create APIs, business logic, authentication and server-side workflows that power the product.',
+      'Create APIs, business logic, authentication, and server-side workflows that power the product.',
   },
   {
     index: '05',
     category: 'Data',
-    title: 'Model & Connect Data',
+    title: 'Structure the Data',
     description:
-      'Structure application data, connect databases and build reliable flows between client and server.',
+      'Model application data, connect databases, and create reliable flows between client and server.',
   },
   {
     index: '06',
     category: 'Integration',
     title: 'Connect Services & AI',
     description:
-      'Integrate REST APIs, AI models and external services into real application workflows.',
+      'Integrate APIs, cloud services, AI models, and external tools into real product workflows.',
   },
   {
     index: '07',
     category: 'Quality',
     title: 'Test & Refine',
     description:
-      'Validate functionality, responsive behaviour, accessibility, edge cases and production failure states.',
+      'Validate functionality, responsiveness, accessibility, edge cases, and production failure states.',
   },
   {
     index: '08',
     category: 'Delivery',
     title: 'Ship & Improve',
     description:
-      'Build, deploy and monitor production applications, then iterate from real usage and feedback.',
+      'Deploy production applications, monitor how they perform, and improve them through real feedback.',
   },
 ]
 

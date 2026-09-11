@@ -65,9 +65,9 @@ export const Projects = ({
           <RevealText
             lines={[
               <p className="text-3xl font-medium md:text-5xl">
-                Explore my work,{' '}
+                Explore what I build,{' '}
                 <span className="block">
-                  process <span className="text-secondary">and more.</span>
+                  how I work <span className="text-secondary">and more.</span>
                 </span>
               </p>,
             ]}
@@ -76,8 +76,9 @@ export const Projects = ({
 
         <div className="flex flex-col gap-6">
           <p className="text-secondary slide-up-fade-in text-lg">
-            Case studies and side explorations across web, SaaS, and apps. Keep
-            exploring, there's more than just UI design.
+            Case studies and side projects across web apps, SaaS products,
+            frontend systems, and AI-powered experiences. There’s more here than
+            just the interface.
           </p>
 
           <div className="slide-up-fade-in flex flex-wrap items-center gap-4">
@@ -85,12 +86,13 @@ export const Projects = ({
               onClick={() => handleScrollToSection('screenshots')}
               text="Screenshots Instead"
               showIcon
+              inverted
             />
-            <Button
-              onClick={() => handleScrollToSection('all-work')}
+            {/* <Button
+              onClick={() => transitionTo('/work/projects', 'All Projects')}
               text="Explore All Work"
               showIcon
-            />
+            /> */}
           </div>
         </div>
       </div>

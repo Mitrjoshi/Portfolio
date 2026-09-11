@@ -1,5 +1,5 @@
 import { createRootRoute, Outlet, useMatchRoute } from '@tanstack/react-router'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { Header } from '../components/header'
 import { BorderContainer } from '../components/border-container'
@@ -7,6 +7,8 @@ import { TransitionNavigationProvider } from '../providers/transition-navigation
 import { Footer } from '../components/footer'
 import { SmoothScroll } from '../providers/smooth-scroll'
 import { WelcomeTransition } from '../components/welcome-transition'
+
+const WELCOME_TRANSITION_KEY = 'welcome-transition-shown'
 
 const RootLayout = () => {
   const matchRoute = useMatchRoute()
@@ -21,16 +23,20 @@ const RootLayout = () => {
     fuzzy: false,
   })
 
-  const [isReload, setIsReload] = useState(() => {
-    if (typeof window === 'undefined') return false
+  const [showWelcome, setShowWelcome] = useState(false)
 
-    const navigation = performance.getEntriesByType('navigation')[0] as
-      PerformanceNavigationTiming | undefined
+  useEffect(() => {
+    const hasShownWelcome = localStorage.getItem(WELCOME_TRANSITION_KEY)
 
-    return navigation?.type === 'reload'
-  })
+    if (!hasShownWelcome) {
+      setShowWelcome(true)
+    }
+  }, [])
 
-  console.log(isReload)
+  const handleWelcomeComplete = () => {
+    localStorage.setItem(WELCOME_TRANSITION_KEY, 'true')
+    setShowWelcome(false)
+  }
 
   return (
     <TransitionNavigationProvider>
@@ -51,10 +57,10 @@ const RootLayout = () => {
           </div>
         )}
 
-        {isReload && (
+        {showWelcome && (
           <WelcomeTransition
             text="Welcome"
-            onComplete={() => setIsReload(false)}
+            onComplete={handleWelcomeComplete}
           />
         )}
       </SmoothScroll>

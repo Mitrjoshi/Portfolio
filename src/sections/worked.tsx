@@ -6,22 +6,22 @@ const teams = [
   {
     title: 'ADSMN',
     position: 'Software Developer L2',
-    work: 'Building production AI platforms for major brands using Google Vertex AI (Gemini, Imagen, Veo).',
+    work: 'Building production-ready AI platforms for leading brands using Google Vertex AI, Gemini, Imagen, and Veo.',
   },
   {
     title: 'ADSMN',
     position: 'Software Developer L1',
-    work: 'Built a ReactFlow-based storyboard and video workflow canvas, including node execution pipelines and GCS-backed autosave.',
+    work: 'Built a React Flow-based storyboard and video workflow platform with node execution pipelines, autosave, and GCS integration.',
   },
   {
     title: 'ADSMN',
     position: 'Frontend Developer',
-    work: 'Developed core frontend features and UI systems using React and TypeScript.',
+    work: 'Developed scalable frontend features, reusable UI components, and product experiences using React and TypeScript.',
   },
   {
     title: 'ADSMN',
     position: 'Frontend Developer Intern',
-    work: "Contributed to frontend development while learning the team's tools and workflows.",
+    work: 'Contributed to production frontend projects while building a strong foundation in React, TypeScript, and modern development workflows.',
   },
 ]
 
@@ -35,15 +35,16 @@ export const Worked = () => {
           <RevealText
             lines={[
               <p className="text-3xl font-medium md:max-w-[40ch] md:text-5xl">
-                Where I've <span className="text-secondary">worked</span>.
+                Where I've <span className="text-secondary">grown</span>.
               </p>,
             ]}
           />
 
           <InView>
             <p className="slide-up-fade-in text-secondary text-lg md:max-w-[40%]">
-              From global banks to independent apps — product, brand and systems
-              for teams of every size.
+              From frontend development to AI-powered platforms — taking on more
+              complex products, systems, and engineering challenges along the
+              way.
             </p>
           </InView>
         </div>

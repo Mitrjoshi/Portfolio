@@ -129,8 +129,8 @@ export const CompaniesWorkedWith = () => {
 
       <div className="mx-auto pt-20 pb-15 text-center md:max-w-[40ch]">
         <p className="text-secondary">
-          Plus many other projects I can't publicly share, but they're some of
-          my favorite work.
+          Plus a number of projects I can’t share publicly — some of the most
+          challenging and rewarding work I’ve been part of.
         </p>
       </div>
 

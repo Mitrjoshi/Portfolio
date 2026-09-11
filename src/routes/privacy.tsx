@@ -20,9 +20,8 @@ function RouteComponent() {
           <p className="text-5xl font-semibold">Privacy</p>
 
           <p className="text-secondary md:max-w-[40ch]">
-            What this site records while you explore it, why it is collected,
-            and how you can stop it. It is a portfolio, so the answer is fairly
-            short.
+            A straightforward explanation of what this portfolio records, why it
+            is collected, and how you can control it.
           </p>
 
           <Separator />
@@ -32,16 +31,15 @@ function RouteComponent() {
           <p className="text-3xl font-medium">The short version</p>
 
           <p className="text-secondary md:max-w-[45%]">
-            This site uses analytics to understand how people move through it —
-            which pages get viewed, what gets clicked, how far people scroll,
-            and where the experience could be improved. It does not need to know
-            who you are to do that.
+            This portfolio uses Pathlens, a product analytics platform I built,
+            to understand how people explore the site and where the experience
+            can be improved.
           </p>
 
           <p className="text-secondary md:max-w-[45%]">
-            There is no account to create, no newsletter to subscribe to, and no
-            contact form collecting personal information. If you email me, I
-            will have your email address because you chose to send it.
+            There are no user accounts, newsletter sign-ups, or contact forms
+            collecting personal information. If you email me directly, I will
+            only receive the information you choose to send.
           </p>
 
           <Separator />
@@ -53,20 +51,20 @@ function RouteComponent() {
           <p className="text-secondary md:max-w-[45%]">
             Pathlens records basic interaction data such as pages visited,
             navigation between pages, clicks, scroll activity, and repeated
-            clicks on elements that may look interactive. That information helps
-            me understand what works and what needs improving.
+            interactions that may indicate friction in the interface.
           </p>
 
           <p className="text-secondary md:max-w-[45%]">
-            It may also record general technical information such as your device
-            type, browser, screen size, referring page, and an approximate
-            location derived from your network connection.
+            It may also record basic technical information such as device type,
+            browser, screen size, referring page, and other information needed
+            to understand how the site performs across different environments.
           </p>
 
           <p className="text-secondary md:max-w-[45%]">
             A random visitor identifier may be stored in your browser so that
-            separate visits can be understood as part of the same anonymous
-            journey. It is not intended to identify you personally.
+            activity across multiple visits can be understood as part of the
+            same anonymous journey. It is not intended to identify you
+            personally.
           </p>
 
           <Separator />
@@ -76,22 +74,15 @@ function RouteComponent() {
           <p className="text-3xl font-medium">Who receives it</p>
 
           <p className="text-secondary md:max-w-[45%]">
-            Pathlens is the product-analytics platform used on this site to help
-            me understand visitor journeys, interactions, and usability. Google
-            Analytics may also be used for broader traffic and audience
-            measurement.
+            Analytics data from this portfolio is collected through Pathlens,
+            which is built and operated by me. No separate third-party analytics
+            product is used on this site.
           </p>
 
           <p className="text-secondary md:max-w-[45%]">
-            Vercel hosts this website and may process the normal technical
-            information required to deliver pages and assets when you visit.
-          </p>
-
-          <p className="text-secondary md:max-w-[45%]">
-            The site may also load fonts, images, and other assets from external
-            services and includes links to platforms such as Dribbble, LinkedIn,
-            Awwwards, and ThemeForest. If you visit an external service, its own
-            privacy policy applies.
+            The information is used only to understand how this portfolio is
+            being used and to improve its functionality, usability, and overall
+            experience.
           </p>
 
           <Separator />
@@ -101,15 +92,14 @@ function RouteComponent() {
           <p className="text-3xl font-medium">What Pathlens is used for</p>
 
           <p className="text-secondary md:max-w-[45%]">
-            Pathlens is used to understand the experience rather than the
-            individual. I use the data to see which work gets explored, where
-            visitors lose interest, which interactions are useful, and where
-            something in the interface may be confusing.
+            Pathlens helps me understand which projects people explore, how
+            visitors move through the site, which interactions are useful, and
+            where something may be unclear or difficult to use.
           </p>
 
           <p className="text-secondary md:max-w-[45%]">
-            Analytics collected through this site is not used to build an
-            advertising profile or sold to advertisers.
+            Analytics collected through this portfolio is not sold, shared with
+            advertisers, or used to build advertising profiles.
           </p>
 
           <Separator />
@@ -119,22 +109,22 @@ function RouteComponent() {
           <p className="text-3xl font-medium">Turning it off</p>
 
           <p className="text-secondary md:max-w-[45%]">
-            Tracker-blocking and privacy extensions may prevent analytics from
-            loading, and that is completely fine. The portfolio is designed to
-            work without analytics.
+            Privacy extensions and tracker blockers may prevent Pathlens from
+            loading. The portfolio is designed to continue working normally
+            without analytics.
           </p>
 
           <p className="text-secondary md:max-w-[45%]">
-            Clearing your browser storage can also remove locally stored
-            identifiers. If you have a question about information collected
-            through this site, you can email me directly.
+            Clearing your browser storage can also remove locally stored visitor
+            identifiers. If you have questions about information collected
+            through this site, you can contact me directly.
           </p>
 
           <Separator />
         </div>
 
         <div className="w-fit space-y-4">
-          <p className="text-3xl font-medium">Questions about any of this</p>
+          <p className="text-3xl font-medium">Questions?</p>
 
           <a
             href="mailto:mitrjoshi26@gmail.com"

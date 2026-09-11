@@ -6,9 +6,9 @@ import { RevealText } from '../components/reveal-text'
 import { InView } from '../components/in-view'
 import { AnimatePresence, motion } from 'motion/react'
 import { SectionAttribute } from '../components/section-attribute'
-import { ReactDevelopmentScene } from '../components/react-development-scene'
-import { FrontendEngineeringScene } from '../components/frontend-engineer-scene'
-import { CreativeDevelopmentScene } from '../components/creative-development-scene'
+import { ReactDevelopmentScene } from '../components/svg/react-development-scene'
+import { FrontendEngineeringScene } from '../components/svg/frontend-engineer-scene'
+import { CreativeDevelopmentScene } from '../components/svg/creative-development-scene'
 
 export const Focus = () => {
   return (
@@ -16,7 +16,6 @@ export const Focus = () => {
       <Container className="corner-border-top-right relative border-x-0 border-t">
         <div className="p-5 py-20! md:p-10">
           <SectionAttribute text="Tracks" />
-
           <div className="flex w-full flex-col items-center">
             <RevealText
               lines={[
@@ -25,14 +24,15 @@ export const Focus = () => {
                 </p>,
               ]}
             />
+
             <InView>
               <p className="text-secondary slide-up-fade-in mx-auto mt-2 text-center text-lg lg:max-w-[40ch]">
-                {new Date().getFullYear() - 2022} years of shipping, settled
-                into three tracks that sharpen each other every day.
+                {new Date().getFullYear() - 2022}+ years of building and
+                shipping, focused across three disciplines that strengthen each
+                other.
               </p>
             </InView>
           </div>
-
           <div className="mt-10">
             <Carousel />
           </div>
@@ -46,19 +46,19 @@ const carouselItems = [
   {
     title: 'React Development',
     description:
-      'Building scalable, responsive, and high-performance web applications with React and TypeScript.',
+      'Building fast, scalable web applications with React, TypeScript, and modern frontend tooling.',
     duration: `${new Date().getFullYear() - 2022}+ Years`,
   },
   {
     title: 'Frontend Engineering',
     description:
-      'Creating maintainable frontend architectures, reusable components, and seamless API integrations.',
+      'Designing maintainable architectures, reusable component systems, and reliable API integrations.',
     duration: `${new Date().getFullYear() - 2022}+ Years`,
   },
   {
     title: 'Creative Development',
     description:
-      'Crafting interactive interfaces with smooth animations, modern UI patterns, and engaging digital experiences.',
+      'Creating interactive digital experiences through motion, micro-interactions, and thoughtful UI implementation.',
     duration: `${new Date().getFullYear() - 2022}+ Years`,
   },
 ]
@@ -77,12 +77,11 @@ const Carousel = () => {
   }
 
   return (
-    <div className="mx-auto grid items-center gap-10 md:grid-cols-2 lg:max-w-[75%]">
-      <div className="relative aspect-square w-full">
+    <div className="mx-auto grid items-center gap-10 overflow-hidden md:grid-cols-2 lg:max-w-[75%]">
+      <div className="relative w-full overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeIndex}
-            className="absolute inset-0 h-full w-full object-contain"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -105,7 +104,7 @@ const Carousel = () => {
       <div className="space-y-6 text-center md:text-left">
         <div key={activeIndex} className="space-y-6">
           <div className="space-y-2">
-            <p className="carousel-reveal text-3xl font-medium text-nowrap">
+            <p className="carousel-reveal text-3xl font-medium">
               {activeItem.title}
             </p>
 

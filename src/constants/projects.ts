@@ -43,11 +43,15 @@ export const PROJECT_COLORS = {
   vertex: '#9B6CFF',
   'de-beers': '#C9A227',
   basecamp: '#38BDF8',
-  fevikwik: '#fbec4c',
+  fevikwik: '#db3519',
   milka: '#7665a3',
 }
 
 export const PROJECTS: Project[] = [
+  // =========================================================
+  // PATHLENS
+  // =========================================================
+
   {
     id: 'pathlens',
     confidential: false,
@@ -55,15 +59,19 @@ export const PROJECTS: Project[] = [
     title: 'Pathlens',
     platform: 'SaaS Platform',
     image: '/projects/pathlens.png',
+
     description:
       'A full-stack product analytics platform that captures behavioural data and turns sessions, events, heatmaps, and live activity into actionable product insights.',
+
     details: {
       live: 'https://d1zadf3to2hh75.cloudfront.net',
       client: 'Pathlens',
       type: 'SaaS Product',
       year: '2026',
-      role: 'Full Stack Development',
+      role: 'Full-Stack Development',
+
       technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'AWS'],
+
       features: [
         'Event Ingestion',
         'Session Replay',
@@ -73,98 +81,120 @@ export const PROJECTS: Project[] = [
         'Behaviour Analytics',
       ],
     },
+
     section: {
       overview: {
         title: 'Building analytics from capture to insight',
         details: [
-          'I built Pathlens as a full-stack SaaS analytics product rather than a dashboard-only experience. The work covered the browser-facing application, event collection flows, backend services, PostgreSQL data modelling, analytics retrieval, and AWS delivery needed to turn raw user interactions into useful product intelligence.',
+          'I built Pathlens as a full-stack analytics product rather than a dashboard-only experience. The work spans the React application, event collection, backend services, PostgreSQL data modelling, analytics retrieval, and cloud delivery needed to transform raw user interactions into useful product intelligence.',
         ],
       },
+
       challenge: {
-        title: 'Handling behavioural data without overwhelming the product',
+        title: 'Turning behavioural data into useful product intelligence',
         details: [
-          'The core challenge was connecting high-volume behavioural signals with an experience that remained understandable for product teams. Session activity, events, visitor state, and interaction patterns needed to be captured consistently, stored in a queryable form, and surfaced quickly enough to support investigation and decision-making.',
+          'The core challenge was handling multiple behavioural signals without overwhelming the people using the product. Sessions, events, visitor activity, and interaction patterns needed to be captured consistently, stored in a queryable structure, and surfaced through interfaces that make investigation fast and understandable.',
         ],
+
         tags: [
-          'Event collection',
-          'Analytics queries',
-          'Session intelligence',
-          'Data modelling',
-          'Near real-time visibility',
-          'Scalable product architecture',
+          'Event Collection',
+          'Analytics Queries',
+          'Session Intelligence',
+          'Data Modelling',
+          'Near Real-Time Data',
+          'Scalable Architecture',
         ],
       },
+
       'product discovery': {
-        title: 'Defining the analytics model around real product questions',
+        title: 'Designing around real product questions',
         details: [
-          'The platform was structured around the questions teams repeatedly ask: what happened in a session, where users interacted, which events occurred, who is active now, and where friction appears. That framing helped keep both the data model and the product navigation focused on investigation rather than raw telemetry.',
+          'The analytics model was structured around the questions product teams repeatedly ask: what happened during a session, where users interacted, which events occurred, who is active now, and where friction may exist. This framing helped keep both the data model and navigation focused on investigation rather than raw telemetry.',
         ],
-        images: [
-          '/project-details/pathlens/discovery.png',
-          '/project-details/pathlens/research.png',
-        ],
+
+        // images: [
+        //   '/project-details/pathlens/discovery.png',
+        //   '/project-details/pathlens/research.png',
+        // ],
       },
+
       'system architecture': {
-        title: 'Separating collection, application, and analytics concerns',
+        title: 'Separating collection, processing, and analytics',
         details: [
-          'The application was organised into clear layers for client-side interaction capture, API communication, backend processing, PostgreSQL persistence, and analytics delivery. This separation made it easier to evolve individual capabilities such as event tracking or session playback without tightly coupling every part of the platform.',
+          'The application is organised into clear layers for client-side event capture, API communication, server-side processing, PostgreSQL persistence, and analytics delivery. Keeping these concerns separated makes individual capabilities easier to extend without tightly coupling the entire platform.',
         ],
-        images: ['/project-details/pathlens/architecture.png'],
+
+        // images: ['/project-details/pathlens/architecture.png'],
       },
+
       'backend and data': {
-        title: 'Designing the backend around sessions, visitors, and events',
+        title: 'Structuring the backend around visitors, sessions, and events',
         details: [
-          'Node.js services handled the application data flows behind the analytics experience, while PostgreSQL provided structured persistence for visitors, sessions, events, and related metadata. API responses were shaped around the views the product actually needed instead of exposing database structure directly to the frontend.',
+          'Node.js services handle the application and analytics data flows, while PostgreSQL provides structured persistence for visitors, sessions, events, and interaction metadata. API responses are shaped around the product experiences that consume them instead of exposing database structures directly to the frontend.',
         ],
+
         tags: [
-          'Node.js services',
+          'Node.js',
           'PostgreSQL',
-          'REST-style APIs',
-          'Query design',
-          'Data validation',
+          'REST APIs',
+          'Query Design',
+          'Data Validation',
         ],
-        images: ['/project-details/pathlens/backend.png'],
+
+        // images: ['/project-details/pathlens/backend.png'],
       },
+
       'frontend experience': {
-        title: 'Making dense analytics usable in the browser',
+        title: 'Making dense analytics usable',
         details: [
-          'React and TypeScript were used to build reusable analytics views for session replay, heatmaps, live visitors, event exploration, and behavioural insights. The frontend focused on predictable state, clear loading and empty states, responsive layouts, and interfaces that could handle large amounts of behavioural information without becoming visually noisy.',
+          'React and TypeScript power reusable interfaces for session replay, heatmaps, live visitors, event exploration, and behavioural insights. The frontend focuses on predictable state, responsive layouts, clear loading and empty states, and presenting large amounts of analytical information without unnecessary complexity.',
         ],
       },
+
       'product system': {
-        title: 'Creating a consistent product language across complex tools',
+        title: 'Building a reusable product system',
         details: [
-          'A reusable product system kept navigation, filters, data states, controls, and feedback patterns consistent across the analytics modules. The visual identity supported the product, but the larger goal was to reduce implementation duplication and make new analytical views easier to add.',
+          'Shared components and interaction patterns keep navigation, filters, controls, data states, and feedback consistent across the analytics modules. Beyond visual consistency, the system reduces implementation duplication and makes new analytical capabilities easier to introduce.',
         ],
-        images: [
-          '/project-details/pathlens/brand-1.png',
-          '/project-details/pathlens/brand-2.png',
-          '/project-details/pathlens/brand-3.png',
-          '/project-details/pathlens/brand-4.png',
-          '/project-details/pathlens/brand-5.png',
-        ],
+
+        // images: [
+        //   '/project-details/pathlens/brand-1.png',
+        //   '/project-details/pathlens/brand-2.png',
+        //   '/project-details/pathlens/brand-3.png',
+        //   '/project-details/pathlens/brand-4.png',
+        //   '/project-details/pathlens/brand-5.png',
+        // ],
       },
+
       'cloud and performance': {
-        title: 'Preparing the product for reliable cloud delivery',
+        title: 'Engineering for reliable cloud delivery',
         details: [
-          'The AWS-based delivery setup was treated as part of the product architecture, with attention to deployability, static asset delivery, API reliability, and performance across data-heavy screens. The implementation was structured so frontend and backend concerns could be evolved and deployed without rewriting the application as it grew.',
+          'Cloud delivery is treated as part of the product architecture, with attention to deployment, static assets, API reliability, and performance across data-heavy screens. Frontend and backend concerns remain separated so each layer can evolve without requiring large structural rewrites.',
         ],
       },
+
       outcome: {
-        title: 'A complete behavioural analytics stack',
+        title: 'An end-to-end behavioural analytics platform',
         details: [
-          'Pathlens was delivered as an end-to-end analytics product covering collection, persistence, backend services, analytics interfaces, and cloud delivery rather than only the visible dashboard layer.',
+          'Pathlens brings event collection, persistence, backend processing, analytics interfaces, and cloud delivery into one connected product rather than treating analytics as a collection of isolated dashboard screens.',
         ],
+
         shipped: [
-          'Behavioural event collection and session-oriented data flows.',
-          'Session replay, heatmap, live visitor, and event analytics experiences.',
-          'Node.js and PostgreSQL backend foundation.',
-          'AWS-hosted full-stack delivery architecture.',
+          'Behavioural event collection and session-based data flows.',
+          'Session replay, heatmaps, live visitors, and event analytics.',
+          'Node.js and PostgreSQL backend architecture.',
+          'Cloud-hosted full-stack application delivery.',
         ],
       },
     },
+
     next_case: 'vertex',
   },
+
+  // =========================================================
+  // VERTEX
+  // =========================================================
+
   {
     id: 'vertex',
     confidential: true,
@@ -172,15 +202,19 @@ export const PROJECTS: Project[] = [
     title: 'Vertex',
     platform: 'Web Platform',
     image: '/projects/vertex.png',
+
     description:
-      'A confidential full-stack web platform built to support complex, data-backed workflows through a scalable React application, Node.js services, SQL Server, and GCP.',
+      'A confidential full-stack web platform built around complex application workflows using React, TypeScript, Node.js, SQL Server, and GCP.',
+
     details: {
       live: 'https://dev.ogilvystudio.ai/',
       client: 'Confidential',
       type: 'Enterprise Product',
       year: '2026',
-      role: 'Full Stack Development',
+      role: 'Full-Stack Development',
+
       technologies: ['React', 'TypeScript', 'Node.js', 'SQL Server', 'GCP'],
+
       features: [
         'Workflow Management',
         'API-backed Data Flows',
@@ -190,78 +224,95 @@ export const PROJECTS: Project[] = [
         'Cloud Deployment',
       ],
     },
+
     section: {
       overview: {
         title: 'Engineering a workflow-heavy product end to end',
         details: [
-          'I worked across the full Vertex stack, connecting a React and TypeScript frontend with Node.js services, SQL Server persistence, and GCP delivery. Because the product is confidential, the case study focuses on engineering decisions and system responsibilities rather than client-specific business logic.',
+          'I worked across the full application stack, connecting a React and TypeScript frontend with Node.js services, SQL Server persistence, and GCP delivery. Because the product is confidential, this case study focuses on engineering responsibilities and system architecture rather than client-specific business logic.',
         ],
       },
+
       challenge: {
-        title: 'Keeping complex workflows understandable and maintainable',
+        title: 'Keeping complex workflows maintainable',
         details: [
-          'The platform needed to support multiple connected actions and data states without allowing frontend complexity to leak into backend design. The implementation therefore focused on clear boundaries between presentation, domain workflows, API contracts, persistence, and infrastructure.',
+          'The platform needed to support multiple connected actions, application states, and data dependencies without allowing complexity in one layer to spread across the entire system. The implementation therefore focused on clear boundaries between presentation, workflows, APIs, persistence, and infrastructure.',
         ],
+
         tags: [
-          'Complex workflows',
-          'Typed frontend',
-          'API contracts',
-          'Relational data',
-          'Maintainable modules',
-          'Cloud delivery',
+          'Complex Workflows',
+          'Typed Frontend',
+          'API Contracts',
+          'Relational Data',
+          'Reusable Modules',
+          'Cloud Delivery',
         ],
       },
+
       'workflow mapping': {
         title: 'Mapping system behaviour before implementation',
         details: [
-          'Key user actions and dependencies were mapped before building the screens so that frontend states could be matched to backend operations and database changes. This reduced duplicated logic in the UI and made failure, loading, validation, and completion states easier to reason about.',
+          'Key user actions, dependencies, and state transitions were mapped before implementation so frontend states could align with backend operations and database changes. This made loading, validation, failure, and completion states easier to reason about while reducing duplicated logic in the interface.',
         ],
-        images: [
-          '/project-details/vertex/discovery.png',
-          '/project-details/vertex/research.png',
-        ],
+
+        // images: [
+        //   '/project-details/vertex/discovery.png',
+        //   '/project-details/vertex/research.png',
+        // ],
       },
+
       'application architecture': {
-        title: 'Building around reusable domain and service boundaries',
+        title: 'Separating application responsibilities',
         details: [
-          'The application was structured so reusable React modules handled presentation and interaction while Node.js services owned server-side workflow logic and data access. Shared TypeScript conventions helped keep payloads and application states explicit across the stack.',
+          'Reusable React modules handle presentation and interaction while Node.js services own server-side workflows and data access. Shared TypeScript conventions help keep request payloads, application states, and integration boundaries explicit across the stack.',
         ],
-        images: ['/project-details/vertex/architecture.png'],
+
+        // images: ['/project-details/vertex/architecture.png'],
       },
+
       'backend and database': {
-        title: 'Connecting server-side workflows to relational data',
+        title: 'Connecting application workflows to relational data',
         details: [
-          'Backend services were organised around application actions rather than direct table manipulation. SQL Server provided the relational persistence layer, while the API layer handled validation, controlled reads and writes, and responses shaped for the application workflows.',
+          'Backend services are organised around product actions rather than direct table manipulation. SQL Server provides the persistence layer, while APIs manage validation, controlled reads and writes, and responses designed around the needs of application workflows.',
         ],
       },
+
       'frontend engineering': {
-        title: 'Building a responsive application rather than isolated screens',
+        title: 'Building complete application workflows',
         details: [
-          'The frontend used reusable React components, typed state, predictable data-loading patterns, validation feedback, and responsive behaviour. The emphasis was on making complete workflows resilient across success, empty, loading, and error states instead of treating the interface as a static presentation layer.',
+          'The frontend uses reusable React components, typed state, predictable data-loading patterns, responsive behaviour, and clear validation feedback. The focus is on making complete user flows resilient across success, loading, empty, and error states instead of treating individual screens as isolated interfaces.',
         ],
       },
+
       'cloud and quality': {
-        title: 'Designing for repeatable delivery on GCP',
+        title: 'Designing for repeatable cloud delivery',
         details: [
-          'Deployment and environment concerns were treated as part of the engineering work. The codebase was kept modular so application changes could move through development and deployment without tightly coupling infrastructure, database, backend, and frontend changes.',
+          'Deployment and environment concerns are treated as part of the engineering process. The codebase is structured so frontend, backend, database, and infrastructure changes can evolve independently while still moving through a predictable development and deployment workflow.',
         ],
       },
+
       outcome: {
-        title:
-          'A maintainable full-stack foundation for continued product growth',
+        title: 'A maintainable foundation for continued product development',
         details: [
-          'Vertex was delivered as a connected application stack with reusable frontend modules, API-backed workflows, relational persistence, and cloud deployment foundations designed to support continued iteration.',
+          'The platform brings together reusable frontend modules, API-backed workflows, relational persistence, and cloud delivery in a connected architecture designed to support ongoing product iteration.',
         ],
+
         shipped: [
           'React and TypeScript application architecture.',
           'Node.js backend workflow layer.',
-          'SQL Server persistence and data access flows.',
-          'GCP-ready application delivery.',
+          'SQL Server persistence and data access.',
+          'GCP-based application delivery.',
         ],
       },
     },
+
     next_case: 'de-beers',
   },
+
+  // =========================================================
+  // DE BEERS
+  // =========================================================
+
   {
     id: 'de-beers',
     confidential: false,
@@ -269,15 +320,19 @@ export const PROJECTS: Project[] = [
     title: 'De Beers',
     platform: 'Digital Experience',
     image: '/projects/indra.png',
+
     description:
-      'A premium full-stack digital experience combining a React frontend with backend services, structured data, and cloud delivery to support rich brand storytelling across devices.',
+      'A premium digital experience combining reusable React interfaces, backend services, structured data, and cloud delivery for content-rich storytelling across devices.',
+
     details: {
       live: 'https://dev.ogilvystudio.ai/',
       client: 'De Beers',
       type: 'Brand Platform',
       year: '2026',
-      role: 'Full Stack Development',
+      role: 'Full-Stack Development',
+
       technologies: ['React', 'TypeScript', 'Node.js', 'SQL Server', 'AWS'],
+
       features: [
         'Content-led Experiences',
         'Dynamic Data Delivery',
@@ -287,72 +342,88 @@ export const PROJECTS: Project[] = [
         'Cloud Deployment',
       ],
     },
+
     section: {
       overview: {
-        title: 'Translating a luxury experience into a dependable web platform',
+        title: 'Engineering a premium digital experience',
         details: [
-          'The De Beers project combined premium presentation with full-stack engineering. I worked on the React and TypeScript experience as well as the Node.js, SQL Server, and AWS-backed foundation required to deliver structured content and media consistently across the site.',
+          'The De Beers project combined high-quality visual presentation with full-stack implementation. I worked across the React and TypeScript experience as well as the Node.js, SQL Server, and cloud-backed foundation responsible for delivering structured content and media throughout the platform.',
         ],
       },
+
       challenge: {
         title: 'Balancing visual richness with engineering discipline',
         details: [
-          'Luxury storytelling introduces large media, detailed layouts, and highly polished interactions, but the platform still needs predictable data, reusable modules, responsive behaviour, and reliable delivery. The implementation therefore had to preserve the brand experience without creating a fragile frontend-only build.',
+          'Content-rich experiences introduce large media assets, detailed layouts, and polished interactions while still requiring predictable data, reusable modules, responsive behaviour, and reliable delivery. The challenge was preserving the quality of the experience without creating a fragile frontend implementation.',
         ],
+
         tags: [
-          'Premium storytelling',
-          'Structured content',
-          'Reusable modules',
-          'Responsive delivery',
-          'Backend integration',
-          'Performance awareness',
+          'Content Architecture',
+          'Structured Data',
+          'Reusable Modules',
+          'Responsive Delivery',
+          'Backend Integration',
+          'Performance',
         ],
       },
+
       'experience planning': {
-        title: 'Mapping content, hierarchy, and digital touchpoints',
+        title: 'Mapping content and application structure',
         details: [
-          'The experience was planned around how users move through brand and product content, which helped determine reusable page patterns, content relationships, and the data each frontend module needed from the application layer.',
+          'The experience was mapped around how users move through brand and product content. That work helped define reusable page patterns, content relationships, frontend module boundaries, and the data required from the application layer.',
         ],
-        images: [
-          '/project-details/de-beers/discovery.png',
-          '/project-details/de-beers/research.png',
-        ],
+
+        // images: [
+        //   '/project-details/de-beers/discovery.png',
+        //   '/project-details/de-beers/research.png',
+        // ],
       },
+
       'full stack architecture': {
-        title: 'Connecting modular frontend experiences to structured data',
+        title: 'Connecting reusable interfaces to structured data',
         details: [
-          'React modules were kept focused on rendering and interaction while Node.js services handled application logic and data delivery from SQL Server. This allowed content-rich pages to share common backend and frontend patterns instead of being implemented as one-off static pages.',
+          'React modules remain focused on presentation and interaction while Node.js services handle application logic and structured data delivery from SQL Server. This lets content-heavy pages share common frontend and backend patterns instead of becoming independent one-off implementations.',
         ],
-        images: ['/project-details/de-beers/architecture.png'],
+
+        // images: ['/project-details/de-beers/architecture.png'],
       },
+
       'frontend and media': {
         title: 'Building responsive, media-rich interfaces',
         details: [
-          'The frontend was developed around responsive composition, reusable presentation components, progressive data states, and careful media handling so the experience could remain polished across screen sizes without sacrificing maintainability.',
+          'The frontend was developed around reusable presentation components, responsive composition, predictable content states, and careful media handling. This keeps the experience polished across screen sizes while maintaining a component architecture that can evolve over time.',
         ],
       },
+
       'delivery and performance': {
-        title:
-          'Treating performance and cloud delivery as part of the experience',
+        title: 'Making performance part of the experience',
         details: [
-          'AWS delivery, asset loading, application structure, and backend response patterns were considered together because a premium interface only works when content arrives reliably and interactions remain responsive.',
+          'Cloud delivery, media loading, frontend architecture, and backend response patterns were considered together because rich presentation depends on content arriving reliably and interactions remaining responsive across devices.',
         ],
       },
+
       outcome: {
-        title: 'A premium experience backed by a reusable application stack',
+        title: 'A premium experience backed by reusable architecture',
         details: [
-          'The result was a content-led digital platform where brand presentation and full-stack implementation were designed together rather than as separate frontend and backend efforts.',
+          'The resulting platform brings brand storytelling and full-stack implementation together through reusable React modules, backend-supported data delivery, structured persistence, and cloud infrastructure.',
         ],
+
         shipped: [
           'Reusable React content and interaction modules.',
           'Node.js application and data-delivery layer.',
           'SQL Server-backed structured data flows.',
-          'AWS-hosted delivery foundation.',
+          'Cloud-hosted delivery foundation.',
         ],
       },
     },
+
     next_case: 'basecamp',
   },
+
+  // =========================================================
+  // BASECAMP
+  // =========================================================
+
   {
     id: 'basecamp',
     confidential: true,
@@ -360,15 +431,19 @@ export const PROJECTS: Project[] = [
     title: 'Basecamp',
     platform: 'Workshop Platform',
     image: '/projects/basecamp.png',
+
     description:
-      'A configurable full-stack workshop platform for participant onboarding, idea creation and refinement, shortlisting, voting, facilitator controls, and live presentation workflows.',
+      'A configurable full-stack workshop platform for participant onboarding, idea creation, AI-assisted refinement, shortlisting, voting, administration, and live presentation.',
+
     details: {
       live: 'https://dev.ogilvystudio.ai/',
       client: 'Ogilvy',
       type: 'Collaborative Platform',
       year: '2026',
-      role: 'Full Stack Development',
+      role: 'Full-Stack Development',
+
       technologies: ['React', 'TypeScript', 'Node.js', 'SQL Server', 'GCP'],
+
       features: [
         'Workshop Configuration',
         'Participant Team Access',
@@ -378,97 +453,117 @@ export const PROJECTS: Project[] = [
         'Admin Controls & Big Screen',
       ],
     },
+
     section: {
       overview: {
-        title: 'Building a workshop engine, not just a participant interface',
+        title: 'Building a workshop engine, not just an interface',
         details: [
-          'I developed Basecamp as a full-stack workshop platform connecting participant experiences, facilitator controls, configurable workshop rules, persistent idea state, voting, and presentation flows. The system had to support the full lifecycle of a workshop rather than a collection of independent screens.',
+          'I developed Basecamp as a full-stack workshop platform connecting participant experiences, facilitator controls, configurable workshop rules, persistent idea state, voting, and presentation flows. The system supports the complete lifecycle of a workshop rather than a collection of disconnected screens.',
         ],
       },
+
       challenge: {
-        title: 'Keeping many participants aligned to one workshop state',
+        title: 'Keeping every participant aligned to one workshop state',
         details: [
-          'The key challenge was enforcing shared rules across different user experiences. Participants can create and refine ideas, ideas can be shortlisted, voting is enabled by an admin, and once voting begins the system needs to prevent actions that are no longer valid. Those rules belong in the application workflow and backend state, not only in disabled buttons on the frontend.',
+          'The main challenge was enforcing shared workflow rules across participant, admin, and presentation experiences. Participants can create and refine ideas, teams can shortlist them, and admins control voting. Once the workshop moves forward, actions that are no longer valid must be restricted by application state and backend rules rather than frontend controls alone.',
         ],
+
         tags: [
-          'Multi-user workflows',
-          'Workshop state',
-          'Idea lifecycle',
-          'Voting rules',
-          'Admin controls',
-          'Presentation mode',
+          'Multi-user Workflows',
+          'Workshop State',
+          'Idea Lifecycle',
+          'Voting Rules',
+          'Admin Controls',
+          'Presentation Mode',
         ],
       },
+
       'domain model': {
-        title: 'Modelling the lifecycle from draft idea to winner',
+        title: 'Modelling the journey from idea to winner',
         details: [
-          'The core domain was organised around workshops, teams, participants, ideas, lifecycle states, shortlisting, votes, and winner selection. Clear state transitions made it possible to enforce which operations were allowed before voting, during voting, and after a workshop reached its final stage.',
+          'The core domain is organised around workshops, teams, participants, ideas, lifecycle states, shortlists, votes, and winner selection. Clear state transitions determine which actions are available during ideation, voting, and completion.',
         ],
-        images: [
-          '/project-details/basecamp/discovery.png',
-          '/project-details/basecamp/research.png',
-        ],
+
+        // images: [
+        //   '/project-details/basecamp/discovery.png',
+        //   '/project-details/basecamp/research.png',
+        // ],
       },
+
       'backend workflows': {
-        title: 'Putting workshop rules behind APIs',
+        title: 'Enforcing workshop rules through APIs',
         details: [
-          'Node.js services handled the workflow operations behind idea creation, editing, refinement, shortlisting, sequence changes, voting, and administrative controls. Server-side validation was important so locked workshop states and voting rules could not be bypassed by client-side behaviour.',
+          'Node.js services handle operations behind idea creation, editing, refinement, shortlisting, sequencing, voting, and administrative controls. Server-side validation ensures locked workshop states and voting rules cannot be bypassed through client-side behaviour.',
         ],
       },
+
       'database and state': {
-        title: 'Persisting workshop configuration and participation data',
+        title: 'Persisting workshop configuration and activity',
         details: [
-          'SQL Server provided the persistence layer for workshop configuration, users and teams, ideas, ordering, statuses, and other workshop activity. The data model supported configurable workshop behaviour while keeping operational state consistent between participant, admin, and presentation experiences.',
+          'SQL Server stores workshop configuration, users, teams, ideas, ordering, statuses, voting data, and related activity. The data model supports configurable workshop behaviour while maintaining a consistent source of truth across participant, admin, and presentation interfaces.',
         ],
       },
+
       'participant experience': {
-        title: 'Designing the participant journey around clear next actions',
+        title: 'Guiding participants through clear next actions',
         details: [
-          'The React participant experience covers entry through team access, walkthrough guidance, idea submission, optional refinement, shortlisting, voting, and final-stage visibility. UI states are driven by workshop rules so unavailable actions disappear or lock when the backend state changes.',
+          'The React participant experience covers team access, walkthrough guidance, idea submission, optional AI refinement, shortlisting, voting, and final-stage visibility. Interface states respond to workshop rules so actions automatically become available or lock as the workshop progresses.',
         ],
       },
+
       'ai assistance': {
-        title: 'Adding AI assistance without replacing participant ownership',
+        title: 'Integrating AI into the workshop lifecycle',
         details: [
-          'AI-assisted flows such as Coach and Scout were treated as controlled product capabilities inside the workshop lifecycle. Their availability can depend on workshop configuration and current stage, while the submitted idea remains part of the same backend-managed lifecycle as manually created ideas.',
+          'AI-assisted capabilities such as Coach and Scout are integrated as controlled parts of the workshop flow rather than standalone tools. Their availability can depend on configuration and workshop stage while participant ideas remain part of the same backend-managed lifecycle.',
         ],
       },
+
       'admin and big screen': {
-        title: 'Separating facilitation controls from the participant flow',
+        title: 'Separating facilitation from participation',
         details: [
-          'The admin experience manages workshop setup, stage controls, voting activation, configuration, and presentation actions. A separate Big Screen experience is designed for facilitated display, including workshop progress, ideas, voting QR visibility, and manually controlled presentation states.',
+          'The admin experience manages workshop setup, stage controls, voting activation, configuration, and presentation actions. A separate Big Screen interface supports facilitated display of workshop progress, ideas, voting QR states, and manually controlled presentation sequences.',
         ],
       },
+
       'system architecture': {
         title: 'Connecting three experiences to one source of truth',
         details: [
-          'Participant, admin, and Big Screen interfaces were designed around the same backend state and business rules. This reduced the risk of one surface showing stale permissions or workshop status while another surface had already moved to a new stage.',
+          'Participant, admin, and Big Screen interfaces share the same backend state and business rules. This prevents one surface from showing outdated permissions or workshop status after another has already moved the session into a new stage.',
         ],
-        images: ['/project-details/basecamp/architecture.png'],
+
+        // images: ['/project-details/basecamp/architecture.png'],
       },
+
       'cloud and access': {
-        title:
-          'Preparing a configurable platform for repeatable workshop delivery',
+        title: 'Building for repeatable workshop delivery',
         details: [
-          'The GCP-hosted architecture was organised so new workshops could reuse the same core application while varying configuration, content, stages, and rules. Access and server-side validation were treated as platform concerns because facilitator and participant actions have different permissions and effects.',
+          'The GCP-hosted architecture allows new workshops to reuse the same application while varying configuration, content, stages, and rules. Access control and server-side validation are treated as platform-level concerns because facilitator and participant actions have different permissions and effects.',
         ],
       },
+
       outcome: {
-        title: 'A reusable full-stack platform for facilitated collaboration',
+        title: 'A reusable platform for facilitated collaboration',
         details: [
-          'Basecamp turned the workshop lifecycle into a configurable digital system with shared data, enforceable rules, participant collaboration, facilitator controls, voting, and presentation experiences.',
+          'Basecamp turns the workshop lifecycle into a configurable digital system with shared data, enforceable state transitions, participant collaboration, AI assistance, voting, facilitator controls, and presentation experiences.',
         ],
+
         shipped: [
           'Configurable workshop and participant flows.',
           'Persistent idea lifecycle from draft through winner.',
-          'Admin-controlled shortlisting, voting, and presentation workflows.',
-          'AI-assisted ideation capabilities integrated into workshop rules.',
-          'Shared full-stack foundation for participant, admin, and Big Screen experiences.',
+          'Admin-controlled shortlisting, voting, and presentation.',
+          'AI-assisted ideation integrated into workshop rules.',
+          'Shared architecture across participant, admin, and Big Screen.',
         ],
       },
     },
+
     next_case: 'fevikwik',
   },
+
+  // =========================================================
+  // FEVIKWIK
+  // =========================================================
+
   {
     id: 'fevikwik',
     confidential: false,
@@ -476,15 +571,19 @@ export const PROJECTS: Project[] = [
     title: 'Fevikwik',
     platform: 'Campaign Web Platform',
     image: '/projects/fevikwik.png',
+
     description:
-      'A full-stack campaign experience for Fevikwik combining interactive storytelling, structured content, backend-supported data flows, and responsive cloud delivery.',
+      'A full-stack campaign experience combining interactive storytelling, reusable application modules, structured data, backend-supported workflows, and responsive cloud delivery.',
+
     details: {
       live: 'https://fevikwik-kwik-gpt-stag-25.onmlab.in/',
       client: 'Fevikwik',
       type: 'Digital Campaign',
       year: '2026',
-      role: 'Full Stack Development',
+      role: 'Full-Stack Development',
+
       technologies: ['React', 'TypeScript', 'Node.js', 'SQL Server', 'AWS'],
+
       features: [
         'Campaign Storytelling',
         'Interactive Experiences',
@@ -494,73 +593,88 @@ export const PROJECTS: Project[] = [
         'Cloud-hosted Application',
       ],
     },
+
     section: {
       overview: {
-        title: 'Turning a campaign idea into a maintainable web application',
+        title: 'Turning a campaign into a maintainable web application',
         details: [
-          'The Fevikwik work went beyond visual campaign pages. I developed the experience as a full-stack application using React and TypeScript on the client, Node.js on the server, SQL Server for structured data, and AWS for delivery so campaign content and interactive modules could be managed as a coherent system.',
+          'The Fevikwik project went beyond building visual campaign pages. I developed the experience as a full-stack application using React and TypeScript on the frontend, Node.js for application logic, SQL Server for structured data, and cloud infrastructure for delivery.',
         ],
       },
+
       challenge: {
-        title: 'Keeping a high-energy campaign flexible behind the scenes',
+        title: 'Keeping a fast-moving campaign maintainable',
         details: [
-          'Campaign experiences change quickly, but hard-coded one-off pages become difficult to maintain. The implementation needed reusable modules, consistent data shapes, backend-supported content flows, responsive behaviour, and a delivery setup that could support iteration without rebuilding the site structure for every change.',
+          'Campaign requirements can change quickly, while heavily hard-coded pages become difficult to maintain. The implementation therefore needed reusable modules, consistent data structures, backend-supported content flows, responsive behaviour, and an architecture that could accommodate iteration without rebuilding the entire experience.',
         ],
+
         tags: [
-          'Campaign architecture',
-          'Reusable modules',
-          'Content data',
-          'Interactive flows',
-          'Responsive implementation',
-          'Cloud delivery',
+          'Campaign Architecture',
+          'Reusable Modules',
+          'Structured Content',
+          'Interactive Flows',
+          'Responsive Development',
+          'Cloud Delivery',
         ],
       },
+
       'campaign planning': {
-        title: 'Connecting audience moments to reusable digital modules',
+        title: 'Turning campaign requirements into reusable modules',
         details: [
-          'The experience was planned around brand story, campaign pages, interactive moments, product information, and engagement actions. That structure helped turn creative requirements into reusable technical modules instead of isolated page builds.',
+          'The experience was mapped around campaign storytelling, content sections, interactive moments, product information, and engagement actions. This helped translate creative requirements into reusable technical modules instead of isolated page implementations.',
         ],
-        images: [
-          '/project-details/fevikwik/discovery.png',
-          '/project-details/fevikwik/research.png',
-        ],
+
+        // images: [
+        //   '/project-details/fevikwik/discovery.png',
+        //   '/project-details/fevikwik/research.png',
+        // ],
       },
+
       'application architecture': {
-        title: 'Building a modular full-stack campaign foundation',
+        title: 'Building a modular full-stack foundation',
         details: [
-          'The application separated React presentation modules from Node.js application logic and SQL Server data concerns. Reusable sections could consume structured data while keeping layout, interaction, and backend responsibilities independently maintainable.',
+          'The application separates React presentation modules from Node.js application logic and SQL Server data concerns. Reusable sections consume structured data while layout, interaction, backend behaviour, and persistence remain independently maintainable.',
         ],
-        images: ['/project-details/fevikwik/architecture.png'],
+
+        // images: ['/project-details/fevikwik/architecture.png'],
       },
+
       'interactive frontend': {
-        title:
-          'Creating an energetic experience without sacrificing responsiveness',
+        title: 'Building interaction without sacrificing responsiveness',
         details: [
-          'The frontend combined brand-led layouts with interactive content patterns, responsive behaviour, and reusable components. The implementation focused on making motion and visual energy support the campaign while keeping navigation and content consumption clear across devices.',
+          'The frontend combines campaign-led layouts with reusable components, interactive content patterns, responsive behaviour, and motion. The implementation keeps visual energy aligned with the campaign while maintaining clear navigation and usable experiences across devices.',
         ],
       },
+
       'backend and delivery': {
-        title:
-          'Supporting content flows with backend services and cloud delivery',
+        title: 'Supporting the campaign with backend services',
         details: [
-          'Node.js services and SQL Server provided a structured application layer behind the campaign, while AWS supported deployment and content delivery. This gave the project a maintainable foundation beyond the initial launch experience.',
+          'Node.js services and SQL Server provide a structured application layer behind the experience, while cloud infrastructure supports deployment and content delivery. This gives the campaign a maintainable technical foundation beyond its initial launch.',
         ],
       },
+
       outcome: {
-        title: 'A campaign platform designed for both expression and iteration',
+        title: 'A campaign platform built for continued iteration',
         details: [
-          'The final experience combined creative campaign storytelling with reusable frontend modules, backend-supported data, and cloud delivery so future updates could be handled as product changes rather than one-off page rebuilds.',
+          'The final application combines campaign storytelling with reusable frontend modules, backend-supported data flows, and cloud delivery so future changes can be implemented as product updates rather than one-off page rebuilds.',
         ],
+
         shipped: [
           'Responsive React campaign experience.',
-          'Reusable storytelling and interaction modules.',
+          'Reusable interaction and storytelling modules.',
           'Node.js and SQL Server application layer.',
-          'AWS-based delivery foundation.',
+          'Cloud-based deployment and delivery.',
         ],
       },
     },
+
     next_case: 'milka',
   },
+
+  // =========================================================
+  // MILKA POKORA
+  // =========================================================
+
   {
     id: 'milka',
     confidential: false,
@@ -568,15 +682,19 @@ export const PROJECTS: Project[] = [
     title: 'Milka Pokora',
     platform: 'Personal Brand Platform',
     image: '/projects/milka-pokora.png',
+
     description:
-      'A focused full-stack personal brand platform that combines editorial storytelling with structured content, responsive React components, backend data delivery, and performance-conscious deployment.',
+      'A focused personal brand platform combining editorial storytelling, structured content, reusable React components, backend data delivery, and performance-conscious deployment.',
+
     details: {
       live: 'https://dev.ogilvystudio.ai/',
       client: 'Milka Pokora',
       type: 'Portfolio Platform',
       year: '2026',
-      role: 'Full Stack Development',
+      role: 'Full-Stack Development',
+
       technologies: ['React', 'TypeScript', 'Node.js', 'SQL Server', 'AWS'],
+
       features: [
         'Editorial Storytelling',
         'Structured Portfolio Content',
@@ -586,58 +704,66 @@ export const PROJECTS: Project[] = [
         'Cloud Deployment',
       ],
     },
+
     section: {
       overview: {
-        title: 'Building a personal brand site as a maintainable platform',
+        title: 'Building a personal brand as a maintainable platform',
         details: [
-          'Milka Pokora required a smaller and more focused case-study structure than the product platforms. The implementation paired a refined React experience with Node.js, SQL Server, and AWS so portfolio content could be treated as structured application data instead of being embedded entirely inside presentation components.',
+          'Milka Pokora required a more focused architecture than the larger SaaS and enterprise applications. The implementation combines a refined React experience with Node.js, SQL Server, and cloud delivery so portfolio content can remain structured and separate from presentation logic.',
         ],
       },
+
       challenge: {
-        title:
-          'Keeping the experience expressive without making updates fragile',
+        title: 'Balancing expression with maintainability',
         details: [
-          'The main challenge was balancing editorial freedom with maintainability. Content, imagery, and storytelling needed to feel highly personal, while the underlying implementation still required reusable components, clear data structures, responsive behaviour, and dependable delivery.',
+          'The main challenge was giving the experience enough flexibility for editorial storytelling without turning each page into bespoke code. Content, imagery, and presentation needed to remain expressive while the underlying system stayed reusable, responsive, and easy to maintain.',
         ],
+
         tags: [
-          'Personal brand',
-          'Structured content',
+          'Personal Brand',
+          'Structured Content',
           'Editorial UI',
-          'Reusable React components',
-          'Responsive delivery',
+          'Reusable Components',
+          'Responsive Delivery',
         ],
       },
+
       'content architecture': {
-        title: 'Structuring stories, projects, and media as reusable data',
+        title: 'Structuring stories, projects, and media as data',
         details: [
-          'Content was organised around reusable structures so portfolio sections could be updated without redesigning the page system. The backend and database layer provided a foundation for separating content concerns from the React presentation layer.',
+          'Content is organised around reusable structures so portfolio sections can evolve without redesigning the application. Separating content from React presentation components provides a cleaner foundation for ongoing updates and additional sections.',
         ],
       },
+
       'frontend engineering': {
-        title: 'Crafting a responsive editorial interface',
+        title: 'Building a responsive editorial interface',
         details: [
-          'React and TypeScript were used to build the visual storytelling layer with reusable sections, responsive layouts, predictable content rendering, and interaction patterns designed to keep the experience polished without turning every page into bespoke code.',
+          'React and TypeScript power the visual storytelling layer through reusable sections, responsive layouts, predictable content rendering, and consistent interaction patterns. The goal is to keep the experience polished without making every page a separate implementation.',
         ],
       },
+
       'performance and delivery': {
-        title: 'Supporting media-heavy storytelling with dependable delivery',
+        title: 'Supporting media-rich content with reliable delivery',
         details: [
-          'The application structure considered media loading, semantic page structure, responsive behaviour, and AWS delivery together so the portfolio could remain visually rich while still being maintainable and performance-conscious.',
+          'Application structure, media loading, semantic markup, responsive behaviour, and cloud delivery are considered together so the platform remains visually rich while still being maintainable and performance-conscious.',
         ],
       },
+
       outcome: {
-        title: 'A focused full-stack portfolio with room to evolve',
+        title: 'A focused platform designed to evolve',
         details: [
-          'The result is a personal brand platform with a deliberately smaller architecture than the SaaS and enterprise projects, but the same full-stack discipline around structured data, reusable UI, backend separation, and cloud delivery.',
+          'The result is a personal brand platform with a deliberately lighter architecture than the larger product applications while maintaining the same engineering principles around reusable UI, structured data, backend separation, and reliable delivery.',
         ],
+
         shipped: [
-          'Responsive React and TypeScript portfolio experience.',
+          'Responsive React and TypeScript experience.',
           'Structured content and backend separation.',
           'Reusable editorial presentation components.',
-          'AWS-based delivery foundation.',
+          'Cloud-based delivery foundation.',
         ],
       },
     },
+
     next_case: 'pathlens',
   },
 ]

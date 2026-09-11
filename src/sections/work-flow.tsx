@@ -58,15 +58,15 @@ export const WorkFlow = () => {
           lines={[
             <p className="text-3xl font-medium lg:max-w-[40ch] lg:text-5xl">
               Built, shipped, and{' '}
-              <span className="text-secondary">running</span>.
+              <span className="text-secondary">in production</span>.
             </p>,
           ]}
         />
 
         <InView>
           <p className="slide-up-fade-in text-secondary text-lg lg:max-w-[40%]">
-            Not concept projects. Real applications engineered from interface to
-            API, database, deployment, and production.
+            Real applications built end to end — from interface and APIs to
+            data, integrations, deployment, and production workflows.
           </p>
         </InView>
       </div>

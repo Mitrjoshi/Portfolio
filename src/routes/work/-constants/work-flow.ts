@@ -81,15 +81,16 @@ export const WORK_FLOW: WorkFlowEntry[] = [
   {
     id: 'pathlens',
     name: 'Pathlens',
-    category: 'Full Stack',
+    category: 'Full-Stack Application',
     year: '2026',
     status: 'In development',
     headline:
-      'Privacy-focused product analytics built from tracking script to dashboard.',
+      'Privacy-focused product analytics built from tracking layer to dashboard.',
     purpose:
-      'Capture visitor behaviour, process interaction data, and turn sessions and events into clear product analytics without relying on heavyweight analytics platforms.',
+      'Capture user interactions, process behavioural data, and turn sessions and events into actionable product insights through a lightweight analytics platform.',
     liveUrl: 'https://d1zadf3to2hh75.cloudfront.net/',
     githubUrl: 'https://github.com/Mitrjoshi/Airship-x-Pathlens',
+
     stack: [
       'React',
       'TypeScript',
@@ -98,29 +99,34 @@ export const WORK_FLOW: WorkFlowEntry[] = [
       'REST API',
       'Vercel',
     ],
+
     flow: [
       {
         step: '01',
         title: 'Capture',
-        description: 'Collect visitor events, page activity and interactions.',
+        description:
+          'Collect visitor events, page activity, navigation, and interactions.',
       },
       {
         step: '02',
         title: 'Process',
-        description: 'Validate, enrich and structure incoming event data.',
+        description:
+          'Validate, enrich, and structure incoming behavioural event data.',
       },
       {
         step: '03',
         title: 'Store',
         description:
-          'Persist visitors, sessions, events and interaction metadata.',
+          'Persist visitors, sessions, events, and interaction metadata.',
       },
       {
         step: '04',
         title: 'Visualize',
-        description: 'Transform analytics queries into dashboard insights.',
+        description:
+          'Transform structured analytics data into clear dashboard insights.',
       },
     ],
+
     metrics: [
       {
         value: '7+',
@@ -139,8 +145,18 @@ export const WORK_FLOW: WorkFlowEntry[] = [
         label: 'Responsive',
       },
     ],
-    tags: ['Full Stack', 'SaaS', 'Analytics', 'React', 'Node.js', 'PostgreSQL'],
+
+    tags: [
+      'Full-Stack',
+      'SaaS',
+      'Product Analytics',
+      'React',
+      'Node.js',
+      'PostgreSQL',
+    ],
+
     defaultCommand: 'pathlens api health',
+
     terminalRuns: [
       {
         command: 'pathlens build',
@@ -164,41 +180,41 @@ export const WORK_FLOW: WorkFlowEntry[] = [
           '·visitor connected · session_84f2',
           '·page → /pricing · referrer → organic',
           '',
-          '✓page_view captured · 42ms',
+          '✓page_view captured',
           '✓session linked → visitor_1024',
           '✓event persisted → PostgreSQL',
           '',
-          '·3 events · exit 0 · 0.18s',
+          '·event pipeline active · exit 0',
         ],
       },
       {
         command: 'pathlens analyse --session=84f2',
         lines: [
-          '·loading session · 18 events · 4 pages',
+          '·loading visitor session',
           '·processing clicks + scroll + navigation',
           '',
-          '✓CTA clicked → "Start free trial"',
-          '✓pricing section → 87% scroll depth',
-          '✓navigation → /signup',
+          '✓CTA interaction detected',
+          '✓scroll activity processed',
+          '✓navigation sequence resolved',
           '',
-          '!2 rapid clicks detected → possible friction',
+          '!rapid interactions detected → possible friction',
           '',
-          '·session processed · exit 0 · 0.42s',
+          '·session processed · exit 0',
         ],
       },
       {
         command: 'pathlens heatmap --page=/pricing',
         lines: [
           '·querying interaction coordinates',
-          '·126 sessions · 842 interaction points',
+          '·processing page interaction data',
           '',
-          '✓hero CTA ............ 184 clicks',
-          '✓pricing cards ....... 297 clicks',
-          '✓FAQ section ......... 91 clicks',
+          '✓hero interactions ...... mapped',
+          '✓pricing cards .......... mapped',
+          '✓FAQ interactions ....... mapped',
           '',
           '!low interaction → secondary CTA',
           '',
-          '·heatmap ready · exit 0 · 0.31s',
+          '·heatmap ready · exit 0',
         ],
       },
       {
@@ -206,12 +222,12 @@ export const WORK_FLOW: WorkFlowEntry[] = [
         lines: [
           '·checking tracking + analytics services',
           '',
-          '✓POST /events ........ 200 · 48ms',
-          '✓GET /sessions ....... 200 · 71ms',
-          '✓GET /analytics ...... 200 · 94ms',
+          '✓POST /events ........ healthy',
+          '✓GET /sessions ....... healthy',
+          '✓GET /analytics ...... healthy',
           '✓database ............ connected',
           '',
-          '·12 endpoints · 0 failures',
+          '·services operational · 0 failures',
         ],
       },
       {
@@ -219,30 +235,30 @@ export const WORK_FLOW: WorkFlowEntry[] = [
         lines: [
           '·listening for active visitor events',
           '',
-          '✓visitor_1024 → /dashboard',
-          '✓visitor_1107 → /pricing',
-          '✓visitor_1121 → /features',
+          '✓visitor activity → /dashboard',
+          '✓visitor activity → /pricing',
+          '✓visitor activity → /features',
           '',
-          '·3 active visitors',
-          '·9 events in last 60s',
+          '·live event stream active',
         ],
       },
       {
         command: 'pathlens query --metric=conversion',
         lines: [
-          '·range → last 7d',
-          '·1,284 visitors · 2,916 sessions',
+          '·reading analytics range',
+          '·processing visitor + session data',
           '',
-          '✓signup started ....... 186',
-          '✓signup completed ..... 124',
-          '✓conversion rate ...... 9.65%',
+          '✓signup started ........ resolved',
+          '✓signup completed ...... resolved',
+          '✓conversion rate ....... calculated',
           '',
-          '!drop-off → pricing → signup · 22%',
+          '!drop-off path identified → pricing → signup',
           '',
-          '·query complete · exit 0 · 0.27s',
+          '·query complete · exit 0',
         ],
       },
     ],
+
     architecture: [
       'User Website / App',
       'Tracking Script',
@@ -251,6 +267,7 @@ export const WORK_FLOW: WorkFlowEntry[] = [
       'Analytics Processing',
       'Product Dashboard',
     ],
+
     data: [
       'Visitors',
       'Sessions',
@@ -259,6 +276,7 @@ export const WORK_FLOW: WorkFlowEntry[] = [
       'Heatmap Data',
       'Live Visitor Activity',
     ],
+
     actions: {
       previous: 'Prev',
       next: 'Next',
@@ -273,8 +291,9 @@ export const WORK_FLOW: WorkFlowEntry[] = [
         url: 'https://github.com/Mitrjoshi/Airship-x-Pathlens',
       },
     },
+
     footer:
-      'Full-stack analytics product covering tracking, APIs, structured data, processing and dashboard delivery.',
+      'Full-stack analytics platform covering event tracking, APIs, structured data, processing, and dashboard visualization.',
   },
 
   // =========================================================
@@ -288,9 +307,10 @@ export const WORK_FLOW: WorkFlowEntry[] = [
     year: '2026',
     status: 'Live',
     headline:
-      'AI-powered content generation platform connecting enterprise workflows with Google Vertex AI.',
+      'AI content generation platform built around enterprise workflows and Google Vertex AI.',
     purpose:
-      'Give teams a controlled interface for generating production-ready image, video and AI content through Vertex AI while managing users, credits, requests and model access through a secure application layer.',
+      'Give teams a controlled interface for generating images, videos, and multimodal content while managing authentication, usage, credits, requests, and model access through a secure application layer.',
+
     stack: [
       'React',
       'TypeScript',
@@ -300,12 +320,13 @@ export const WORK_FLOW: WorkFlowEntry[] = [
       'Veo',
       'Imagen',
     ],
+
     flow: [
       {
         step: '01',
         title: 'Prompt',
         description:
-          'Capture structured generation requests and creative inputs.',
+          'Capture structured generation requests, prompts, and creative inputs.',
       },
       {
         step: '02',
@@ -317,14 +338,16 @@ export const WORK_FLOW: WorkFlowEntry[] = [
         step: '03',
         title: 'Generate',
         description:
-          'Run image, video and multimodal generation through Vertex AI.',
+          'Run image, video, and multimodal generation through Vertex AI.',
       },
       {
         step: '04',
         title: 'Deliver',
-        description: 'Return generated assets while tracking usage and access.',
+        description:
+          'Return generated assets while tracking access, usage, and requests.',
       },
     ],
+
     metrics: [
       {
         value: 'Gemini',
@@ -343,8 +366,11 @@ export const WORK_FLOW: WorkFlowEntry[] = [
         label: 'Usage Control',
       },
     ],
-    tags: ['AI Platform', 'Full Stack', 'Vertex AI', 'Gemini', 'Veo', 'Imagen'],
+
+    tags: ['AI Platform', 'Full-Stack', 'Vertex AI', 'Gemini', 'Imagen', 'Veo'],
+
     defaultCommand: 'vertex models --status',
+
     terminalRuns: [
       {
         command: 'vertex models --status',
@@ -447,6 +473,7 @@ export const WORK_FLOW: WorkFlowEntry[] = [
         ],
       },
     ],
+
     architecture: [
       'User Interface',
       'Application API',
@@ -456,6 +483,7 @@ export const WORK_FLOW: WorkFlowEntry[] = [
       'Gemini / Imagen / Veo',
       'Generated Assets',
     ],
+
     data: [
       'Users',
       'Generation Requests',
@@ -464,7 +492,9 @@ export const WORK_FLOW: WorkFlowEntry[] = [
       'Credit Usage',
       'Generated Assets',
     ],
+
     caseStudyUrl: '#vertex',
+
     actions: {
       previous: 'Prev',
       next: 'Next',
@@ -474,8 +504,9 @@ export const WORK_FLOW: WorkFlowEntry[] = [
         url: '#vertex',
       },
     },
+
     footer:
-      'Enterprise AI generation workflow connecting application logic, access control, usage management and multimodal Vertex AI services.',
+      'AI generation platform connecting application logic, access control, usage management, and multimodal Vertex AI services.',
   },
 
   // =========================================================
@@ -489,9 +520,10 @@ export const WORK_FLOW: WorkFlowEntry[] = [
     year: '2026',
     status: 'Live',
     headline:
-      'Collaborative workshop platform built for live ideation, AI-assisted refinement, voting and presentation.',
+      'Live workshop platform for collaborative ideation, AI-assisted refinement, voting, and presentation.',
     purpose:
-      'Replace fragmented workshop tools with one structured system where participants submit and refine ideas, teams shortlist them, admins control voting, and winning ideas move into a presentation-ready workshop outcome.',
+      'Bring the complete workshop journey into one structured system where participants create and refine ideas, teams shortlist them, admins control voting, and winning concepts move into a presentation-ready experience.',
+
     stack: [
       'React',
       'TypeScript',
@@ -500,29 +532,34 @@ export const WORK_FLOW: WorkFlowEntry[] = [
       'SQL',
       'AI Integration',
     ],
+
     flow: [
       {
         step: '01',
-        title: 'Generate',
-        description: 'Participants capture ideas directly from their phones.',
+        title: 'Ideate',
+        description:
+          'Participants create and submit ideas directly from their devices.',
       },
       {
         step: '02',
-        title: 'Expand',
-        description: 'AI Coach and Scout help teams refine and explore ideas.',
+        title: 'Refine',
+        description:
+          'AI Coach and Scout help participants improve and explore ideas.',
       },
       {
         step: '03',
-        title: 'Converge',
-        description: 'Teams shortlist ideas and move into controlled voting.',
+        title: 'Vote',
+        description:
+          'Teams shortlist ideas before moving into admin-controlled voting.',
       },
       {
         step: '04',
         title: 'Present',
         description:
-          'Winning ideas are surfaced through the Big Screen experience.',
+          'Winning ideas move into a presentation-ready Big Screen experience.',
       },
     ],
+
     metrics: [
       {
         value: '30–70',
@@ -541,8 +578,18 @@ export const WORK_FLOW: WorkFlowEntry[] = [
         label: 'Voting',
       },
     ],
-    tags: ['Full Stack', 'Real-time', 'Workshops', 'AI', 'Voting', 'Admin'],
+
+    tags: [
+      'Full-Stack',
+      'Real-Time',
+      'Workshops',
+      'AI Integration',
+      'Voting',
+      'Admin',
+    ],
+
     defaultCommand: 'basecamp workshop --status',
+
     terminalRuns: [
       {
         command: 'basecamp workshop --status',
@@ -645,6 +692,7 @@ export const WORK_FLOW: WorkFlowEntry[] = [
         ],
       },
     ],
+
     architecture: [
       'Participant Device',
       'Workshop UI',
@@ -655,6 +703,7 @@ export const WORK_FLOW: WorkFlowEntry[] = [
       'Admin Console',
       'Big Screen',
     ],
+
     data: [
       'Participants',
       'Teams',
@@ -665,7 +714,9 @@ export const WORK_FLOW: WorkFlowEntry[] = [
       'Workshop Configuration',
       'Activity Events',
     ],
+
     caseStudyUrl: '#basecamp',
+
     actions: {
       previous: 'Prev',
       next: 'Next',
@@ -675,7 +726,8 @@ export const WORK_FLOW: WorkFlowEntry[] = [
         url: '#basecamp',
       },
     },
+
     footer:
-      'Live workshop system connecting participant ideation, AI-assisted refinement, controlled voting, administration and presentation workflows.',
+      'Live workshop platform connecting participant ideation, AI-assisted refinement, voting, administration, and presentation workflows.',
   },
 ]

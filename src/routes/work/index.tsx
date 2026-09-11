@@ -6,9 +6,7 @@ import { Projects } from '../../sections/projects'
 import { CompaniesWorkedWith } from '../../sections/companies-worked-with'
 import { Screenshots } from '../../sections/screenshots'
 import { Worked } from '../../sections/worked'
-import { WorkFlow } from '../../sections/work-flow'
 import { Skills } from '../../sections/skills'
-import { HowIBuild } from '../../sections/how-i-build'
 
 export const Route = createFileRoute('/work/')({
   component: RouteComponent,
@@ -52,18 +50,6 @@ function RouteComponent() {
       <BorderContainer>
         <Container className="border-t">
           <Worked />
-        </Container>
-      </BorderContainer>
-
-      <BorderContainer>
-        <Container className="border-t">
-          <HowIBuild />
-        </Container>
-      </BorderContainer>
-
-      <BorderContainer>
-        <Container className="border-t">
-          <WorkFlow />
         </Container>
       </BorderContainer>
 

@@ -3,7 +3,7 @@ import { useTransitionNavigate } from '../providers/transition-navigation'
 import { BorderContainerInner } from './border-container-inner'
 import { useLocation } from '@tanstack/react-router'
 import { useState } from 'react'
-import { ToolCircuit } from './tool-circuit'
+import { ToolCircuit } from './svg/tool-circuit'
 
 const DAILY_KIT = [
   'VS Code',
@@ -112,9 +112,23 @@ export const Footer = ({
 
               <li
                 className="hover:text-foreground cursor-pointer duration-200"
+                onClick={() => transitionTo('/development', 'Development')}
+              >
+                <p>Development</p>
+              </li>
+
+              <li
+                className="hover:text-foreground cursor-pointer duration-200"
                 onClick={() => transitionTo('/profile', 'Profile')}
               >
                 <p>Profile</p>
+              </li>
+
+              <li
+                className="hover:text-foreground cursor-pointer duration-200"
+                onClick={() => transitionTo('/contact', 'Contact')}
+              >
+                <p>Contact</p>
               </li>
             </ul>
           </div>

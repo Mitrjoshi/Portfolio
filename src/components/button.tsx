@@ -4,6 +4,7 @@ import type { ButtonHTMLAttributes } from 'react'
 interface I_Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string
   showIcon?: boolean
+  inverted?: boolean
   highlight?: boolean
   size?: 'default' | 'sm'
 }
@@ -11,6 +12,7 @@ interface I_Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button = ({
   text,
   showIcon = false,
+  inverted = false,
   highlight = true,
   size = 'default',
   disabled = false,
@@ -27,7 +29,7 @@ export const Button = ({
 
       {showIcon && (
         <ArrowRight
-          className="-rotate-45 duration-200 group-hover:translate-x-1 group-hover:-translate-y-1"
+          className={`${inverted ? 'rotate-125' : '-rotate-45'} duration-200 ${inverted ? 'group-hover:-translate-x-1 group-hover:translate-y-1' : 'group-hover:translate-x-1 group-hover:-translate-y-1'}`}
           strokeWidth={1}
         />
       )}

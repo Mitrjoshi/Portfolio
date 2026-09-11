@@ -177,6 +177,107 @@
   --human-bag: #936246;
   --human-bag-detail: #744a35;
   --scene-stroke-width: 2;
+
+  --software-pipeline-bg: #fffdf5;
+  --software-pipeline-surface: #f6f1e5;
+  --software-pipeline-surface-soft: #fbf8ef;
+  --software-pipeline-border: #c9c1b0;
+
+  --software-pipeline-ground: #8d8576;
+  --software-pipeline-skirt: #d8d1c3;
+  --software-pipeline-line: #b4ac9d;
+  --software-pipeline-line-strong: #8d8576;
+  --software-pipeline-line-soft: #c3baa6;
+  --software-pipeline-line-deep: #ded7c6;
+  --software-pipeline-line-tie: #c8c0b0;
+
+  --software-pipeline-text: #262626;
+  --software-pipeline-text-muted: #726b60;
+  --software-pipeline-text-dim: #928c7f;
+
+  --software-pipeline-accent: #6f8e50;
+  --software-pipeline-accent-dim: #94a978;
+  --software-pipeline-wire-active: #809866;
+  --software-pipeline-purple: #8a70a7;
+  --software-pipeline-blue: #5f8192;
+  --software-pipeline-olive: #8b845c;
+  --software-pipeline-gate: #78965c;
+  --software-pipeline-lip: #c9c1b0;
+
+  /* Circuit board */
+  --software-pipeline-board-bus: #d1cabd;
+  --software-pipeline-board-trace: #a69e8e;
+  --software-pipeline-board-silk: #b9b1a1;
+  --software-pipeline-board-via-bg: #fffdf5;
+  --software-pipeline-board-via-edge: #8d8576;
+  --software-pipeline-board-component: #ded7c6;
+  --software-pipeline-board-component-edge: #aaa08d;
+  --software-pipeline-board-cap: #c9d6d9;
+  --software-pipeline-board-cap-edge: #829398;
+  --software-pipeline-board-pin: #9b9282;
+
+  /* Stations */
+  --software-pipeline-unit-edge: #c3baa6;
+  --software-pipeline-vent: #a39a88;
+  --software-pipeline-slot: #958c7c;
+  --software-pipeline-led-idle: #c1b9aa;
+  --software-pipeline-feet: #aaa190;
+
+  /* Development cards */
+  --software-pipeline-card-dot: #b8b09f;
+  --software-pipeline-card-title: #625d54;
+  --software-pipeline-card-copy: #8b8578;
+  --software-pipeline-progress: #b9bea5;
+
+  /* Chip */
+  --software-pipeline-chip-pin: #9a9283;
+  --software-pipeline-chip-bg: #ded7c6;
+  --software-pipeline-chip-edge: #a99f8c;
+  --software-pipeline-chip-core: #8f7aa0;
+  --software-pipeline-chip-core-edge: #6f5f7c;
+
+  /* Database */
+  --software-pipeline-db-body: #c8d0c5;
+  --software-pipeline-db-edge: #879184;
+  --software-pipeline-db-top: #bfd1d6;
+  --software-pipeline-db-top-edge: #7f9499;
+
+  /* Cloud */
+  --software-pipeline-cloud: #8d8576;
+  --software-pipeline-cloud-copy: #726b60;
+
+  /* Code window */
+  --software-pipeline-code-edge: #c3baa6;
+  --software-pipeline-code-bar: #e7e1d1;
+  --software-pipeline-code-dot: #928c7f;
+  --software-pipeline-code-keyword: #7a609d;
+  --software-pipeline-code-identifier: #726b60;
+  --software-pipeline-code-string: #5f7d4f;
+
+  /* Robot */
+  --software-pipeline-robot-shadow: #c9c1b1;
+  --software-pipeline-robot-limb: #a9aaa2;
+  --software-pipeline-robot-limb-edge: #73756d;
+  --software-pipeline-robot-joint: #898b84;
+  --software-pipeline-robot-joint-edge: #62645d;
+  --software-pipeline-robot-foot: #b7b8b0;
+  --software-pipeline-robot-foot-edge: #74766e;
+  --software-pipeline-robot-body: #9fa19a;
+  --software-pipeline-robot-body-edge: #686a63;
+  --software-pipeline-robot-vent: #74766f;
+  --software-pipeline-robot-core: #c99b50;
+  --software-pipeline-robot-core-edge: #9d6f2d;
+  --software-pipeline-robot-neck: #b0b1aa;
+  --software-pipeline-robot-neck-edge: #74766f;
+  --software-pipeline-robot-head: #a8aaa3;
+  --software-pipeline-robot-head-edge: #6d6f68;
+  --software-pipeline-robot-visor: #686b64;
+  --software-pipeline-robot-visor-edge: #8c8f87;
+  --software-pipeline-robot-eye: #f0b555;
+  --software-pipeline-robot-antenna: #74766f;
+  --software-pipeline-robot-antenna-led: #c58a33;
+  --software-pipeline-status-copy: #726b60;
+  --software-pipeline-status-dot: #c98c32;
 }
 
 /* --------------------------------
@@ -255,6 +356,107 @@
   --human-bag: #b47b59;
   --human-bag-detail: #936246;
   --scene-stroke-width: 2;
+
+  --software-pipeline-bg: #12110d;
+  --software-pipeline-surface: #181711;
+  --software-pipeline-surface-soft: #171610;
+  --software-pipeline-border: #47463a;
+
+  --software-pipeline-ground: #69695d;
+  --software-pipeline-skirt: #2f302a;
+  --software-pipeline-line: #3b3b32;
+  --software-pipeline-line-strong: #56564a;
+  --software-pipeline-line-soft: #4a4b41;
+  --software-pipeline-line-deep: #303129;
+  --software-pipeline-line-tie: #3e4037;
+
+  --software-pipeline-text: #deddd5;
+  --software-pipeline-text-muted: #777468;
+  --software-pipeline-text-dim: #5e5d53;
+
+  --software-pipeline-accent: #759553;
+  --software-pipeline-accent-dim: #4b603d;
+  --software-pipeline-wire-active: #4f5e42;
+  --software-pipeline-purple: #55426f;
+  --software-pipeline-blue: #345365;
+  --software-pipeline-olive: #5a5537;
+  --software-pipeline-gate: #435d32;
+  --software-pipeline-lip: #474437;
+
+  /* Circuit board */
+  --software-pipeline-board-bus: #34352f;
+  --software-pipeline-board-trace: #55564c;
+  --software-pipeline-board-silk: #43443c;
+  --software-pipeline-board-via-bg: #14140f;
+  --software-pipeline-board-via-edge: #6a6b5f;
+  --software-pipeline-board-component: #39382f;
+  --software-pipeline-board-component-edge: #67675a;
+  --software-pipeline-board-cap: #263237;
+  --software-pipeline-board-cap-edge: #646b65;
+  --software-pipeline-board-pin: #64655a;
+
+  /* Stations */
+  --software-pipeline-unit-edge: #4a493f;
+  --software-pipeline-vent: #54544a;
+  --software-pipeline-slot: #5b5b50;
+  --software-pipeline-led-idle: #424238;
+  --software-pipeline-feet: #56574c;
+
+  /* Development cards */
+  --software-pipeline-card-dot: #3d3d34;
+  --software-pipeline-card-title: #a7a59b;
+  --software-pipeline-card-copy: #66655b;
+  --software-pipeline-progress: #414537;
+
+  /* Chip */
+  --software-pipeline-chip-pin: #66655a;
+  --software-pipeline-chip-bg: #2b2a22;
+  --software-pipeline-chip-edge: #666457;
+  --software-pipeline-chip-core: #554865;
+  --software-pipeline-chip-core-edge: #7a756b;
+
+  /* Database */
+  --software-pipeline-db-body: #30342d;
+  --software-pipeline-db-edge: #63685e;
+  --software-pipeline-db-top: #26363b;
+  --software-pipeline-db-top-edge: #697069;
+
+  /* Cloud */
+  --software-pipeline-cloud: #777568;
+  --software-pipeline-cloud-copy: #6e6b61;
+
+  /* Code window */
+  --software-pipeline-code-edge: #4b493e;
+  --software-pipeline-code-bar: #2c2b24;
+  --software-pipeline-code-dot: #767369;
+  --software-pipeline-code-keyword: #745da0;
+  --software-pipeline-code-identifier: #77756a;
+  --software-pipeline-code-string: #61794f;
+
+  /* Robot */
+  --software-pipeline-robot-shadow: #060604;
+  --software-pipeline-robot-limb: #5e5f58;
+  --software-pipeline-robot-limb-edge: #898a80;
+  --software-pipeline-robot-joint: #40413b;
+  --software-pipeline-robot-joint-edge: #8a8b80;
+  --software-pipeline-robot-foot: #74756d;
+  --software-pipeline-robot-foot-edge: #98998f;
+  --software-pipeline-robot-body: #555750;
+  --software-pipeline-robot-body-edge: #8d8e83;
+  --software-pipeline-robot-vent: #30322d;
+  --software-pipeline-robot-core: #796239;
+  --software-pipeline-robot-core-edge: #aa9256;
+  --software-pipeline-robot-neck: #6c6d65;
+  --software-pipeline-robot-neck-edge: #929289;
+  --software-pipeline-robot-head: #666861;
+  --software-pipeline-robot-head-edge: #96978d;
+  --software-pipeline-robot-visor: #31342f;
+  --software-pipeline-robot-visor-edge: #777a70;
+  --software-pipeline-robot-eye: #b39b58;
+  --software-pipeline-robot-antenna: #85867c;
+  --software-pipeline-robot-antenna-led: #b4944b;
+  --software-pipeline-status-copy: #8e8a7f;
+  --software-pipeline-status-dot: #a77a2d;
 }
 
 /* --------------------------------
@@ -342,6 +544,131 @@
   --color-human-bag-detail: var(--human-bag-detail);
 
   --scene-stroke-width: var(--scene-stroke-width);
+
+  --color-software-pipeline-bg: var(--software-pipeline-bg);
+  --color-software-pipeline-surface: var(--software-pipeline-surface);
+  --color-software-pipeline-surface-soft: var(--software-pipeline-surface-soft);
+  --color-software-pipeline-border: var(--software-pipeline-border);
+
+  --color-software-pipeline-ground: var(--software-pipeline-ground);
+  --color-software-pipeline-skirt: var(--software-pipeline-skirt);
+  --color-software-pipeline-line: var(--software-pipeline-line);
+  --color-software-pipeline-line-strong: var(--software-pipeline-line-strong);
+  --color-software-pipeline-line-soft: var(--software-pipeline-line-soft);
+  --color-software-pipeline-line-deep: var(--software-pipeline-line-deep);
+  --color-software-pipeline-line-tie: var(--software-pipeline-line-tie);
+
+  --color-software-pipeline-text: var(--software-pipeline-text);
+  --color-software-pipeline-text-muted: var(--software-pipeline-text-muted);
+  --color-software-pipeline-text-dim: var(--software-pipeline-text-dim);
+
+  --color-software-pipeline-accent: var(--software-pipeline-accent);
+  --color-software-pipeline-accent-dim: var(--software-pipeline-accent-dim);
+  --color-software-pipeline-wire-active: var(--software-pipeline-wire-active);
+  --color-software-pipeline-purple: var(--software-pipeline-purple);
+  --color-software-pipeline-blue: var(--software-pipeline-blue);
+  --color-software-pipeline-olive: var(--software-pipeline-olive);
+  --color-software-pipeline-gate: var(--software-pipeline-gate);
+  --color-software-pipeline-lip: var(--software-pipeline-lip);
+
+  --color-software-pipeline-board-bus: var(--software-pipeline-board-bus);
+  --color-software-pipeline-board-trace: var(--software-pipeline-board-trace);
+  --color-software-pipeline-board-silk: var(--software-pipeline-board-silk);
+  --color-software-pipeline-board-via-bg: var(--software-pipeline-board-via-bg);
+  --color-software-pipeline-board-via-edge: var(
+    --software-pipeline-board-via-edge
+  );
+  --color-software-pipeline-board-component: var(
+    --software-pipeline-board-component
+  );
+  --color-software-pipeline-board-component-edge: var(
+    --software-pipeline-board-component-edge
+  );
+  --color-software-pipeline-board-cap: var(--software-pipeline-board-cap);
+  --color-software-pipeline-board-cap-edge: var(
+    --software-pipeline-board-cap-edge
+  );
+  --color-software-pipeline-board-pin: var(--software-pipeline-board-pin);
+
+  --color-software-pipeline-unit-edge: var(--software-pipeline-unit-edge);
+  --color-software-pipeline-vent: var(--software-pipeline-vent);
+  --color-software-pipeline-slot: var(--software-pipeline-slot);
+  --color-software-pipeline-led-idle: var(--software-pipeline-led-idle);
+  --color-software-pipeline-feet: var(--software-pipeline-feet);
+
+  --color-software-pipeline-card-dot: var(--software-pipeline-card-dot);
+  --color-software-pipeline-card-title: var(--software-pipeline-card-title);
+  --color-software-pipeline-card-copy: var(--software-pipeline-card-copy);
+  --color-software-pipeline-progress: var(--software-pipeline-progress);
+
+  --color-software-pipeline-chip-pin: var(--software-pipeline-chip-pin);
+  --color-software-pipeline-chip-bg: var(--software-pipeline-chip-bg);
+  --color-software-pipeline-chip-edge: var(--software-pipeline-chip-edge);
+  --color-software-pipeline-chip-core: var(--software-pipeline-chip-core);
+  --color-software-pipeline-chip-core-edge: var(
+    --software-pipeline-chip-core-edge
+  );
+
+  --color-software-pipeline-db-body: var(--software-pipeline-db-body);
+  --color-software-pipeline-db-edge: var(--software-pipeline-db-edge);
+  --color-software-pipeline-db-top: var(--software-pipeline-db-top);
+  --color-software-pipeline-db-top-edge: var(--software-pipeline-db-top-edge);
+
+  --color-software-pipeline-cloud: var(--software-pipeline-cloud);
+  --color-software-pipeline-cloud-copy: var(--software-pipeline-cloud-copy);
+
+  --color-software-pipeline-code-edge: var(--software-pipeline-code-edge);
+  --color-software-pipeline-code-bar: var(--software-pipeline-code-bar);
+  --color-software-pipeline-code-dot: var(--software-pipeline-code-dot);
+  --color-software-pipeline-code-keyword: var(--software-pipeline-code-keyword);
+  --color-software-pipeline-code-identifier: var(
+    --software-pipeline-code-identifier
+  );
+  --color-software-pipeline-code-string: var(--software-pipeline-code-string);
+
+  --color-software-pipeline-robot-shadow: var(--software-pipeline-robot-shadow);
+  --color-software-pipeline-robot-limb: var(--software-pipeline-robot-limb);
+  --color-software-pipeline-robot-limb-edge: var(
+    --software-pipeline-robot-limb-edge
+  );
+  --color-software-pipeline-robot-joint: var(--software-pipeline-robot-joint);
+  --color-software-pipeline-robot-joint-edge: var(
+    --software-pipeline-robot-joint-edge
+  );
+  --color-software-pipeline-robot-foot: var(--software-pipeline-robot-foot);
+  --color-software-pipeline-robot-foot-edge: var(
+    --software-pipeline-robot-foot-edge
+  );
+  --color-software-pipeline-robot-body: var(--software-pipeline-robot-body);
+  --color-software-pipeline-robot-body-edge: var(
+    --software-pipeline-robot-body-edge
+  );
+  --color-software-pipeline-robot-vent: var(--software-pipeline-robot-vent);
+  --color-software-pipeline-robot-core: var(--software-pipeline-robot-core);
+  --color-software-pipeline-robot-core-edge: var(
+    --software-pipeline-robot-core-edge
+  );
+  --color-software-pipeline-robot-neck: var(--software-pipeline-robot-neck);
+  --color-software-pipeline-robot-neck-edge: var(
+    --software-pipeline-robot-neck-edge
+  );
+  --color-software-pipeline-robot-head: var(--software-pipeline-robot-head);
+  --color-software-pipeline-robot-head-edge: var(
+    --software-pipeline-robot-head-edge
+  );
+  --color-software-pipeline-robot-visor: var(--software-pipeline-robot-visor);
+  --color-software-pipeline-robot-visor-edge: var(
+    --software-pipeline-robot-visor-edge
+  );
+  --color-software-pipeline-robot-eye: var(--software-pipeline-robot-eye);
+  --color-software-pipeline-robot-antenna: var(
+    --software-pipeline-robot-antenna
+  );
+  --color-software-pipeline-robot-antenna-led: var(
+    --software-pipeline-robot-antenna-led
+  );
+  --color-software-pipeline-status-copy: var(--software-pipeline-status-copy);
+  --color-software-pipeline-status-dot: var(--software-pipeline-status-dot);
 }
 
 @layer base {

@@ -38,7 +38,7 @@ export const CityWalkerSvg = ({
   }, [])
 
   const walkerX = Math.max(MIN_WALKER_X, viewportWidth * 0.15)
-  const pinX = Math.min(viewportWidth - MIN_PIN_RIGHT, viewportWidth * 0.93)
+  const pinX = Math.min(viewportWidth - MIN_PIN_RIGHT, viewportWidth * 0.94)
 
   return (
     <div
