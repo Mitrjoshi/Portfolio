@@ -5,12 +5,12 @@ import {
   useScroll,
   useTransform,
 } from 'framer-motion'
+import { ArrowRight } from 'lucide-react'
 
 import { BorderContainerInner } from '../components/border-container-inner'
 import { InView } from '../components/in-view'
 import { RevealText } from '../components/reveal-text'
 import { SectionAttribute } from '../components/section-attribute'
-import { ArrowRight } from 'lucide-react'
 import { useTransitionNavigate } from '../providers/transition-navigation'
 
 const STATS = [
@@ -35,16 +35,8 @@ export const ByTheNumbers = () => {
   })
 
   return (
-    /*
-     * This creates the scroll distance.
-     * The user visually stays inside this section
-     * while the bars fill.
-     */
-    <div ref={sectionRef} className="relative h-[320vh]">
-      {/*
-       * Keep the actual section pinned below the 81px header.
-       */}
-      <div className="sticky top-17.25 h-[calc(100vh-69px)] overflow-hidden md:top-20.25 md:h-[calc(100vh-81px)]">
+    <div ref={sectionRef} className="relative h-auto sm:h-[320vh]">
+      <div className="h-auto overflow-hidden sm:sticky sm:top-17.25 sm:h-[calc(100vh-69px)] md:top-20.25 md:h-[calc(100vh-81px)]">
         <BorderContainerInner className="corner-border-top-right bg-background! h-full w-full border-x">
           <div className="flex h-full flex-col p-5 py-10 md:p-10">
             <SectionAttribute text="By The Numbers" />
@@ -60,17 +52,20 @@ export const ByTheNumbers = () => {
                   </p>,
                 ]}
               />
+
               <InView>
                 <p className="text-secondary slide-up-fade-in mx-auto mt-2 text-center text-lg lg:max-w-[60ch]">
                   Websites developed, products shipped, and industries explored
                   — a snapshot of the work behind the code.
                 </p>
               </InView>
+
               <button
                 onClick={() => transitionTo('/profile', 'Profile')}
                 className="group hover:text-primary hover:border-primary mt-8 flex w-fit cursor-pointer items-center gap-1 border-b pb-1 duration-200"
               >
-                <p className="">Read the full profile</p>
+                <p>Read the full profile</p>
+
                 <ArrowRight
                   className="duration-200 group-hover:translate-x-1"
                   size={18}
@@ -78,12 +73,20 @@ export const ByTheNumbers = () => {
               </button>
             </div>
 
-            {/*
-             * Fixed chart height is important.
-             * The percentage heights of individual bars
-             * are calculated against this.
-             */}
-            <div className="mt-auto grid h-[280px] grid-cols-2 items-end gap-4 md:h-[320px] md:grid-cols-4 md:gap-8">
+            {/* Mobile */}
+            <div className="mt-12 grid h-[400px] grid-cols-2 items-end gap-4 sm:hidden">
+              {STATS.map((stat, index) => (
+                <StatBar
+                  key={stat.label}
+                  stat={stat}
+                  index={index}
+                  progress={scrollYProgress}
+                />
+              ))}
+            </div>
+
+            {/* sm+ — original layout */}
+            <div className="mt-auto hidden h-[280px] grid-cols-2 items-end gap-4 sm:grid md:h-[320px] md:grid-cols-4 md:gap-8">
               {STATS.map((stat, index) => (
                 <StatBar
                   key={stat.label}
@@ -111,17 +114,6 @@ type StatBarProps = {
 }
 
 const StatBar = ({ stat, index, progress }: StatBarProps) => {
-  /*
-   * First block:
-   * always 100% filled.
-   *
-   * Remaining scroll:
-   *
-   * 0.00 → 0.33 = Block 2
-   * 0.33 → 0.66 = Block 3
-   * 0.66 → 1.00 = Block 4
-   */
-
   const animatedScale = useTransform(
     progress,
     index === 1 ? [0, 0.333] : index === 2 ? [0.333, 0.666] : [0.666, 1],
@@ -132,40 +124,60 @@ const StatBar = ({ stat, index, progress }: StatBarProps) => {
   )
 
   return (
-    <div className="flex h-full min-w-0 flex-col justify-end">
-      <p className="mb-2 text-3xl leading-none font-medium md:text-4xl">
-        {stat.value}
-      </p>
+    <>
+      {/* Mobile only */}
+      <div className="flex h-full min-h-0 min-w-0 flex-col sm:hidden">
+        <p className="mb-2 shrink-0 text-3xl leading-none font-medium">
+          {stat.value}
+        </p>
 
-      <div
-        className="diagonal-line-background border-foreground relative w-full shrink-0 overflow-hidden border"
-        style={{
-          height: `${stat.height}%`,
-        }}
-      >
-        {index === 0 ? (
-          /*
-           * Block 1 starts filled.
-           */
-          <div className="bg-primary absolute inset-0" />
-        ) : (
-          /*
-           * Blocks 2–4 progressively fill
-           * from bottom → top.
-           */
-          <motion.div
-            className="bg-primary absolute inset-0"
+        {/* Bar height fits inside remaining container space */}
+        <div className="relative min-h-0 flex-1">
+          <div
+            className="diagonal-line-background border-foreground absolute bottom-0 left-0 w-full overflow-hidden border"
             style={{
-              scaleY: animatedScale,
-              transformOrigin: 'bottom center',
+              height: `${stat.height}%`,
             }}
-          />
-        )}
+          >
+            {/* Always filled on mobile */}
+            <div className="bg-primary absolute inset-0" />
+          </div>
+        </div>
+
+        <p className="text-secondary mt-4 shrink-0 text-center text-sm">
+          {stat.label}
+        </p>
       </div>
 
-      <p className="text-secondary mt-4 shrink-0 text-center text-sm">
-        {stat.label}
-      </p>
-    </div>
+      {/* sm+ — exact old bar structure */}
+      <div className="hidden h-full min-w-0 flex-col justify-end sm:flex">
+        <p className="mb-2 text-3xl leading-none font-medium md:text-4xl">
+          {stat.value}
+        </p>
+
+        <div
+          className="diagonal-line-background border-foreground relative w-full shrink-0 overflow-hidden border"
+          style={{
+            height: `${stat.height}%`,
+          }}
+        >
+          {index === 0 ? (
+            <div className="bg-primary absolute inset-0" />
+          ) : (
+            <motion.div
+              className="bg-primary absolute inset-0"
+              style={{
+                scaleY: animatedScale,
+                transformOrigin: 'bottom center',
+              }}
+            />
+          )}
+        </div>
+
+        <p className="text-secondary mt-4 shrink-0 text-center text-sm">
+          {stat.label}
+        </p>
+      </div>
+    </>
   )
 }

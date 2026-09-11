@@ -69,6 +69,11 @@ export const CityWalkerSvg = ({
        FAR BACKGROUND
     ========================================================= */
 
+    .smoke {
+  fill: var(--foreground);
+  opacity: .4;
+}
+
     .far > rect {
       fill: #1b5393;
       opacity: .10;
