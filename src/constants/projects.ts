@@ -207,7 +207,7 @@ export const PROJECTS: Project[] = [
       'A confidential full-stack web platform built around complex application workflows using React, TypeScript, Node.js, SQL Server, and GCP.',
 
     details: {
-      live: 'https://dev.ogilvystudio.ai/',
+      live: '',
       client: 'Confidential',
       type: 'Enterprise Product',
       year: '2026',
@@ -325,7 +325,7 @@ export const PROJECTS: Project[] = [
       'A premium digital experience combining reusable React interfaces, backend services, structured data, and cloud delivery for content-rich storytelling across devices.',
 
     details: {
-      live: 'https://dev.ogilvystudio.ai/',
+      live: 'https://indraonline.in/',
       client: 'De Beers',
       type: 'Brand Platform',
       year: '2026',
@@ -436,7 +436,7 @@ export const PROJECTS: Project[] = [
       'A configurable full-stack workshop platform for participant onboarding, idea creation, AI-assisted refinement, shortlisting, voting, administration, and live presentation.',
 
     details: {
-      live: 'https://dev.ogilvystudio.ai/',
+      live: 'https://base-camp-stag-26.onmlab.in/',
       client: 'Ogilvy',
       type: 'Collaborative Platform',
       year: '2026',
@@ -687,7 +687,7 @@ export const PROJECTS: Project[] = [
       'A focused personal brand platform combining editorial storytelling, structured content, reusable React components, backend data delivery, and performance-conscious deployment.',
 
     details: {
-      live: 'https://dev.ogilvystudio.ai/',
+      live: 'https://matt-pokora.milka.com/',
       client: 'Milka Pokora',
       type: 'Portfolio Platform',
       year: '2026',
