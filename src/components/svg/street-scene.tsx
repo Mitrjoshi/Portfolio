@@ -48,22 +48,22 @@ export const AnimatedStreetScene = () => {
             repeatCount="indefinite"
           />
 
-          <g transform="translate(273 298)">
+          <g transform="translate(273 275)">
             <rect
               x="-8"
               y="-6"
               width="16"
               height="11"
               rx="1"
-              fill="#171711"
-              stroke="#d49a39"
+              fill="var(--primary)"
+              stroke="var(--border)"
               strokeOpacity="0.8"
             />
 
             <path
               d="M-8 -6 L0 0 L8 -6"
               fill="none"
-              stroke="#d49a39"
+              stroke="var(--border)"
               strokeOpacity="0.7"
             />
 
@@ -93,7 +93,7 @@ export const AnimatedStreetScene = () => {
             CHARACTER
         ===================================================== */}
 
-        <Visitor x={614} y={310} />
+        {/* <Visitor x={614} y={310} /> */}
 
         {/* =====================================================
             STREET OBJECTS
@@ -109,7 +109,7 @@ export const AnimatedStreetScene = () => {
 
         <path
           d="M0 316 H1440"
-          stroke="#b3a98e"
+          stroke="var(--foreground)"
           strokeOpacity="0.65"
           strokeWidth="1"
         />
@@ -118,7 +118,7 @@ export const AnimatedStreetScene = () => {
 
         <Bench x={355} y={290} />
 
-        <PhoneBooth x={975} y={206} />
+        {/* <PhoneBooth x={975} y={206} /> */}
 
         {/* =====================================================
             STREET LIGHTS
@@ -127,6 +127,8 @@ export const AnimatedStreetScene = () => {
         <Bench x={1145} y={290} />
 
         <StreetLight x={115} groundY={316} height={135} delay="0s" />
+
+        <StreetLight x={1000} groundY={316} height={135} delay="0s" />
 
         <StreetLight x={1340} groundY={316} height={135} delay="-3.5s" />
       </svg>
@@ -148,7 +150,7 @@ const Studio = () => {
         y="151"
         width="405"
         height="165"
-        fill="#12120e"
+        fill="var(--house-walls)"
         stroke="#8a806b"
         strokeOpacity="0.52"
       />
@@ -163,8 +165,8 @@ const Studio = () => {
           L944 151
           Z
         "
-        fill="#76503a"
-        stroke="#8e664d"
+        fill="var(--house-roof)"
+        stroke="var(--border)"
         strokeOpacity="0.8"
       />
 
@@ -175,7 +177,7 @@ const Studio = () => {
         y1="108"
         x2="708"
         y2="151"
-        stroke="#9c7257"
+        stroke="var(--border)"
         strokeOpacity="0.35"
       />
 
@@ -189,8 +191,8 @@ const Studio = () => {
           V118
           Z
         "
-        fill="#292923"
-        stroke="#777062"
+        fill="var(--house-chimney)"
+        stroke="var(--border)"
         strokeOpacity="0.6"
       />
 
@@ -205,8 +207,8 @@ const Studio = () => {
           width="88"
           height="20"
           rx="2"
-          fill="#151510"
-          stroke="#8a806b"
+          fill="var(--house-walls)"
+          stroke="var(--border)"
           strokeOpacity="0.5"
         />
 
@@ -214,7 +216,7 @@ const Studio = () => {
           cx="-31"
           cy="0"
           r="2"
-          fill="#d49a39"
+          fill="var(--primary)"
           filter="url(#contact-small-glow)"
         >
           <animate
@@ -231,7 +233,7 @@ const Studio = () => {
           textAnchor="middle"
           fontSize="7"
           letterSpacing="2"
-          fill="#c8bea8"
+          fill="var(--foreground)"
         >
           MITR JOSHI
         </text>
@@ -341,12 +343,18 @@ const Studio = () => {
         width="17"
         height="19"
         rx="2"
-        fill="#181812"
-        stroke="#8a806b"
+        fill="var(--border)"
+        stroke="var(--border)"
         strokeOpacity="0.65"
       />
 
-      <text x="759.5" y="231" textAnchor="middle" fontSize="8" fill="#ddd3bc">
+      <text
+        x="759.5"
+        y="231"
+        textAnchor="middle"
+        fontSize="8"
+        fill="var(--foreground)"
+      >
         6
       </text>
 
@@ -354,8 +362,8 @@ const Studio = () => {
 
       <path
         d="M652 316 H750 L766 330 H636 Z"
-        fill="#151510"
-        stroke="#8a806b"
+        fill="var(--house-stairs)"
+        stroke="var(--foreground)"
         strokeOpacity="0.38"
       />
 
@@ -364,7 +372,7 @@ const Studio = () => {
         y1="322"
         x2="756"
         y2="322"
-        stroke="#8a806b"
+        stroke="var(--foreground)"
         strokeOpacity="0.3"
       />
 
@@ -373,7 +381,7 @@ const Studio = () => {
         y1="327"
         x2="762"
         y2="327"
-        stroke="#8a806b"
+        stroke="var(--foreground)"
         strokeOpacity="0.22"
       />
     </g>
@@ -414,8 +422,8 @@ const AnimatedStudioDoor = () => {
             width="72"
             height="109"
             rx="2"
-            fill="#c48633"
-            stroke="#d5a04a"
+            fill="var(--house-door)"
+            stroke="var(--border)"
             strokeOpacity="0.85"
           />
 
@@ -425,8 +433,8 @@ const AnimatedStudioDoor = () => {
             width="51"
             height="40"
             rx="2"
-            fill="#aa702c"
-            stroke="#745229"
+            fill="var(--house-door)"
+            stroke="var(--border)"
             strokeOpacity="0.65"
           />
 
@@ -436,12 +444,12 @@ const AnimatedStudioDoor = () => {
             width="51"
             height="34"
             rx="2"
-            fill="#aa702c"
-            stroke="#745229"
+            fill="var(--house-door)"
+            stroke="var(--border)"
             strokeOpacity="0.65"
           />
 
-          <circle cx="63" cy="54" r="2.6" fill="#d9c48d" />
+          <circle cx="63" cy="54" r="2.6" fill="#fff" />
         </g>
       </g>
     </g>
@@ -471,9 +479,9 @@ const StudioWindow = ({
         width={width}
         height={height}
         rx="2"
-        fill="#172027"
-        stroke="#726d61"
-        strokeOpacity="0.7"
+        fill="var(--house-window)"
+        stroke="var(--foreground)"
+        strokeOpacity="0.4"
       />
 
       <line
@@ -481,8 +489,8 @@ const StudioWindow = ({
         y1={y}
         x2={x + width / 2}
         y2={y + height}
-        stroke="#7f796c"
-        strokeOpacity="0.65"
+        stroke="var(--foreground)"
+        strokeOpacity="0.4"
       />
 
       <line
@@ -490,13 +498,13 @@ const StudioWindow = ({
         y1={y + height / 2}
         x2={x + width}
         y2={y + height / 2}
-        stroke="#7f796c"
-        strokeOpacity="0.65"
+        stroke="var(--foreground)"
+        strokeOpacity="0.4"
       />
 
       <path
         d={`M${x - 7} ${y + height + 4} H${x + width + 7}`}
-        stroke="#807969"
+        stroke="var(--border)"
         strokeOpacity="0.5"
       />
     </g>
@@ -529,9 +537,9 @@ const AnimatedStudioWindow = ({
         width={width}
         height={height}
         rx="2"
-        fill="#172027"
-        stroke="#726d61"
-        strokeOpacity="0.7"
+        fill="var(--house-window)"
+        stroke="var(--foreground)"
+        strokeOpacity="0.4"
       />
 
       {/* LEFT STATIC GLASS */}
@@ -541,8 +549,8 @@ const AnimatedStudioWindow = ({
         width={paneWidth}
         height={paneHeight}
         rx="1"
-        fill="#172027"
-        stroke="#7f796c"
+        fill="var(--house-window)"
+        stroke="var(--foreground)"
         strokeOpacity="0.4"
       />
 
@@ -553,8 +561,8 @@ const AnimatedStudioWindow = ({
         width={paneWidth - 4}
         height={paneHeight - 4}
         rx="1"
-        fill="#705239"
-        fillOpacity="0.45"
+        fill="var(--house-roof)"
+        fillOpacity="0.2"
       />
 
       {/* RIGHT WINDOW TRACK */}
@@ -564,8 +572,8 @@ const AnimatedStudioWindow = ({
         width={paneWidth}
         height={paneHeight}
         rx="1"
-        fill="#172027"
-        stroke="#7f796c"
+        fill="var(--house-window)"
+        stroke="var(--foreground)"
         strokeOpacity="0.4"
       />
 
@@ -602,7 +610,7 @@ const AnimatedStudioWindow = ({
           width={paneWidth}
           height={paneHeight}
           rx="1"
-          fill="#172027"
+          fill="var(--house-window)"
           stroke="#8a806b"
           strokeOpacity="0.75"
         />
@@ -635,7 +643,7 @@ const AnimatedStudioWindow = ({
         y1={y}
         x2={x + half}
         y2={y + height}
-        stroke="#7f796c"
+        stroke="var(--border)"
         strokeOpacity="0.75"
       />
 
@@ -645,7 +653,7 @@ const AnimatedStudioWindow = ({
         y1={y + height / 2}
         x2={x + width}
         y2={y + height / 2}
-        stroke="#7f796c"
+        stroke="var(--border)"
         strokeOpacity="0.45"
       />
 
@@ -666,7 +674,14 @@ const AnimatedStudioWindow = ({
 const Mailbox = ({ x, y }: { x: number; y: number }) => {
   return (
     <g transform={`translate(${x} ${y})`}>
-      <line x1="0" y1="0" x2="0" y2="30" stroke="#777062" strokeWidth="3" />
+      <line
+        x1="0"
+        y1="0"
+        x2="0"
+        y2="30"
+        stroke="var(--border)"
+        strokeWidth="3"
+      />
 
       <path
         d="
@@ -678,8 +693,8 @@ const Mailbox = ({ x, y }: { x: number; y: number }) => {
           H-19
           Z
         "
-        fill="#292820"
-        stroke="#817869"
+        fill="var(--mail-box)"
+        stroke="var(--street-fence)"
         strokeOpacity="0.75"
       />
 
@@ -722,91 +737,6 @@ const Mailbox = ({ x, y }: { x: number; y: number }) => {
    PHONE BOOTH
 ============================================================ */
 
-const PhoneBooth = ({ x, y }: { x: number; y: number }) => {
-  return (
-    <g transform={`translate(${x} ${y})`}>
-      <rect
-        width="75"
-        height="110"
-        fill="#171711"
-        stroke="#80796b"
-        strokeOpacity="0.65"
-      />
-
-      <rect
-        x="8"
-        y="10"
-        width="59"
-        height="25"
-        fill="#292820"
-        stroke="#80796b"
-        strokeOpacity="0.45"
-      />
-
-      <text
-        x="37.5"
-        y="26"
-        textAnchor="middle"
-        fontSize="7"
-        letterSpacing="1.5"
-        fill="#b8ae98"
-      >
-        CALL
-      </text>
-
-      {/* glass */}
-
-      <rect
-        x="8"
-        y="42"
-        width="59"
-        height="58"
-        fill="#172027"
-        fillOpacity="0.5"
-        stroke="#777062"
-        strokeOpacity="0.45"
-      />
-
-      {/* phone */}
-
-      <path
-        d="
-          M27 59
-          Q37 52 47 59
-          M28 62
-          V81
-          M46 62
-          V81
-        "
-        fill="none"
-        stroke="#c79037"
-        strokeOpacity="0.7"
-        strokeWidth="2"
-      />
-
-      {/* ringing waves */}
-
-      {[0, 1, 2].map((i) => (
-        <path
-          key={i}
-          d={`M${78 + i * 7} 50 q12 10 0 20`}
-          fill="none"
-          stroke="#d49a39"
-          strokeOpacity="0.5"
-        >
-          <animate
-            attributeName="opacity"
-            values="0;0.8;0"
-            dur="2s"
-            begin={`${i * 0.25}s`}
-            repeatCount="indefinite"
-          />
-        </path>
-      ))}
-    </g>
-  )
-}
-
 /* ============================================================
    CONTACT CABLE
 ============================================================ */
@@ -832,7 +762,7 @@ const ContactCable = ({
           H ${endX}
         `}
         fill="none"
-        stroke="#8a806b"
+        stroke="var(--foreground)"
         strokeOpacity="0.27"
       />
 
@@ -840,8 +770,8 @@ const ContactCable = ({
         cx={startX + 35}
         cy={y - 8}
         r="2"
-        fill="#11110d"
-        stroke="#c79037"
+        fill="var(--foreground)"
+        stroke="var(--foreground)"
         strokeOpacity="0.55"
       />
 
@@ -849,8 +779,8 @@ const ContactCable = ({
         cx={endX - 35}
         cy={y - 8}
         r="2"
-        fill="#11110d"
-        stroke="#c79037"
+        fill="var(--foreground)"
+        stroke="var(--foreground)"
         strokeOpacity="0.55"
       />
     </g>
@@ -860,173 +790,6 @@ const ContactCable = ({
 /* ============================================================
    VISITOR
 ============================================================ */
-
-const Visitor = ({ x, y }: { x: number; y: number }) => {
-  return (
-    <g transform={`translate(${x} ${y})`}>
-      <ellipse cx="0" cy="3" rx="12" ry="2.2" fill="#000" fillOpacity="0.3" />
-
-      <g>
-        <animateTransform
-          attributeName="transform"
-          type="translate"
-          values="0 0;0 -1;0 0"
-          dur="2s"
-          repeatCount="indefinite"
-        />
-
-        {/* legs */}
-
-        <path
-          d="M-4 -25 L-5 0"
-          stroke="#61574f"
-          strokeWidth="5"
-          strokeLinecap="round"
-        />
-
-        <path
-          d="M4 -25 L6 0"
-          stroke="#61574f"
-          strokeWidth="5"
-          strokeLinecap="round"
-        />
-
-        {/* body */}
-
-        <path
-          d="
-            M-8 -51
-            Q0 -56 8 -51
-            L7 -25
-            H-7
-            Z
-          "
-          fill="#776859"
-          stroke="#948574"
-          strokeOpacity="0.55"
-        />
-
-        {/* bag */}
-
-        <path
-          d="
-            M-9 -43
-            Q-17 -38 -15 -26
-            H-7
-            V-43
-            Z
-          "
-          fill="#4f6150"
-          stroke="#76806d"
-          strokeOpacity="0.5"
-        />
-
-        {/* head */}
-
-        <circle cx="0" cy="-59" r="7" fill="#9a6849" />
-
-        {/* hair */}
-
-        <path
-          d="M-6 -61 Q0 -69 6 -62"
-          fill="#352b24"
-          stroke="#352b24"
-          strokeWidth="3"
-        />
-
-        {/* knocking arm */}
-
-        <g transform="translate(6 -45)">
-          <g>
-            <animateTransform
-              attributeName="transform"
-              type="rotate"
-              values="
-                0;
-                0;
-                -24;
-                -6;
-                -24;
-                -6;
-                -24;
-                0;
-                0
-              "
-              keyTimes="
-                0;
-                0.52;
-                0.58;
-                0.62;
-                0.66;
-                0.7;
-                0.74;
-                0.8;
-                1
-              "
-              dur="5s"
-              repeatCount="indefinite"
-            />
-
-            <line
-              x1="0"
-              y1="0"
-              x2="10"
-              y2="10"
-              stroke="#9a6849"
-              strokeWidth="4"
-              strokeLinecap="round"
-            />
-
-            <g transform="translate(10 10)">
-              <g>
-                <animateTransform
-                  attributeName="transform"
-                  type="rotate"
-                  values="
-                    0;
-                    0;
-                    -44;
-                    -17;
-                    -44;
-                    -17;
-                    -44;
-                    0;
-                    0
-                  "
-                  keyTimes="
-                    0;
-                    0.52;
-                    0.58;
-                    0.62;
-                    0.66;
-                    0.7;
-                    0.74;
-                    0.8;
-                    1
-                  "
-                  dur="5s"
-                  repeatCount="indefinite"
-                />
-
-                <line
-                  x1="0"
-                  y1="0"
-                  x2="5"
-                  y2="11"
-                  stroke="#9a6849"
-                  strokeWidth="3.5"
-                  strokeLinecap="round"
-                />
-
-                <circle cx="5" cy="12" r="2.4" fill="#9a6849" />
-              </g>
-            </g>
-          </g>
-        </g>
-      </g>
-    </g>
-  )
-}
 
 /* ============================================================
    STREET LIGHT
@@ -1126,9 +889,10 @@ const BackgroundBuilding = ({
         y={y}
         width={width}
         height={height}
-        fill="#12120e"
-        stroke="#655f53"
+        fill="var(--house-walls)"
+        stroke="var(--border)"
         strokeOpacity="0.35"
+        fillOpacity={0.4}
       />
 
       <path
@@ -1138,9 +902,10 @@ const BackgroundBuilding = ({
           L ${x + width + 10} ${y}
           Z
         `}
-        fill="#453329"
-        stroke="#6e5949"
+        fill="var(--house-roof)"
+        stroke="var(--border)"
         strokeOpacity="0.45"
+        fillOpacity={0.4}
       />
 
       <rect
@@ -1149,8 +914,8 @@ const BackgroundBuilding = ({
         width="18"
         height="22"
         rx="1"
-        fill="#172027"
-        stroke="#5f5d55"
+        fill="var(--house-window)"
+        stroke="var(--border)"
         strokeOpacity="0.4"
       />
 
@@ -1160,8 +925,8 @@ const BackgroundBuilding = ({
         width="18"
         height="22"
         rx="1"
-        fill="#172027"
-        stroke="#5f5d55"
+        fill="var(--house-window)"
+        stroke="var(--border)"
         strokeOpacity="0.4"
       />
     </g>
@@ -1175,13 +940,29 @@ const BackgroundBuilding = ({
 const Tree = ({ x, y, scale }: { x: number; y: number; scale: number }) => {
   return (
     <g transform={`translate(${x} ${y}) scale(${scale})`}>
-      <line x1="0" y1="-4" x2="0" y2="29" stroke="#645746" strokeWidth="4" />
+      <line
+        x1="0"
+        y1="-4"
+        x2="0"
+        y2="29"
+        stroke="var(--border)"
+        strokeWidth="4"
+      />
 
       <circle
-        cx="-9"
+        cx="0"
+        cy="-24"
+        r="28"
+        fill="var(--street-leaf-s3)"
+        stroke="#526045"
+        strokeOpacity="0.65"
+      />
+
+      <circle
+        cx="-18"
         cy="-15"
         r="17"
-        fill="#27301f"
+        fill="var(--street-leaf-s1)"
         stroke="#526045"
         strokeOpacity="0.65"
       />
@@ -1190,7 +971,7 @@ const Tree = ({ x, y, scale }: { x: number; y: number; scale: number }) => {
         cx="10"
         cy="-18"
         r="20"
-        fill="#27301f"
+        fill="var(--street-leaf-s2)"
         stroke="#526045"
         strokeOpacity="0.65"
       />
@@ -1205,14 +986,20 @@ const Tree = ({ x, y, scale }: { x: number; y: number; scale: number }) => {
 const Bench = ({ x, y }: { x: number; y: number }) => {
   return (
     <g transform={`translate(${x} ${y})`}>
-      <rect width="72" height="8" rx="1" fill="#35462c" stroke="#58674d" />
+      <rect
+        width="72"
+        height="8"
+        rx="1"
+        fill="var(--street-bench)"
+        stroke="#58674d"
+      />
 
       <rect
         y="12"
         width="72"
         height="6"
         rx="1"
-        fill="#35462c"
+        fill="var(--street-bench)"
         stroke="#58674d"
       />
 
@@ -1267,7 +1054,7 @@ const StreetFence = () => {
           y1={topY}
           x2={leftEnd}
           y2={topY}
-          stroke="#817869"
+          stroke="var(--street-fence)"
           strokeOpacity="0.55"
           strokeWidth="1"
         />
@@ -1278,7 +1065,7 @@ const StreetFence = () => {
           y1={middleY}
           x2={leftEnd}
           y2={middleY}
-          stroke="#817869"
+          stroke="var(--street-fence)"
           strokeOpacity="0.45"
           strokeWidth="1"
         />
@@ -1291,7 +1078,7 @@ const StreetFence = () => {
               y1={topY - 8}
               x2={x}
               y2={groundY}
-              stroke="#817869"
+              stroke="var(--street-fence)"
               strokeOpacity="0.55"
               strokeWidth="1"
             />
@@ -1304,7 +1091,7 @@ const StreetFence = () => {
                 L ${x + 2.5} ${topY - 8}
                 Z
               `}
-              fill="#817869"
+              stroke="var(--street-fence)"
               fillOpacity="0.45"
             />
           </g>
@@ -1322,7 +1109,7 @@ const StreetFence = () => {
           y1={topY}
           x2={rightEnd}
           y2={topY}
-          stroke="#817869"
+          stroke="var(--street-fence)"
           strokeOpacity="0.55"
           strokeWidth="1"
         />
@@ -1333,7 +1120,7 @@ const StreetFence = () => {
           y1={middleY}
           x2={rightEnd}
           y2={middleY}
-          stroke="#817869"
+          stroke="var(--street-fence)"
           strokeOpacity="0.45"
           strokeWidth="1"
         />
@@ -1346,7 +1133,7 @@ const StreetFence = () => {
               y1={topY - 8}
               x2={x}
               y2={groundY}
-              stroke="#817869"
+              stroke="var(--street-fence)"
               strokeOpacity="0.55"
               strokeWidth="1"
             />
@@ -1358,7 +1145,7 @@ const StreetFence = () => {
                 L ${x + 2.5} ${topY - 8}
                 Z
               `}
-              fill="#817869"
+              stroke="var(--street-fence)"
               fillOpacity="0.45"
             />
           </g>
@@ -1377,8 +1164,8 @@ const StreetFence = () => {
           width="4"
           height={groundY - topY + 11}
           rx="1"
-          fill="#28261f"
-          stroke="#817869"
+          fill="var(--street-fence)"
+          stroke="var(--street-fence)"
           strokeOpacity="0.65"
         />
 
@@ -1397,8 +1184,8 @@ const StreetFence = () => {
           width="4"
           height={groundY - topY + 11}
           rx="1"
-          fill="#28261f"
-          stroke="#817869"
+          fill="var(--street-fence)"
+          stroke="var(--street-fence)"
           strokeOpacity="0.65"
         />
 
@@ -1406,7 +1193,7 @@ const StreetFence = () => {
           cx={rightStart}
           cy={topY - 12}
           r="2.8"
-          fill="#b2833d"
+          fill="var(--street-fence)"
           fillOpacity="0.65"
         />
       </g>
@@ -1531,8 +1318,8 @@ const Cloud = ({
 
           Z
         "
-        fill="#26251f"
-        stroke="#8a806b"
+        fill="var(--border)"
+        stroke="var(--footer-line-border)"
         strokeOpacity="0.75"
         strokeWidth="1.1"
       />
@@ -1545,7 +1332,7 @@ const Cloud = ({
           C 67 17 71 13 72 9
         "
         fill="none"
-        stroke="#b2833d"
+        stroke="var(--footer-line-border)"
         strokeOpacity="0.26"
         strokeWidth="1"
       />
@@ -1564,7 +1351,7 @@ const Cloud = ({
           C 63 -1 68 3 69 8
         "
         fill="none"
-        stroke="#a29987"
+        stroke="var(--footer-line-border)"
         strokeOpacity="0.2"
         strokeWidth="1"
       />

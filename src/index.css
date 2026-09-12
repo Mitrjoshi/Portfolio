@@ -278,6 +278,23 @@
   --software-pipeline-robot-antenna-led: #c58a33;
   --software-pipeline-status-copy: #726b60;
   --software-pipeline-status-dot: #c98c32;
+
+  /* STREET SCENE */
+  --house-walls: #f3ecdc;
+  --house-roof: #c18d72;
+  --house-chimney: #c9c2b2;
+  --house-window: #dce7ec;
+  --house-door: #c67f08;
+  --house-stairs: #ebe4d4;
+
+  --street-leaf-s1: #dde3cd;
+  --street-leaf-s2: #e3e9d3;
+  --street-leaf-s3: #e7ecd9;
+
+  --street-fence: #a49b88;
+  --street-bench: #b9cca7;
+
+  --mail-box: #c0564b;
 }
 
 /* --------------------------------
@@ -457,6 +474,23 @@
   --software-pipeline-robot-antenna-led: #b4944b;
   --software-pipeline-status-copy: #8e8a7f;
   --software-pipeline-status-dot: #a77a2d;
+
+  /* STREET SCENE */
+  --house-walls: #201c14;
+  --house-roof: #7b5038;
+  --house-chimney: #3f3a30;
+  --house-window: #1d2225;
+  --house-door: #d69640;
+  --house-stairs: #262218;
+
+  --street-leaf-s1: #202418;
+  --street-leaf-s2: #252a1a;
+  --street-leaf-s3: #1e2014;
+
+  --street-fence: #615a4b;
+  --street-bench: #3c302b;
+
+  --mail-box: #b6564c;
 }
 
 /* --------------------------------
@@ -669,6 +703,23 @@
   );
   --color-software-pipeline-status-copy: var(--software-pipeline-status-copy);
   --color-software-pipeline-status-dot: var(--software-pipeline-status-dot);
+
+  /* STREET SCENE */
+  --color-house-walls: var(--house-walls);
+  --color-house-roof: var(--house-roof);
+  --color-house-chimney: var(--house-chimney);
+  --color-house-door: var(--house-door);
+  --color-house-stairs: var(--house-stairs);
+
+  --color-street-leaf-s1: var(--street-leaf-s1);
+  --color-street-leaf-s2: var(--street-leaf-s2);
+  --color-street-leaf-s3: var(--street-leaf-s3);
+
+  --color-house-window: var(--house-window);
+  --color-street-fence: var(--street-fence);
+
+  --color-street-bench: var(--street-bench);
+  --color-mail-box: var(--mail-box);
 }
 
 @layer base {

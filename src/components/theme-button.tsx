@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { IconBrightness } from '@tabler/icons-react'
 
 export default function ThemeButton() {
-  const [isDark, setIsDark] = useState(false)
+  const [isDark, setIsDark] = useState(true)
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme')
