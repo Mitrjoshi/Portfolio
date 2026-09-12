@@ -6,6 +6,8 @@ import { Skills } from '../sections/skills'
 import { Focus } from '../sections/focus'
 import { Worked } from '../sections/worked'
 import { ByTheNumbers } from '../sections/by-the-numbers'
+import { HomeScreenShots } from '../sections/home-screenshots'
+import { Separator } from '../components/separator'
 
 export const Route = createFileRoute('/')({
   component: RouteComponent,
@@ -37,6 +39,12 @@ function RouteComponent() {
 
         <Container className="corner-border-top-right relative border-t">
           <Worked />
+        </Container>
+
+        <Separator />
+
+        <Container>
+          <HomeScreenShots />
         </Container>
       </BorderContainer>
     </>

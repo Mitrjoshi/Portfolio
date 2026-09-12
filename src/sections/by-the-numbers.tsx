@@ -1,7 +1,8 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import {
   motion,
   type MotionValue,
+  useMotionValueEvent,
   useScroll,
   useTransform,
 } from 'framer-motion'
@@ -23,6 +24,18 @@ const STATS = [
   { value: '10+', label: 'Products shipped', height: 50 },
   { value: '5+', label: 'Industries worked in', height: 16 },
 ]
+
+// Splits "50+" into { number: 50, suffix: '+' } so the digits can be
+// animated as a count while any trailing text stays static.
+const parseStatValue = (value: string) => {
+  const match = value.match(/^(\d+)(.*)$/)
+
+  if (!match) {
+    return { number: 0, suffix: value }
+  }
+
+  return { number: parseInt(match[1], 10), suffix: match[2] }
+}
 
 export const ByTheNumbers = () => {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -114,21 +127,41 @@ type StatBarProps = {
 }
 
 const StatBar = ({ stat, index, progress }: StatBarProps) => {
-  const animatedScale = useTransform(
+  const { number, suffix } = parseStatValue(stat.value)
+
+  // Each stat gets its own slice of the scroll range so the bars/numbers
+  // step in one after another rather than all animating at once.
+  const segment = 1 / STATS.length
+  const rangeStart = index * segment
+  const rangeEnd = rangeStart + segment
+
+  const animatedScale = useTransform(progress, [rangeStart, rangeEnd], [0, 1], {
+    clamp: true,
+  })
+
+  const animatedCount = useTransform(
     progress,
-    index === 1 ? [0, 0.333] : index === 2 ? [0.333, 0.666] : [0.666, 1],
-    [0, 1],
+    [rangeStart, rangeEnd],
+    [0, number],
     {
       clamp: true,
     }
   )
+
+  const [displayNumber, setDisplayNumber] = useState(0)
+
+  useMotionValueEvent(animatedCount, 'change', (latest) => {
+    setDisplayNumber(Math.round(latest))
+  })
+
+  const displayValue = `${displayNumber}${suffix}`
 
   return (
     <>
       {/* Mobile only */}
       <div className="flex h-full min-h-0 min-w-0 flex-col sm:hidden">
         <p className="mb-2 shrink-0 text-3xl leading-none font-medium">
-          {stat.value}
+          {displayValue}
         </p>
 
         {/* Bar height fits inside remaining container space */}
@@ -139,8 +172,13 @@ const StatBar = ({ stat, index, progress }: StatBarProps) => {
               height: `${stat.height}%`,
             }}
           >
-            {/* Always filled on mobile */}
-            <div className="bg-primary absolute inset-0" />
+            <motion.div
+              className="bg-primary absolute inset-0"
+              style={{
+                scaleY: animatedScale,
+                transformOrigin: 'bottom center',
+              }}
+            />
           </div>
         </div>
 
@@ -152,7 +190,7 @@ const StatBar = ({ stat, index, progress }: StatBarProps) => {
       {/* sm+ — exact old bar structure */}
       <div className="hidden h-full min-w-0 flex-col justify-end sm:flex">
         <p className="mb-2 text-3xl leading-none font-medium md:text-4xl">
-          {stat.value}
+          {displayValue}
         </p>
 
         <div
@@ -161,17 +199,13 @@ const StatBar = ({ stat, index, progress }: StatBarProps) => {
             height: `${stat.height}%`,
           }}
         >
-          {index === 0 ? (
-            <div className="bg-primary absolute inset-0" />
-          ) : (
-            <motion.div
-              className="bg-primary absolute inset-0"
-              style={{
-                scaleY: animatedScale,
-                transformOrigin: 'bottom center',
-              }}
-            />
-          )}
+          <motion.div
+            className="bg-primary absolute inset-0"
+            style={{
+              scaleY: animatedScale,
+              transformOrigin: 'bottom center',
+            }}
+          />
         </div>
 
         <p className="text-secondary mt-4 shrink-0 text-center text-sm">
