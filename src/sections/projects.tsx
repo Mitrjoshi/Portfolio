@@ -138,7 +138,7 @@ export const Projects = ({
 
                   openProjectPage(project)
                 }}
-                className="group relative cursor-pointer overflow-hidden md:aspect-9/16 md:!h-auto"
+                className="group relative cursor-pointer overflow-hidden md:aspect-9/16 md:h-auto!"
               >
                 {/* Same content */}
                 <div className="absolute inset-0 z-10 flex justify-between p-4">
@@ -322,14 +322,24 @@ const ProjectCard = ({
       <div className="project-cursor-card bg-primary-foreground w-120 -translate-x-1/2 -translate-y-1/2 border">
         <img
           src={project.image}
-          className="aspect-16/10 w-full object-cover"
+          className="aspect-5/4 w-full object-cover"
           alt={project.title}
         />
 
         <div className="p-4 py-2">
-          <p className="text-lg font-medium">{project.title}</p>
+          <p
+            key={project.title}
+            className="slide-up-fade-in text-lg font-medium"
+          >
+            {project.title}
+          </p>
 
-          <p className="text-secondary mb-4 text-sm">{project.description}</p>
+          <p
+            key={project.description}
+            className="slide-up-fade-in text-secondary mb-4 text-sm"
+          >
+            {project.description}
+          </p>
 
           <p className="text-primary flex items-center gap-2 text-sm">
             Open project

@@ -57,7 +57,7 @@ export const PROJECTS: Project[] = [
     confidential: false,
     category: 'apps',
     title: 'Pathlens',
-    platform: 'SaaS Platform',
+    platform: 'SaaS',
     image: '/projects/pathlens.png',
 
     description:
@@ -569,7 +569,7 @@ export const PROJECTS: Project[] = [
     confidential: false,
     category: 'apps',
     title: 'Fevikwik',
-    platform: 'Campaign Web Platform',
+    platform: 'Campaign',
     image: '/projects/fevikwik.png',
 
     description:
@@ -680,7 +680,7 @@ export const PROJECTS: Project[] = [
     confidential: false,
     category: 'apps',
     title: 'Milka Pokora',
-    platform: 'Personal Brand Platform',
+    platform: 'Campaign',
     image: '/projects/milka-pokora.png',
 
     description:

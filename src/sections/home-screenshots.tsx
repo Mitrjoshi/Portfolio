@@ -2,20 +2,20 @@ import { useRef } from 'react'
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion'
 
 const images = [
-  '/projects/screenshots/pathlens.png',
+  '/projects/screenshots/sprite.png',
   '/projects/screenshots/vertex.png',
   '/projects/screenshots/basecamp.png',
   '/projects/screenshots/fevikwik.png',
   '/projects/screenshots/indra.png',
   '/projects/screenshots/kelloggs.png',
   '/projects/screenshots/maaza.png',
-  '/projects/screenshots/sprite.png',
+  '/projects/screenshots/pathlens.png',
   '/projects/screenshots/milka-pokora.png',
   '/projects/screenshots/fevikwik.png',
   '/projects/screenshots/indra.png',
   '/projects/screenshots/kelloggs.png',
   '/projects/screenshots/maaza.png',
-  '/projects/screenshots/sprite.png',
+  '/projects/screenshots/pathlens.png',
   '/projects/screenshots/milka-pokora.png',
 ]
 
